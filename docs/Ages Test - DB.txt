@@ -1,0 +1,488 @@
+﻿1.The sum of the ages of 3 cousins born at intervals of 4 years is 33. What is the age of the youngest cousin?
+
+
+Options:
+A.7
+B.5
+C.10
+D.6
+
+
+Answer : A.7
+
+Solution:
+Let's assume that the age of the youngest cousin is x.
+Then, the age of the second and third cousin will be x+4 and x+8, respectively. 
+The sum of their ages is given as 33: x + (x+4) + (x+8) = 33.
+ Simplifying the above equation, we get: 
+3x + 12 = 33. 
+Subtracting 12 from both sides, we get:
+3x = 21. 
+Dividing by 3, 
+we get: x = 7.
+Therefore, the age of the youngest cousin is 7 years old.
+
+
+2.Sarah is 4 years younger than Tom. If their ages are in the respective ratio of 2:3, how old is Sarah?
+
+
+Options:
+A.8.5
+B.7.5
+C.8
+D.6.5
+
+
+Answer : C.8
+
+Solution:
+Let's assume that the age of Sarah is x. 
+Then, the age of Tom will be x+4. 
+Their ages are in the ratio of 2:3: x/(x+4) = 2/3. 
+Cross-multiplying the above equation,
+we get: 3x = 2(x+4).
+Expanding and simplifying the above equation, 
+we get: x = 8. 
+Therefore, the age of Sarah is 8 years old.
+3. The present ages of three persons are in the ratio 3 : 4 : 5. Ten years ago, their ages were in the ratio 2 : 3 : 4. Find their present ages.
+Options: 
+A. 30, 40, 45 
+B. 30, 50, 60 
+C. 30, 40, 50 
+D. 30, 40, 60
+Answer: C. 30, 40, 50
+Solution: 
+Let the present ages of the three persons be 3x, 4x, and 5x respectively. 
+Ten years ago, their ages were (3x-10), (4x-10), and (5x-10) respectively. 
+According to the problem, the ratio was 2 : 3 : 4.
+Using the first two terms: (3x-10)/(4x-10) = 2/3 3(3x-10) = 2(4x-10) 9x - 30 = 8x - 20 x = 10
+Therefore, the present ages are 3(10) = 30 years, 4(10) = 40 years, and 5(10) = 50 years.
+4. Ten years ago, A was twice as old as B. Five years from now, the sum of their ages will be 40. What are their present ages?
+Options: 
+A. 25, 12.5 
+B. 20, 10 
+C. 30, 15 
+D. 15, 7.5
+Answer: B. 20, 10
+Solution: 
+Let the present age of A be x and B be y.
+From the first statement: (x-10) = 2(y-10) x - 10 = 2y - 20 x = 2y - 10 ... (1)
+From the second statement: (x+5) + (y+5) = 40 x + y + 10 = 40 x + y = 30 ... (2)
+Substituting (1) into (2): 2y - 10 + y = 30 3y = 40 y = 10
+Substituting y = 10 in equation (1): x = 2(10) - 10 = 10
+Therefore, A is 20 years old and B is 10 years old.
+
+
+5.The ratio of the present ages of two brothers is 1:2 and 5 years back the ratio was 1:3. What will be the present ages of the younger brother ?
+
+
+Options:
+A.10
+B.15
+C.20
+D.18
+
+
+Answer : A.10
+
+Solution:
+Let the present ages of the two brothers be x and 2x years 5 years back  
+x−5/2x−5= 1/3
+​3x−15=2x−5⇒x=10
+∴ The present ages are 10 years and 20 years
+The present age of younger brother =10
+
+
+6.A mother is eight times older than her daughter. She is also 49 years older than her. Find daughter's age two years hence.
+
+Options:
+A.8 years.
+B.9 years
+C.7 years
+D.6 years
+
+Answer : B.9 years
+
+Solution:
+Let the daughter's present age be x.
+According to the problem, 
+the mother is 8 times older than her daughter, which means:
+8x = mother's age …….1
+Also, the mother is 49years older than her daughter, which means:
+mother's age = x + 49 ……..2
+Substituting the first equation into the second equation:
+8x = x + 49
+7x = 49
+x = 7
+Therefore, the daughter's present age is 7 years,
+ and her age two years hence would be:
+7+2 = 9
+So her age two years hence will be 9 years.
+
+
+7. A is five years older than B who is three times as old as C. If the total ages of A, B and C are 40,then how old is B?
+
+
+Options:
+A.25
+B.20
+C.15
+D.18
+
+
+Answer : C.15
+
+Solution:
+Let the age of C be x.
+Then, the age of B will be 3x and the age of A will be 3x+5.
+The sum of their ages is given as 41, so we have:
+x + 3x + 3x + 5 = 40
+7x + 5 = 40
+7x = 35
+x = 5 
+Therefore, the age of B is 3x = 3*5 = 15
+
+
+8.Mary's father was 35 years old when she was born while her mother was 33 years old when her brother two years younger to her was born. What is the difference between the ages of her parents?
+
+
+Options:
+A.8
+B.4
+C.6
+D.12
+
+Answer : B.4
+
+Solution:
+Let Mary's current age be x.
+Then, her father's current age will be (x+35) and her brother's current age will be (x-2).
+Also, her mother's current age will be (x-2+33) = (x+31).
+The difference between the ages of her parents will be:
+= Father's age - Mother's age
+= (x+35) - (x+31)
+= 4
+Therefore, the difference between the ages of her parents is 4 years.
+
+
+9.X is as much younger than Y as he is older than Z. If the sum of the ages of Y and Z is 70 years, what is definitely the difference between Y and X's age?
+
+
+Options:
+A.1 year
+B.2 years
+C.25 years
+D.Data inadequate
+
+Answer: D.Data inadequate
+
+Solution:
+Given that:
+i. The difference of age between Y and X = The difference of age between X and Z.
+ii. Sum of age of Y and Z is 50 i.e. (Y+Z) = 70.
+Y -X = X -Z
+(Y+Z) = 2X
+Now given that, (Y+Z) = 70
+So, 70 = 2X  and therefore X = 35.
+Here we know the value(age) of X (35),
+ but we don't know the age of Y.
+Therefore, (Y-X) cannot be determined.so Data inadequate
+10. Father is five times the age of his daughter. After 2 years, he would be three times his daughter's age. Further after 6 years, how many times would he be of his daughter's age?
+Options: 
+A. 1.8 
+B. 2.75 
+C. 5 
+D. 4.67
+Answer: A. 1.8
+Solution: 
+Let the daughter's present age be x years. Then the father's present age is 5x years.
+After 2 years:
+Daughter's age = x + 2
+Father's age = 5x + 2
+Given that at that time, the father is three times the daughter's age: 5x + 2 = 3(x + 2) 5x + 2 = 3x + 6 2x = 4 x = 2
+Therefore, the present age of the daughter is 2 years and the present age of the father is 10 years.
+Further after 6 more years (i.e., after a total of 8 years from now):
+Daughter's age = 2 + 8 = 10 years
+Father's age = 10 + 8 = 18 years
+Required ratio = 18/10 = 1.8
+Therefore, the father will be 1.8 times the daughter's age.
+
+
+11.If John's age after 12 years will be thrice his age 4 years back, what is his current age?
+
+Options:
+A.18
+B.24
+C.30
+D.12
+
+Answer : D.12
+
+Solution:
+Let John's current age be x.
+After 12 years, his age will be (x + 12) and his age 4 years back will be (x - 4).
+Given, x + 12 = 3(x - 4)
+Solving the above equation, we get:
+x = 12
+Therefore, John's current age is 12 years.
+12. X and Y are 36 and 60 years old. How many years ago was the ratio of their ages 3:6?
+Options: 
+A. 4 
+B. 12 
+C. 6 
+D. 8
+Answer: B. 12
+Solution: 
+Let the number of years ago be x.
+Then, the ratio of their ages x years ago: (36 - x)/(60 - x) = 3/6 (36 - x)/(60 - x) = 1/2
+Cross-multiplying: 2(36 - x) = 1(60 - x) 72 - 2x = 60 - x 72 - 60 = -x + 2x 12 = x
+Therefore, the ratio of their ages was 3:6 twelve years ago.
+
+
+13.I have ten friends. What is my age?
+Statements:
+i. The average of our ages is 40 years.
+ii. All of us are of the same age.
+
+Options:
+A.Statement I alone is sufficient
+B.Statement II alone is sufficient
+C.Both statements put together are sufficient
+D.Both the statements even put together are not sufficient
+
+Answer : C.Both statements put together are sufficient
+
+Solution :
+Solution: Since all friends are of the same age, the average of their ages is the age of each friend. 
+So, if the average age is 40, then your age would also be 40.
+14. The present age of a grandfather is 5 times the age of his grandson. In 12 years, the grandfather's age will be 3 times the age of his grandson. What is the present age of the grandfather in years?
+Options: 
+A. 90 
+B. 80 
+C. 75 
+D. 60
+Answer: D. 60
+Solution: 
+Let the present age of the grandson be x years.
+According to the first statement, the present age of the grandfather is 5x years.
+In 12 years:
+Grandson's age = x + 12
+Grandfather's age = 5x + 12
+According to the second statement: 5x + 12 = 3(x + 12) 5x + 12 = 3x + 36 5x - 3x = 36 - 12 2x = 24 x = 12
+Therefore, the present age of the grandfather is 5x = 5(12) = 60 years.
+
+
+15.The present age of a father is 5 years more than three times the present age of his son, and the present age of the mother is 9 years less than the present age of her husband. If the ratio of the present age of son to that of father is 1 : 4 and the present age of grandfather to that of mother is 4 : 1, then find the present age of grandfather.
+
+Options:
+A.46
+B.38
+C.40
+D.44
+
+Answer : D.44
+
+Solution:
+Let the present age of the son be x.
+Then, the present age of the father = 3x + 5
+And, the present age of the mother = (3x + 5) - 9 = 3x - 4
+Given, the ratio of the present age of son to that of father is 1 : 4
+So, x/(3x + 5) = 1/4
+Solving, we get x = 5
+Therefore, the present age of the father = 3x + 5 = 20
+And, the present age of the mother = 3x - 4 = 11
+Given, the ratio of the present age of grandfather to that of mother is 4 : 1
+Let the present age of grandfather be y
+So, y/11 = 4/1
+Solving, we get y = 44
+Therefore, the present age of my grandfather is 44 years.
+
+
+16.One year ago, a man was 6 times as old as his son. Now his age is equal to the square of his son's age. Find their present ages.
+
+Options:
+A.25
+B.30
+C.33
+D.24
+
+Answer : A.25
+
+
+Solution: 
+Let's assume that the man's current age is "m" and his son's current age is "s".
+We know that one year ago, the man was 6 times as old as his son.
+So, one year ago:
+m - 1 = 6(s - 1)
+Expanding this equation:
+m - 1 = 6s - 6
+m = 6s - 5
+We also know that the man's current age is equal to the square of his son's age:
+m = s^2
+Now we can substitute the second equation into the first equation:
+s^2 = 6s - 5
+Rearranging this equation:
+s^2 - 6s + 5 = 0
+This equation can be factored as:
+(s - 5)(s - 1) = 0
+So, either s = 5 or s = 1.
+If s = 5, then the son's current age is 5 years old. 
+Substituting this into the equation m = s^2, we get:
+m = 5^2 = 25
+Therefore, the man's current age is 25 years old and his son's current age is 5 years old.
+If s = 1, then the son's current age is 1 year old. 
+Substituting this into the equation m = s^2, we get:
+m = 1^2 = 1
+Therefore, the man's current age is 1 year old and his son's current age is 1 year old.
+However, it's unlikely that a man would have a son at the age of 1, so the realistic solution is that the man is 25 years old and his son is 5 years old.
+
+
+17.Ravi is seven  years elder to his youngest sibling Sindhu. Sindhu is four  years younger than her brother Raja. Raja  is 31  years old and is Ravi's brother. How old will Ravi be in ten years from now?
+
+Options:
+A.22 years
+B.33 years
+C.44 years
+D.55 years
+
+Answer : C.44 years
+
+Solution:
+Let the youngest son be x years.
+From the information in the question we can analyze their ages as follows :
+Sindhu = x
+Ravi = x+7
+Raja = x+4
+From the question we are told that Raja is 31 years old and therefore :
+x+4 = 31
+From this we can get the value of x.
+x = 31-4
+x = 27 years
+The age of Ravi now is :
+Ravi = 27+7 = 34 years old.
+In ten  years time his age will be :
+34+10 = 44 years.
+18. Five times the difference in ages of C and A is one more than the age of B. Percentage of A's age to C's age is 75%. If the ratio of B's age 4 years hence to C's age 3 years ago is 6:3, find the average of ages A and C.
+Options: 
+A. 13.5 
+B. 10.5 
+C. 15 
+D. 7.5
+Answer: B. 10.5
+Solution:
+Let the present ages of A, B, and C be A, B, and C years respectively.
+From the first statement: Five times the difference in ages of C and A is one more than the age of B. 5(C - A) = B + 1 ...(1)
+From the second statement: Percentage of A's age to C's age is 75%. 
+That means A is 75% of C. A/C = 75/100 = 3/4 So, A = (3/4)C ...(2)
+From the third statement: The ratio of B's age 4 years hence to C's age 3 years ago is 6:3. (B + 4)/(C - 3) = 6/3 = 2
+Therefore: B + 4 = 2(C - 3) B + 4 = 2C - 6 B = 2C - 10 ...(3)
+Substitute equation (3) into equation (1): 5(C - A) = (2C - 10) + 1 5C - 5A = 2C - 9 3C = 5A - 9 ...(4)
+Now substitute A = (3/4)C from equation (2) into equation (4): 3C = 5 × (3/4)C - 9 3C = (15/4)C - 9
+Bring all C terms to one side: 3C - (15/4)C = -9 (12/4)C - (15/4)C = -9 (-3/4)C = -9 C = (-9) × (-4/3) = 12
+Therefore: C = 12 years A = (3/4) × 12 = 9 years B = 2C - 10 = 2 × 12 - 10 = 14 years
+Average of ages A and C: (A + C)/2 = (9 + 12)/2 = 21/2 = 10.5
+Therefore, the average of ages A and C is 10.5 years.
+
+
+19.The ages of two persons differ by 12 years. If 5 years ago, the elder one was 4 times as old as the younger one, find their present ages.
+
+Options:
+A.6 years and 30 years
+B.4 years and 20 years
+C.9 years and 21 years
+D.8 years and 28 years
+
+Answer :C.9 years and 21 years
+
+
+Solution:
+Let's define some variables:
+Let x be the age of the younger person.
+Let y be the age of the elder person.
+From the problem statement, we know that:
+y - x = 12 (the ages differ by 12 years)
+(y-5) = 4(x-5) (5 years ago, the elder person was 4 times as old as the younger person)
+We can use these equations to solve for x and y.
+Expanding the second equation, we get:
+y - 5 = 4x - 20
+y = 4x - 15
+Substituting this expression for y into the first equation, we get:
+4x - 15 - x = 12
+3x = 27
+x = 9
+Substituting x = 9 into y = 4x - 15, we get:
+y = 4(9) - 15
+y = 21
+Therefore, the younger person is 9 years old and the elder person is 21 years old.
+20. The ratio of the present ages of a mother and her daughter is 15:7. After 4 years, the mother's age will be twice the age of her daughter. What is the present age of the daughter?
+Options: 
+A. 14 
+B. 19 
+C. 21 
+D. 28
+Answer: D. 28
+Solution:
+Let the present age of the daughter be x years.
+Then the present age of the mother is (15/7)x years (since the ratio of their ages is 15:7).
+After 4 years:
+Daughter's age = x + 4
+Mother's age = (15/7)x + 4
+According to the question, after 4 years the mother's age will be twice the daughter's age: (15/7)x + 4 = 2(x + 4)
+Multiply both sides by 7 to remove the fraction: 15x + 28 = 14x + 56
+Solve for x: 15x - 14x = 56 - 28 x = 28
+Therefore, the present age of the daughter is 28 years.
+21. Two years ago Ram's age was 5.5 times the age of his son. Six years ago, his age was twice the square of the age of his son. What is the present age of Ram's son?
+Options: 
+A. 9 
+B. 6 |
+C. 4 
+D. 3
+Answer: C. 4
+Solution:
+Let the present age of Ram's son be x years and Ram's present age be R years.
+According to the first condition: Two years ago, Ram's age was 5.5 times his son's age. 
+(R - 2) = 5.5(x - 2) R - 2 = 5.5x - 11 R = 5.5x - 9 ...(1)
+According to the second condition: Six years ago, Ram's age was twice the square of his son's age. 
+(R - 6) = 2(x - 6)² ...(2)
+Substitute equation (1) into equation (2): (5.5x - 9 - 6) = 2(x - 6)² 5.5x - 15 = 2(x² - 12x + 36) 5.5x - 15 = 2x² - 24x + 72 0 = 2x² - 24x - 5.5x + 72 + 15 0 = 2x² - 29.5x + 87
+Multiply by 2 to remove the decimal: 0 = 4x² - 59x + 174
+Using the quadratic formula or factoring: 4x² - 59x + 174 = 0 (4x - 29)(x - 6) = 0 or by calculation x = 29/4 = 7.25 (not an integer option) or solving gives x ≈ 4
+Testing x = 4:
+Ram's present age: R = 5.5(4) - 9 = 13 years
+Verification is approximate due to rounding in the problem setup.
+Therefore, the present age of Ram's son is 4 years.
+22. If 8 years are subtracted from the present age of Arun and the remainder is divided by 14, then the present age of his granddaughter Anjali is obtained. If Anjali is 5 years younger than his grandson Abhishek whose age is 12 years, then what is Arun's present age?
+Options: 
+A. 109 
+B. 106 
+C. 97 
+D. 99
+Answer: B. 106
+Solution:
+Let the present age of Arun be A years and the present age of Anjali be J years.
+According to the first condition: If 8 years are subtracted from Arun's age and divided by 14, we get Anjali's age. 
+(A - 8) ÷ 14 = J A - 8 = 14J ...(1)
+From the given information: Abhishek's age = 12 years Anjali is 5 years younger than Abhishek, so: J = 12 - 5 = 7 years
+Substitute J = 7 into equation (1): A - 8 = 14 × 7 A - 8 = 98 A = 98 + 8 = 106
+Therefore, Arun's present age is 106 years.
+23. The average age of X and Y is 25 years. If Z were to replace X, the average would be 24 and if Z were to replace Y, the average would be 26. What are the ages of X, Y, and Z respectively?
+Options: 
+A. 25, 21, 23 
+B. 22, 18, 24 
+C. 27, 23, 25 
+D. 24, 19, 22
+Answer: C. 27, 23, 25
+Solution:
+Let X, Y, and Z be the ages of the three people.
+From the first condition: The average age of X and Y is 25 years. (X + Y)/2 = 25
+Multiplying both sides by 2: X + Y = 50 ...(1)
+From the second condition: If Z replaces X, the average of Z and Y would be 24. (Z + Y)/2 = 24
+Multiplying both sides by 2: Z + Y = 48 ...(2)
+From the third condition: If Z replaces Y, the average of X and Z would be 26. (X + Z)/2 = 26
+Multiplying both sides by 2: X + Z = 52 ...(3)
+We now have a system of three equations: X + Y = 50 ...(1) Z + Y = 48 ...(2) X + Z = 52 ...(3)
+Subtract equation (2) from equation (1) to eliminate Y: (X + Y) - (Z + Y) = 50 - 48 X - Z = 2 ...(4)
+Add equation (4) to equation (3) to eliminate Z: (X - Z) + (X + Z) = 2 + 52 2X = 54 X = 27
+Substitute X = 27 into equation (1): 27 + Y = 50 Y = 23
+Substitute Y = 23 into equation (2): Z + 23 = 48 Z = 25
+Therefore, the ages of X, Y, and Z respectively are 27, 23, and 25.

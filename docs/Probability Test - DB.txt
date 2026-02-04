@@ -1,0 +1,510 @@
+﻿1. In a deck of 52 cards, what is the probability of drawing a red card (hearts or diamonds)?
+
+
+Options:
+A. 13/52
+B. 26/52
+C. 1/2
+D. 2/3
+
+Answer: C. 1/2
+
+
+Solution:
+There are 26 red cards (13 hearts and 13 diamonds) in a deck of 52 cards.
+Therefore, the probability of drawing a red card = 26/52 = 13/26 =1/2
+2. Out of 20 applicants, there are 12 engineers and 8 doctors. Three persons are to be selected for a project team. Find the probability that at least one of the selected persons will be an engineer.
+Options: 
+A. 256/285
+B. 261/285
+C. 266/285
+D. 271/285
+Answer: D. 271/285
+Explanation:
+We use the complementary probability approach: P(at least one engineer) = 1 - P(no engineers) = 1 - P(all 3 are doctors)
+Step 1: Calculate total ways to select 3 persons from 20: C(20, 3) = 20!/(3!×17!) = (20×19×18)/(3×2×1) = 6840/6 = 1140
+Step 2: Calculate ways to select 3 doctors from 8: C(8, 3) = 8!/(3!×5!) = (8×7×6)/(3×2×1) = 336/6 = 56
+Step 3: Calculate probability of all 3 being doctors: P(all doctors) = C(8,3)/C(20,3) = 56/1140
+Simplifying: 56/1140 (divide both by 4) = 14/285
+Step 4: Calculate probability of at least one engineer: P(at least one engineer) = 1 - 14/285 = (285-14)/285 = 271/285
+
+
+3. In a cooking competition, there are 10 chefs participating. The chance that Chef A will win is 1/5, that Chef B will win is 1/8, and that Chef C will win is 1/12. Assuming that a dead heat is impossible, find the chance that one of them will win.
+Options: 
+A. 41/120
+B. 45/120
+C. 49/120
+D. 53/120
+Answer: C. 49/120
+Explanation:
+Since only one chef can win, the events are mutually exclusive.
+The required probability = P(A wins) + P(B wins) + P(C wins) = 1/5 + 1/8 + 1/12
+Finding the common denominator: LCM of 5, 8, and 12 = 120
+Converting each fraction:
+1/5 = 1/5 × 24/24 = 24/120
+1/8 = 1/8 × 15/15 = 15/120
+1/12 = 1/12 × 10/10 = 10/120
+Sum = 24/120 + 15/120 + 10/120 = (24 + 15 + 10)/120 = 49/120
+
+4.The probability that Mark will pass a test is 1/4. What is the probability that he passes at least one out of 6 tests?
+
+Options:
+A. 15/16
+B. 31/32
+C. 63/64
+D. 127/128
+
+Answer: C. 63/64
+
+
+Solution:
+The probability that Mark will fail a test = 3/4.
+The probability that Mark will fail all 6 tests = (3/4)^6 = 729/4096.
+Hence, the probability that Mark will pass at least one test = 1 - 729/4096 = 63/64.
+
+
+5.In a drawer, Sarah has three pairs of socks - one red, one blue, and one green. She also has four pairs of shoes - one brown, one black, and two white. If she blindly picks one pair of socks and one pair of shoes, what is the likelihood that neither the socks nor the shoes are red?
+
+
+Options:
+A. 1/12
+B. 1/6
+C. 1/2
+D. 1/4
+
+Answer: C. 1/2
+
+
+Solution:
+Probability that socks are not red = 2/3
+Probability that shoes are not red = 3/4
+Required probability = (2/3) x (3/4) = 1/2
+
+
+6.Two dice are thrown together. What is the probability that the sum of the numbers on the two faces is an even number?
+
+
+Options:
+A. 1/3
+B. 1/2
+C. 2/3
+D. 3/4
+
+
+Answer: B. 1/2
+
+
+Solution:
+Clearly n(S) = 6 x 6 = 36
+Let E be the event that the sum of the numbers on the two faces is even.
+E = {(1,1), (1,3), (1,5), (2,2), (2,4), (2,6), (3,1), (3,3), (3,5), (4,2), (4,4), (4,6), (5,1), (5,3), (5,5), (6,2), (6,4), (6,6)}
+n(E) = 18
+Hence, P(E) = n(E)/n(S) = 18/36 = 1/2
+7. Two dice are thrown together. What is the probability that the sum of the numbers is odd?
+
+
+Options: 
+A. 1/6
+B. 1/4
+C. 1/2
+D. 1
+Answer: C. 1/2
+Explanation:
+Method 1 (Counting): Total number of possible outcomes when throwing two dice = 6 × 6 = 36
+For the sum to be odd, we need one die to show an odd number and the other to show an even number.
+Favorable cases for odd sum:
+Die 1 odd, Die 2 even: (1,2), (1,4), (1,6), (3,2), (3,4), (3,6), (5,2), (5,4), (5,6) = 9 cases
+Die 1 even, Die 2 odd: (2,1), (2,3), (2,5), (4,1), (4,3), (4,5), (6,1), (6,3), (6,5) = 9 cases
+Total favorable cases = 9 + 9 = 18
+P(odd sum) = 18/36 = 1/2
+8.Two dice are thrown together. What is the probability that the product of the numbers is even?
+Options: 
+A. 1/4
+B. 1/3
+C. 1/2
+D. 3/4
+Answer: D. 3/4
+Explanation:
+Method 1 (Complementary Probability - Easiest):
+Total number of possible outcomes = 36
+For the product to be even, at least one die must show an even number.
+Using complementary probability: P(product is even) = 1 - P(product is odd)
+The product is odd ONLY when BOTH dice show odd numbers.
+Odd numbers on each die: 1, 3, 5 (3 options out of 6)
+P(both dice show odd) = (3/6) × (3/6) = 9/36 = 1/4
+Therefore: P(product is even) = 1 - 1/4 = ¾
+
+
+9.One bag contains 4 white and 6 blue marbles, while another bag contains 3 white and 5 blue marbles. If one marble is drawn from each bag, what is the probability that one marble is white and one is blue?
+ Options:
+A. 1/4
+B. 1/5
+C. 3/10
+D. 19/40
+Answer: D. 19/40
+Solution:
+Bag 1: 4 white, 6 blue → total 10
+Bag 2: 3 white, 5 blue → total 8
+Event A: White from Bag 1, Blue from Bag 2
+P(A) = (4/10) × (5/8) = 20/80 = 1/4
+Event B: Blue from Bag 1, White from Bag 2
+P(B) = (6/10) × (3/8) = 18/80 = 9/40
+Total probability = P(A) + P(B) = 1/4 + 9/40 = 10/40 + 9/40 = 19/40
+Correct Answer = 19/40
+10. In a raffle, tickets numbered consecutively from 500 through 799 are placed in a box. What is the probability that a ticket selected at random will have a hundreds digit of 5?
+Options: 
+A. 1/4
+B. 1/3
+C. 2/5
+D. 1/2
+Answer: B. 1/3
+Explanation:
+Total number of tickets = 799 - 500 + 1 = 300
+Tickets with hundreds digit of 5 are those in the range 500-599. 
+Within the available range (500-799), the tickets with hundreds digit 5 are: 500, 501, 502, ..., 599
+Number of such tickets = 599 - 500 + 1 = 100
+Probability = Number of favorable outcomes / Total number of outcomes = 100/300 = 1/3
+Verification:
+Tickets 500-599: hundreds digit = 5  (100 tickets)
+Tickets 600-699: hundreds digit = 6 (100 tickets)
+Tickets 700-799: hundreds digit = 7 (100 tickets)
+Total = 300 tickets 
+P(hundreds digit 5) = 100/300 = 1/3 
+11.A bag contains 15 marbles numbered 1 to 15. A marble is drawn, and then another marble is drawn without replacement. Find the probability that both marbles will have prime numbers.
+Options: 
+A. 1/7
+B. 2/15
+C. 4/15
+D. 1/5
+Answer: A. 1/7
+Explanation:
+Prime numbers from 1 to 15: 2, 3, 5, 7, 11, 13 Total prime numbers = 6
+Step 1: Probability that the first marble shows a prime number P(1st prime) = 6/15 = 2/5
+Step 2: After drawing one prime marble (without replacement):
+Remaining prime marbles = 6 - 1 = 5
+Remaining total marbles = 15 - 1 = 14
+P(2nd prime | 1st prime) = 5/14
+Step 3: Probability that both marbles show prime numbers P(both prime) = P(1st prime) × P(2nd prime | 1st prime) = (6/15) × (5/14) = (2/5) × (5/14) = 10/70 = 1/7
+12.When 4 fair dice are rolled together, what is the probability of getting at least two even numbers?
+Options:
+A. 7/16
+B. 1/4
+C. 1/2
+D. 11/16
+Answer: D. 11/16
+Solution:
+Total outcomes when 4 dice are rolled = 6⁴ = 1296
+Probability of even number on a single die = 3/6 = 1/2
+Probability of odd number on a single die = 1/2
+Let X = number of even numbers in 4 dice. We want P(X ≥ 2) = 1 − P(X = 0 or 1)
+P(X = 0) = all odd = (1/2)⁴ = 1/16
+P(X = 1) = 1 even and 3 odd = C(4,1) × (1/2)¹ × (1/2)³ = 4 × 1/16 = 1/4
+P(X ≥ 2) = 1 − (1/16 + 1/4) = 1 − (1/16 + 4/16) = 1 − 5/16 = 11/16
+13.Nine paintings, consisting of three landscapes, four portraits, and two abstract artworks, are arranged on a wall at random. What is the probability that the paintings of each type are all together?
+ Options:
+A. 1/84
+B. 2/210
+C. 1/210
+D. 4/84
+Answer: C. 1/210
+Solution:
+Total number of arrangements of all 9 paintings = 9! = 362,880
+Favorable arrangements:
+Treat each type as a single block → 3 blocks can be arranged in 3! = 6 ways
+Within each block, paintings can be arranged among themselves:
+Landscapes: 3! = 6
+Portraits: 4! = 24
+Abstracts: 2! = 2
+Total favorable arrangements = 3! × 3! × 4! × 2! = 6 × 6 × 24 × 2 = 1,728
+Probability = favorable / total = 1,728 / 362,880 = 1/210
+14. In a cooking competition, the odds in favor of chefs A, B, C, and D winning are 2:5, 1:3, 2:7, and 1:4, respectively. What is the probability that one of them wins the competition?
+Options: 
+A. 1207/1260
+B. 121/126
+C. 403/420
+D. 201/210
+Answer: A. 1207/1260
+Explanation:
+Converting odds to probabilities:
+Odds in favor of A = 2:5 → P(A) = 2/(2+5) = 2/7
+Odds in favor of B = 1:3 → P(B) = 1/(1+3) = 1/4
+Odds in favor of C = 2:7 → P(C) = 2/(2+7) = 2/9
+Odds in favor of D = 1:4 → P(D) = 1/(1+4) = 1/5
+Since the events are mutually exclusive: P(one of them wins) = P(A) + P(B) + P(C) + P(D)
+Finding LCM of 7, 4, 9, 5 = 1260
+Converting to common denominator:
+2/7 = 360/1260
+1/4 = 315/1260
+2/9 = 280/1260
+1/5 = 252/1260
+Sum = (360 + 315 + 280 + 252)/1260 = 1207/1260
+
+15.A fair six-sided die is rolled repeatedly. If a 1 appears on the first three rolls, what is the probability of rolling a 6 on the fourth roll?
+
+
+Options:
+A. 1/2
+B. 1/6
+C. 5/6
+D. 1/3
+
+Answer: B. ⅙
+
+
+Solution:
+Since the die is fair, every roll is independent of any other roll. 
+Hence, the probability of rolling a 6 on the fourth roll is 1/6.
+16.A bag contains marbles numbered from 1 to 40. If one marble is drawn at random, what is the probability that the drawn marble has a number that is a multiple of 4 or 7?
+ Options:
+A. 7/20
+B. 9/20
+C. 11/20
+D. 1/3
+Answer: A. 7/20
+Solution:
+Total marbles = 40 → sample space, n(S) = 40
+Multiples of 4 from 1 to 40 = 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 → 10 numbers
+Multiples of 7 from 1 to 40 = 7, 14, 21, 28, 35 → 5 numbers
+Note: 28 is counted twice (common multiple of 4 and 7) → subtract 1 to avoid double counting
+Total favorable numbers = 10 + 5 − 1 = 14
+Probability = n(E)/n(S) = 14 / 40 = 7 / 20
+17.Three students appear at an examination of Science. The probability of their success are 1/2, 1/3, and 1/4 respectively. Find the probability of success for at least two of them.
+Options: 
+A. 1/4
+B. 5/24
+C. 7/24
+D. 1/3
+Answer: C. 7/24
+Explanation:
+Let A, B, C be the three students with:
+P(A succeeds) = 1/2, P(A fails) = 1/2
+P(B succeeds) = 1/3, P(B fails) = 2/3
+P(C succeeds) = 1/4, P(C fails) = 3/4
+For at least two to succeed, we need:
+Exactly 2 succeed, OR
+All 3 succeed
+Case 1: A and B succeed, C fails P = (1/2) × (1/3) × (3/4) = 3/24 = 1/8
+Case 2: A and C succeed, B fails P = (1/2) × (2/3) × (1/4) = 2/24 = 1/12
+Case 3: B and C succeed, A fails P = (1/2) × (1/3) × (1/4) = 1/24
+Case 4: All three succeed P = (1/2) × (1/3) × (1/4) = 1/24
+Total probability: = 3/24 + 2/24 + 1/24 + 1/24 = 7/24
+Answer: C. 7/24 
+18.Five boys and four girls stand in a queue. What is the probability that they stand in alternate positions (boy-girl-boy-girl...)?
+Options: 
+A. 1/252
+B. 1/126
+C. 1/63
+D. 1/36
+Answer: B. 1/126
+Explanation:
+Total number of people = 5 boys + 4 girls = 9 people
+Total arrangements: 9! = 362,880
+Favorable arrangements (alternating positions):
+Since we have 5 boys and 4 girls, the only alternating pattern possible is: B G B G B G B G B (must start and end with a boy)
+In this pattern:
+5 boys occupy positions 1, 3, 5, 7, 9
+4 girls occupy positions 2, 4, 6, 8
+Number of ways to arrange:
+Boys in their positions: 5! = 120 ways
+Girls in their positions: 4! = 24 ways
+Total favorable arrangements = 5! × 4! = 120 × 24 = 2,880
+Probability = Favorable arrangements / Total arrangements = 2,880 / 362,880 = 1/126
+
+19.Eight green cards and five yellow cards are randomly placed in a row. Find the probability that no two yellow cards are placed adjacent to each other.
+
+Options:
+A. 42/618
+B. 7/560
+C. 3/680
+D. 42/429
+
+Answer: D. 42/429
+
+
+Solution:
+The total ways of placing eight green cards and five yellow cards in a row = 13! / 8! / 5! = 1287.
+The number of ways in which no two yellow cards are placed next to each other:
+Assume that eight green cards are placed in a continuous line with gaps before and after each card. 
+There are totally 9 such gaps. 
+Out of these 9 gaps, 5 gaps should be chosen in order to place the yellow cards. 
+There are a total of 9C5 = 126 ways in which this can be done.
+Hence, the required probability = 126/1287 = 42/429.
+
+
+20.A card is drawn at random from a standard deck of 52 cards. What is the probability that it is neither a heart nor a queen?
+
+Options:
+A. 11/13
+B. 2/13
+C. 9/13
+D. 12/13
+
+Answer: C. 9/13
+
+
+Solution:
+There are 13 hearts in a deck, including a queen, and there are 3 more queens of other suits.
+Probability of getting a heart or a queen:
+= (13 + 3)/52
+= 16/52
+= 4/13
+Therefore, the probability of getting neither a heart nor a queen:
+= 1 − 4/13
+= 9/13.
+
+
+21.Two friends, Rohit and Rahul, appear for a job interview. The probability of selection for Rohit is 3/8, and for Rahul, it's 1/4. Find the probability that both of them are selected.
+
+
+Options:
+A. 3/32
+B. 1/16
+C. 3/16
+D. 1/8
+
+Answer: A. 3/32
+
+
+Solution:
+Let A be the event that Rohit is selected and B is the event that Rahul is selected.
+P(A) = 3/8
+P(B) = 1/4
+Let C be the event that both are selected.
+P(C) = P(A) x P(B) as A and B are independent events:
+= (3/8) x (1/4) = 3/32.
+
+
+22.Person X tells the truth in 60% of cases, and Person Y tells the truth in 75% of cases. In what percent of cases are they likely to contradict each other in narrating the same event?
+ Options:
+A. 35%
+B. 40%
+C. 45%
+D. 60%
+Answer: C. 45%
+Solution:
+Contradiction occurs when:
+X tells the truth and Y lies
+X lies and Y tells the truth
+Probability X tells the truth = 60% = 3/5
+Probability X lies = 1 - 3/5 = 2/5
+Probability Y tells the truth = 75% = 3/4
+Probability Y lies = 1 - 3/4 = 1/4
+Probability of contradiction = (X truth × Y lies) + (X lies × Y truth)
+= (3/5 × 1/4) + (2/5 × 3/4)
+= 3/20 + 6/20
+= 9/20 = 0.45 = 45%
+
+
+23. A family has 4 babies. What is the probability that at least one of the babies is a boy?
+ Options:
+A. 15/16
+B. 1/16
+C. 7/8
+D. 1/8
+Answer: A. 15/16
+Solution:
+Total number of outcomes when each baby can be a boy (B) or girl (G) = 2⁴ = 16
+The only case with no boys is all girls: GGGG → 1 outcome
+So, the number of favorable cases for at least one boy = Total outcomes – All girls outcome = 16 – 1 = 15
+Probability = Favorable outcomes / Total outcomes = 15 / 16
+
+
+24.What is the probability of drawing a face card (king, queen, or jack) when a card is drawn from a standard deck of 52 cards?
+
+
+Options:
+A. 4/13
+B. 9/13
+C. 12/13
+D. 3/13
+
+Answer: D. 3/13
+
+
+Solution:
+Total Cards = 52. 
+Face Cards (Kings, Queens, Jacks) = 4 from each suit, 3 suits, total 12 face cards.
+P(E) = 12/52 = 3/13
+
+
+25.In a box, there are 5 red balls and 8 green balls. Two balls are drawn, one after the other without replacement. What is the probability that the first ball is red and the second ball is green?
+
+
+Options:
+A. 10/39
+B. 8/13
+C. 5/13
+D. 15/39
+
+Answer: A. 10/39
+
+
+Solution:
+P(First red, then green) = (5/13) * (8/12) = 40/156 = 10/39
+
+
+26.Two cards are drawn from a deck of 52 cards. Find the probability that both cards are hearts or both cards are aces.
+
+
+Options:
+A. (13C2 + 4C2) / 52C2
+B. (13C2 + 4C2) / 50C2
+C. (4C2 + 13C2) / 52C2
+D. (4C2 + 13C2) / 50C2
+
+Answer: A. (13C2 + 4C2) / 52C2
+
+
+Solution:
+Total no. of ways = 52C2
+Case I: Both cards are hearts = 13C2
+Case II: Both cards are aces = 4C2
+P(both hearts or both aces) = (13C2 + 4C2) / 52C2
+
+
+27.Three coins are tossed. What is the probability of getting at least one head?
+
+
+Options:
+A. 7/8
+B. 1/8
+C. 15/16
+D. 9/16
+
+Answer: A. 7/8
+
+
+Solution:
+Total number of outcomes = 2^3 = 8
+Probability of getting at least one head
+= 1 - Probability of getting no heads
+= 1 - (1/8) = 7/8
+28.Three friends A, B, and C are playing a game (with possibly other outcomes like a draw or other winners). The probability that A wins is 3/8, the probability that B wins is 2/5, and the probability that C wins is 1/6. Assuming these are independent events, what is the probability that at least one of them wins the game?
+Options: 
+ A. 121/240
+B. 119/240
+C. 165/240
+D. 119/241
+Answer: C. 165/240
+Explanation:
+Using complementary probability: 
+P(at least one of A, B, or C wins) = 1 - P(none of them wins)
+Assuming the events are independent: 
+P(A doesn't win) = 1 - 3/8 = 5/8 P(B doesn't win) = 1 - 2/5 = 3/5 P(C doesn't win) = 1 - 1/6 = 5/6
+P(none of them wins) = (5/8) × (3/5) × (5/6) = (5 × 3 × 5) / (8 × 5 × 6) = 75/240 = 5/16
+Therefore: P(at least one wins) = 1 - 75/240 = 240/240 - 75/240 = 165/240
+29. A month is randomly selected from a non-leap year. What is the probability that the selected month has exactly 30 days?
+Options: 
+A. 1/4
+B. 1/3
+C. 5/12
+D. 7/12
+Answer: B. 1/3
+Explanation:
+In a non-leap year, there are 12 months total.
+Months categorized by number of days:
+28 days: February (1 month)
+30 days: April, June, September, November (4 months)
+31 days: January, March, May, July, August, October, December (7 months)
+Total months = 1 + 4 + 7 = 12
+Probability of selecting a month with exactly 30 days: = Number of 30-day months / Total number of months = 4/12 = 1/3
