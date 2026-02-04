@@ -159,31 +159,37 @@ def write_to_csv(questions, output_path):
 
 
 def main():
-    """Main function to process all txt files and create CSV."""
+    """Main function to process all txt files and create individual CSV files."""
     # Paths
-    docs_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/docs')
-    output_csv = '/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/questions.csv'
+    base_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib')
+    docs_dir = base_dir / 'docs'
+    csv_dir = base_dir / 'csv'
+
+    # Create csv directory if it doesn't exist
+    csv_dir.mkdir(exist_ok=True)
 
     # Find all txt files
-    txt_files = list(docs_dir.glob('**/*.txt'))
+    txt_files = list(docs_dir.glob('*.txt'))
 
     print(f"Found {len(txt_files)} txt files:")
-    for f in txt_files:
-        print(f"  - {f}")
 
-    # Parse all questions from all files
-    all_questions = []
+    # Process each txt file and create a corresponding CSV
     for txt_file in txt_files:
-        print(f"\nParsing: {txt_file.name}")
+        print(f"\nProcessing: {txt_file.name}")
+
+        # Parse questions from this file
         questions = parse_questions_from_file(txt_file)
         print(f"  Found {len(questions)} questions")
-        all_questions.extend(questions)
 
-    # Write to CSV
-    print(f"\nWriting {len(all_questions)} questions to {output_csv}")
-    write_to_csv(all_questions, output_csv)
+        # Create output CSV filename (same as txt file but with .csv extension)
+        csv_filename = txt_file.stem + '.csv'
+        output_csv = csv_dir / csv_filename
 
-    print("Done!")
+        # Write to individual CSV
+        print(f"  Writing to: {output_csv}")
+        write_to_csv(questions, output_csv)
+
+    print(f"\nDone! Created {len(txt_files)} CSV files in {csv_dir}/")
 
 
 if __name__ == '__main__':
