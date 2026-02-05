@@ -9,3 +9,7 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+csv/
+docs/
+docs-txt/
