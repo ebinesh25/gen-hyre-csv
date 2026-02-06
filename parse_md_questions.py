@@ -35,7 +35,6 @@ def parse_questions_from_file(file_path):
 
     return questions
 
-
 def remove_markdown_formatting(text):
     """Remove markdown formatting from text."""
     # Remove bold markers
@@ -47,7 +46,6 @@ def remove_markdown_formatting(text):
     # Remove links [text](url)
     text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
     return text
-
 
 def process_base64_images(text):
     """
@@ -76,7 +74,6 @@ def process_base64_images(text):
     # Replace all base64 images with S3 URLs
     return re.sub(pattern, replace_base64_with_s3, text)
     # return re.sub(pattern, "IMAGE_URL", text)
-
 
 def parse_single_question(content):
     """Parse a single question with its options, answer, and solution."""
@@ -216,7 +213,6 @@ def parse_single_question(content):
         'explanation': explanation
     }
 
-
 def write_to_csv(questions, output_path):
     """Write questions to CSV file in the specified format."""
     # CSV headers with 4 option columns and extra empty columns
@@ -257,7 +253,6 @@ def write_to_csv(questions, output_path):
                 '', '', '', '', ''
             ]
             writer.writerow(row)
-
 
 def main():
     """Main function to process all md files and create individual CSV files."""

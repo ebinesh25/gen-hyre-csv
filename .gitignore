@@ -13,3 +13,6 @@ wheels/
 csv/
 docs/
 docs-txt/
+
+# Temp files for API
+temp/
