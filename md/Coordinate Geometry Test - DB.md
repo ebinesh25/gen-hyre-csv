@@ -1,0 +1,197 @@
+1.Find the area of the triangle formed by the vertices (-2, 1), (6, 3), and (3, 8).
+
+**Options:**
+
+A. 17
+
+B. 23
+
+C. 19.5
+
+D. 20.5
+
+**Answer : B. 23**
+
+**Solution:**
+
+The area of the triangle with vertices (x1, y1), (x2, y2), and (x3, y3) is given by:
+
+Area = 1/2 \* |x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)|
+
+Area = 1/2 \* (-2(3 - 8) + 6(8 - 1) + 3(1 - 3))
+
+Area = 1/2 \* (-2(-5) + 6(7) + 3(-2))
+
+Area = 1/2 \* (10 + 42 - 6)
+
+Area = 1/2 \* 46
+
+Area = 23.
+
+2.Find the distance of the point F (7, -24) from the origin.
+
+**Options:**
+
+A. 25
+
+B. 26
+
+C. 27
+
+D. 28
+
+**  
+Answer : A. 25**
+
+**Solution:**
+
+The distance from the origin (0,0) can be calculated using the distance formula:
+
+Distance = √((0 - 7)^2 + (0 - (-24))^2)
+
+Distance = √(49 + 576)
+
+Distance = √625 = 25 units.
+
+3.If the points P(1, 3), Q(S, 6), and R(5, 8) are collinear, then S =?
+
+**Options:**
+
+A. 2/5
+
+B. 17/5
+
+C. 4
+
+D. 5
+
+**  
+Answer : B. 17/5**
+
+**Solution:**
+
+To check for collinearity, calculate the slope of PQ and QR and set them equal to each other:
+
+Slope of PQ = (6 - 3) / (S - 1)
+
+Slope of QR = (8 - 6) / (5 - S)
+
+Since the points are collinear, the slopes are equal:
+
+(6 - 3) / (S - 1) = (8 - 6) / (5 - S)
+
+3 / (S - 1) = 2 / (5 - S)
+
+Cross-multiply and solve for S:
+
+3(5 - S) = 2(S - 1)
+
+15 - 3S = 2S - 2
+
+15 + 2 = 2S + 3S
+
+17 = 5S
+
+S = 17 / 5
+
+4\. Determine the number of points, having both coordinates as integers, that are located within the interior of the triangle with vertices at (0,0), (0,27), and (27,0).
+
+**Options:  
+**A. 364  
+B. 405  
+C. 325  
+D. 324
+
+**Answer: C. 325**
+
+**Solution:  
+**The triangle has vertices at (0,0), (0,27), and (27,0).
+
+The equation of the line connecting (0,27) and (27,0) is: x/27 + y/27 = 1  
+Therefore: x + y = 27
+
+For interior points (strictly inside the triangle):
+
+x > 0
+
+y > 0
+
+x + y < 27
+
+We need to count integer points (x, y) where x and y are positive integers and x + y < 27.
+
+Method: Count by summing valid y values for each x
+
+For x = 1: x + y < 27 means y < 26, so y ∈ {1, 2, 3, ..., 25} → 25 points  
+For x = 2: y < 25, so y ∈ {1, 2, 3, ..., 24} → 24 points For x = 3: y < 24, so y ∈ {1, 2, 3, ..., 23} → 23 points ...  
+For x = 24: y < 3, so y ∈ {1, 2} → 2 points For x = 25: y < 2, so y = 1 → 1 point  
+For x ≥ 26: No valid positive y values
+
+Total number of interior points:
+
+Total = 25 + 24 + 23 + ... + 2 + 1
+
+This is the sum of first 25 natural numbers:
+
+Total = n(n + 1)/2 where n = 25
+
+Total = 25 × 26/2
+
+Total = 650/2
+
+Total = 325
+
+Alternative Formula:
+
+For a right triangle with vertices at (0,0), (0,n), and (n,0), the number of interior lattice points is given by:
+
+Interior points = (n-1)(n-2)/2
+
+For n = 27: Interior points = (26)(25)/2 = 650/2 = 325
+
+Therefore, there are 325 interior lattice points in the triangle.
+
+5\. Calculate the area of the closed region bounded by the equation |x| + |y| = 4 in the two-dimensional plane.
+
+**Options:  
+**A. 32  
+B. 16  
+C. 16π  
+D. 64
+
+**Answer: A. 32**
+
+**Solution:  
+**The equation |x| + |y| = 4 represents a closed region in the xy-plane.
+
+Step 1: Find the vertices of the region
+
+To find where the boundary intersects the axes, substitute x = 0 or y = 0:
+
+When x = 0: |0| + |y| = 4 → |y| = 4 → y = ±4 Points: (0, 4) and (0, -4)
+
+When y = 0: |x| + |0| = 4 → |x| = 4 → x = ±4 Points: (4, 0) and (-4, 0)
+
+Step 2: Identify the shape
+
+The four vertices are: (4, 0), (0, 4), (-4, 0), (0, -4)
+
+Connecting these points forms a square rotated 45° (diamond shape).
+
+Step 3: Calculate the diagonal
+
+The distance between (4, 0) and (-4, 0) is 8 units. The distance between (0, 4) and (0, -4) is 8 units.
+
+Both diagonals = 8 units
+
+Step 4: Calculate the side length
+
+For a square with diagonal d, the side length s is: s = d/√2
+
+s = 8/√2 = 8/√2 × √2/√2 = 8√2/2 = 4√2
+
+Step 5: Calculate the area
+
+Area of square = s²
+
+Area = (4√2)² = 16 × 2 = 32 square units

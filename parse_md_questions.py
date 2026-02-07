@@ -7,6 +7,8 @@ import csv
 import re
 from pathlib import Path
 from base_img_s3 import upload_base64_image_to_s3
+from doc2md import convert_docx_to_md
+
 
 def parse_questions_from_file(file_path):
     """Parse questions from a markdown file."""
@@ -19,9 +21,10 @@ def parse_questions_from_file(file_path):
     # This is needed because some markdown files escape question numbers
     content = content.replace(r'\.', '.')
 
-    # Split by question number pattern at line start (e.g., "1.", "2.", etc.)
-    # Use positive lookbehind to keep the question number with content
-    pattern = r'(?m)^(?=\d+\.)'
+    # Split by question number pattern at line start.
+    # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", with whitespace variations
+    # Uses negative lookahead (?!\d) to avoid matching decimals like "1.1236"
+    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|\s*\d+\s*(?:\\.)?\.\s*(?!\d))'
     parts = re.split(pattern, content)
 
     for part in parts:
@@ -79,8 +82,9 @@ def parse_single_question(content):
     """Parse a single question with its options, answer, and solution."""
 
     # Extract question text - from the number up to "**Options:**" or first option
-    # First remove the question number prefix
-    content = re.sub(r'^\d+\.\s*', '', content, count=1)
+    # First remove the question number prefix (handles bold, whitespace, and escaped variations)
+    # Uses negative lookahead (?!\d) to avoid removing decimals like "1.1236"
+    content = re.sub(r'^\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|^\s*\d+\s*(?:\\.)?\.\s*(?!\d)', '', content, count=1)
 
     # Split into lines
     lines = content.split('\n')
@@ -254,11 +258,21 @@ def write_to_csv(questions, output_path):
             ]
             writer.writerow(row)
 
+# def create_md_dir():
+#     pass
+
 def main():
     """Main function to process all md files and create individual CSV files."""
     # Paths
     base_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib')
-    md_dir = base_dir / 'md'
+
+    docx_path = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/docs')
+    md_output_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/md')
+
+    md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
+    # convert_docx_to_md("document.docx", "output")
+
+    md_dir = md_output_dir
     csv_dir = base_dir / 'csv'
 
     # Create csv directory if it doesn't exist
