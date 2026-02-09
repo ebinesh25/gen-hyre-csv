@@ -334,14 +334,14 @@ wheels = [
 
 [[package]]
 name = "doc-to-md-cli"
-version = "0.1.1"
+version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "playwright" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7d/63/6c747acc513e77adbf7b953bc361afe25f98abeb3a6a348c781d70934547/doc_to_md_cli-0.1.1.tar.gz", hash = "sha256:ed1109f0056bdb196681b4bc2d7450cdeb44b4d6de0e91c6bcf7b165f7cde1f5", size = 25122, upload-time = "2026-02-06T10:36:20.822Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4a/cf/c569eaca8380bc75c5138a22cc2fbe6a866af82cdefb0b35c75bd003e227/doc_to_md_cli-0.1.2.tar.gz", hash = "sha256:d263e31cd38f959a8c452b5dd9851eb28be95784e1948fd5dd555e8f04d9a9a7", size = 25125, upload-time = "2026-02-09T10:41:33.675Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b3/b6/28edf7f2a2af08a9acbb0c621af4d3f9daa5e3dd6a4aea5aabd195b291c4/doc_to_md_cli-0.1.1-py3-none-any.whl", hash = "sha256:11d14ef326177172225cfd3c820326e88106ad881a7e173310ba6c9265e32f64", size = 4591, upload-time = "2026-02-06T10:36:18.858Z" },
+    { url = "https://files.pythonhosted.org/packages/6b/10/6a5b38d362752423174d1f31d5052ba03bf7b5eb13d87abd044e8fc114fc/doc_to_md_cli-0.1.2-py3-none-any.whl", hash = "sha256:4400b64bba1c68cc166053382748962d0e102f6f940ab0823a1ae417822e2e97", size = 4596, upload-time = "2026-02-09T10:41:35.011Z" },
 ]
 
 [[package]]
@@ -545,7 +545,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = ">=1.42.42" },
-    { name = "doc-to-md-cli", specifier = ">=0.1.1" },
+    { name = "doc-to-md-cli", specifier = ">=0.1.2" },
     { name = "fastapi", specifier = ">=0.115.0" },
     { name = "gspread", specifier = ">=6.2.1" },
     { name = "pandas", specifier = ">=2.3.3" },
