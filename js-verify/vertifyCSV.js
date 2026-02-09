@@ -1,0 +1,210 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import CSVParser from './csvParser.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const ROOT_DIR = path.dirname(__dirname);
+const SOURCE_DIR = path.join(ROOT_DIR, 'aptitude-topics-csv');
+const VERIFIED_DIR = path.join(__dirname, 'verified-csv');
+const FAILED_DIR = path.join(__dirname, 'failed-csv');
+
+// Configuration
+const CONFIG = {
+  maxOptionCount: 4,
+  maxTestCaseCount: 10,
+  features: {
+    hasQuestionExplanationFeature: true,
+  },
+};
+
+// Parse CSV file into array of rows
+function parseCSV(filePath) {
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const rows = [];
+  let currentRow = [];
+  let inQuotes = false;
+  let currentCell = '';
+
+  for (let i = 0; i < content.length; i++) {
+    const char = content[i];
+    const nextChar = content[i + 1];
+
+    if (char === '"') {
+      if (inQuotes && nextChar === '"') {
+        // Escaped quote
+        currentCell += '"';
+        i++;
+      } else {
+        // Toggle quote mode
+        inQuotes = !inQuotes;
+      }
+    } else if (char === ',' && !inQuotes) {
+      // End of cell
+      currentRow.push(currentCell);
+      currentCell = '';
+    } else if ((char === '\r' || char === '\n') && !inQuotes) {
+      // End of row
+      if (currentCell || currentRow.length > 0) {
+        currentRow.push(currentCell);
+      }
+      if (currentRow.length > 0) {
+        rows.push(currentRow);
+      }
+      currentRow = [];
+      currentCell = '';
+      // Skip \r\n
+      if (char === '\r' && nextChar === '\n') {
+        i++;
+      }
+    } else {
+      currentCell += char;
+    }
+  }
+
+  // Add last row/cell
+  if (currentCell || currentRow.length > 0) {
+    currentRow.push(currentCell);
+    rows.push(currentRow);
+  }
+
+  return rows;
+}
+
+// Validate a single CSV file
+function validateCSV(filePath) {
+  try {
+    const rows = parseCSV(filePath);
+    const parser = new CSVParser(path.basename(filePath));
+
+    // Filter out empty rows
+    const dataRows = rows.filter(row => row.length > 0 && row[0] && row[0].trim());
+
+    if (dataRows.length === 0) {
+      return { valid: false, error: 'No data rows found', rowCount: 0 };
+    }
+
+    // Validate row by row to get better error info
+    let validResult = [];
+    let rowIndex = 0;
+    for (const row of dataRows) {
+      const questionType = row[0].replaceAll(' ', '').toLowerCase();
+
+      if (questionType === 'questiontype') {
+        rowIndex++;
+        continue;
+      }
+
+      try {
+        const [result, error] = parser.validate(
+          [row],
+          CONFIG.maxOptionCount,
+          CONFIG.maxTestCaseCount,
+          CONFIG.features
+        );
+
+        if (error) {
+          const questionPreview = row[1] ? row[1].substring(0, 50) : '(no question)';
+          return {
+            valid: false,
+            error: `Row ${rowIndex}: ${error} - Question: "${questionPreview}..."`,
+            rowCount: dataRows.length
+          };
+        }
+        if (result && result.length > 0) {
+          validResult.push(result[0]);
+        }
+      } catch (e) {
+        const questionPreview = row[1] ? row[1].substring(0, 50) : '(no question)';
+        return {
+          valid: false,
+          error: `Row ${rowIndex}: ${e.message} - Question: "${questionPreview}..."`,
+          rowCount: dataRows.length
+        };
+      }
+      rowIndex++;
+    }
+
+    return {
+      valid: true,
+      rowCount: dataRows.length - 1, // Exclude header
+      questionCount: validResult.length,
+    };
+  } catch (e) {
+    return { valid: false, error: e.message, rowCount: 0 };
+  }
+}
+
+// Main verification function
+function verifyAllCSVs() {
+  // Create output directories
+  if (!fs.existsSync(VERIFIED_DIR)) {
+    fs.mkdirSync(VERIFIED_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(FAILED_DIR)) {
+    fs.mkdirSync(FAILED_DIR, { recursive: true });
+  }
+
+  // Get all CSV files from source directory
+  const files = fs.readdirSync(SOURCE_DIR).filter(f => f.endsWith('.csv'));
+
+  console.log(`Found ${files.length} CSV files to verify\n`);
+  console.log('='.repeat(80));
+
+  const results = {
+    passed: [],
+    failed: [],
+  };
+
+  for (const file of files) {
+    const sourcePath = path.join(SOURCE_DIR, file);
+    const validationResult = validateCSV(sourcePath);
+
+    if (validationResult.valid) {
+      // Copy to verified folder
+      const destPath = path.join(VERIFIED_DIR, file);
+      fs.copyFileSync(sourcePath, destPath);
+      results.passed.push({
+        file,
+        ...validationResult,
+      });
+      console.log(`✓ PASS: ${file}`);
+      console.log(`  Questions: ${validationResult.questionCount}`);
+    } else {
+      // Copy to failed folder
+      const destPath = path.join(FAILED_DIR, file);
+      fs.copyFileSync(sourcePath, destPath);
+      results.failed.push({
+        file,
+        error: validationResult.error,
+      });
+      console.log(`✗ FAIL: ${file}`);
+      console.log(`  Error: ${validationResult.error}`);
+    }
+    console.log('-'.repeat(80));
+  }
+
+  // Summary
+  console.log('\n' + '='.repeat(80));
+  console.log('SUMMARY');
+  console.log('='.repeat(80));
+  console.log(`Total files: ${files.length}`);
+  console.log(`Passed: ${results.passed.length}`);
+  console.log(`Failed: ${results.failed.length}`);
+  console.log('\nVerified files saved to:', VERIFIED_DIR);
+  console.log('Failed files saved to:', FAILED_DIR);
+
+  if (results.failed.length > 0) {
+    console.log('\nFailed files:');
+    results.failed.forEach(({ file, error }) => {
+      console.log(`  - ${file}: ${error}`);
+    });
+  }
+
+  return results;
+}
+
+// Run verification
+verifyAllCSVs();

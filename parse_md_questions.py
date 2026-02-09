@@ -284,7 +284,7 @@ def main():
     docx_path = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/docs')
     md_output_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/md')
 
-    # md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
+    md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
     # convert_docx_to_md("document.docx", "output")
 
     md_dir = md_output_dir
