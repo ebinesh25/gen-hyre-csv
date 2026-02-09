@@ -34,20 +34,11 @@ def parse_questions_from_file(file_path):
     if content.startswith('\ufeff'):
         content = content[1:]
 
-    # Ensure content ends with a newline so the last question is captured
-    if not content.endswith('\n'):
-        content += '\n'
-
-    # Split by question number pattern (e.g., "1.", "2.", etc.) - look for it at line start
-    # or after whitespace to handle various formats
-    # Pattern: newline + optional spaces + digit + dot + space
-    pattern = r'\n\s*(?=\d+\.\s)'
-    parts = re.split(pattern, content)
-
-    # Also handle case where content starts with a question number (no leading newline)
-    if parts and parts[0].strip() and not re.match(r'^\d+\.', parts[0].strip()):
-        # First part might be content before first question, skip it
-        parts = parts[1:]
+    # Use findall to extract questions - each question starts with a number like "1.", "2.", etc.
+    # Pattern captures the question number and everything up to the next question number or end
+    # This handles questions at start of content and questions after newlines
+    pattern = r'(?:^|\n)\s*(\d+\.\s*.*?)(?=(?:\n\s*\d+\.\s)|$)'
+    parts = re.findall(pattern, content, re.DOTALL)
 
     for part in parts:
         part = part.strip()
@@ -184,7 +175,7 @@ def write_to_csv(questions, output_path, category):
     ]
 
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
 
         # Write headers
         writer.writerow(headers)
@@ -202,7 +193,7 @@ def write_to_csv(questions, output_path, category):
 
             row = [
                 q['question_type'],
-                q['question'],
+                f"{q['question']}",
                 q['option_count'],
                 options[0] if len(options) > 0 else '',
                 options[1] if len(options) > 1 else '',
@@ -212,8 +203,8 @@ def write_to_csv(questions, output_path, category):
                 q_category,
                 q['difficulty'],
                 q['score'],
-                q_tags,
-                q['explanation'],
+                f"{q_tags}",
+                f"{q['explanation']}",
                 '', '', '', '', ''
             ]
             writer.writerow(row)
@@ -224,7 +215,7 @@ def main():
     # Paths
     base_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib')
     txts_dir = base_dir / 'txts'
-    csv_dir = base_dir / 'csv-new'
+    csv_dir = base_dir / 'csv-txt'
 
     # Create csv directory if it doesn't exist
     csv_dir.mkdir(exist_ok=True)

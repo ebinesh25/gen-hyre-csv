@@ -38,8 +38,7 @@ def parse_questions_from_file(file_path):
     # Split by question number pattern at line start.
     # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", "1.Ravi's" with whitespace variations
     # Uses negative lookahead (?!\d) to avoid matching decimals like "1.1236"
-    # Uses (?![\d.]) to avoid matching decimals and mathematical expressions like "1.1236P"
-    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?![\d.])|\s*\d+\s*(?:\\.)?\.\s*(?![\d.])|^\d+\.\s+(?![\d.]))'
+    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|\s*\d+\s*(?:\\.)?\.\s*(?!\d)|^\d+\.)'
     parts = re.split(pattern, content)
 
     for part in parts:
@@ -98,8 +97,8 @@ def parse_single_question(content):
 
     # Extract question text - from the number up to "**Options:**" or first option
     # First remove the question number prefix (handles bold, whitespace, and escaped variations)
-    # Uses negative lookahead (?![\d.]) to avoid removing decimals like "1.1236"
-    content = re.sub(r'^\s*\*\*\d+\s*\.\s*\*\*\s*(?![\d.])|^\s*\d+\s*(?:\\.)?\.\s*(?![\d.])', '', content, count=1)
+    # Uses negative lookahead (?!\d) to avoid removing decimals like "1.1236"
+    content = re.sub(r'^\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|^\s*\d+\s*(?:\\.)?\.\s*(?!\d)', '', content, count=1)
 
     # Split into lines
     lines = content.split('\n')
@@ -114,12 +113,12 @@ def parse_single_question(content):
     # Get question text
     while i < len(lines):
         line = lines[i].strip()
-        # Check for "**Options:**" header or "**Options:" (without closing **) or "Options:"
-        if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE) or re.match(r'^Options\s*:?\s*$', line, re.IGNORECASE):
+        # Check for "**Options:**" header or "**Options:" (without closing **)
+        if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE):
             i += 1
             break
-        # Check if this looks like an option line (including partial bolding like **A.) or equals sign format (A =)
-        if re.match(r'^[A-E]\.', line) or re.match(r'^\*\*[A-E]\.', line) or re.match(r'^[A-E]\s*=', line):
+        # Check if this looks like an option line (including partial bolding like **A.)
+        if re.match(r'^[A-E]\.', line) or re.match(r'^\*\*[A-E]\.', line):
             break
         if line:  # Only add non-empty lines
             question_lines.append(line)
@@ -135,16 +134,14 @@ def parse_single_question(content):
     while i < len(lines):
         line = lines[i].strip()
 
-        # Check if line starts with **Answer, __Answer:, Answer, or **Solution
-        if re.search(r'^\*\*\s*Answer|^__Answer\s*:|^Answer\s*:', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution|^Solution\s*:', line, re.IGNORECASE):
+        # Check if line starts with **Answer, __Answer:, or **Solution
+        if re.search(r'^\*\*\s*Answer|^__Answer\s*:', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution', line, re.IGNORECASE):
             break
 
         # Check for bold option markers like **A.** or **A. (with partial bolding)
         opt_match_bold = re.match(r'^\*\*([A-E])\.\s*\*?\s*(.+)', line)
         # Check for regular option markers like A.
         opt_match = re.match(r'^([A-E])\.\s*(.+)', line)
-        # Check for option markers with equals sign like "A = text" or "B=text"
-        opt_match_equals = re.match(r'^([A-E])\s*=\s*(.+)', line)
 
         if opt_match_bold:
             option_text = process_base64_images(opt_match_bold.group(2))
@@ -164,29 +161,10 @@ def parse_single_question(content):
                 # Don't increment i, let the answer extraction handle this line
                 break
             i += 1
-        elif opt_match_equals:
-            # Handle options with equals sign format like "A = text"
-            option_raw = opt_match_equals.group(2)
-            # Stop at **Answer or ** if present
-            option_parts = re.split(r'\s*\*\*\s*Answer|\s*\*\*$', option_raw, maxsplit=1, flags=re.IGNORECASE)
-            option_text = process_base64_images(option_parts[0])
-            option_text = remove_markdown_formatting(option_text).strip()
-            # Include the letter prefix as part of the option text for clarity
-            option_text = f"{opt_match_equals.group(1)} = {option_text}"
-            options.append(option_text)
-            # Check if this line also contains the answer
-            if '**Answer' in line or re.search(r'\*\*\s*Answer', line, re.IGNORECASE):
-                # Don't increment i, let the answer extraction handle this line
-                break
-            i += 1
         elif line:
-            # Skip lines that start with Solution to avoid capturing them as options
-            if re.match(r'^Solution\s*:', line, re.IGNORECASE):
-                i += 1
-                continue
             # Handle continuation lines - only if it's not starting with ** and not an answer line
-            # Also skip lines that start with option markers (A., B., A =, B =, etc.)
-            if options and not line.startswith('**') and not re.search(r'Answer', line, re.IGNORECASE) and not re.match(r'^[A-E]\.', line) and not re.match(r'^[A-E]\s*=', line):
+            # Also skip lines that start with option markers (A., B., etc.)
+            if options and not line.startswith('**') and not re.search(r'Answer', line, re.IGNORECASE) and not re.match(r'^[A-E]\.', line):
                 cleaned_line = process_base64_images(line)
                 cleaned_line = remove_markdown_formatting(cleaned_line)
                 options[-1] += ' ' + cleaned_line
@@ -198,7 +176,7 @@ def parse_single_question(content):
     remaining_content = '\n'.join(lines[i:])
 
     # Extract answer from the full remaining content first (before any splitting)
-    # Pattern matches "__Answer: B. witty__" or "**Answer: A.**" or "**Answer : A.**" or "**  Answer: A. option text**" or "Answer : A.7" or "Answer : A = text"
+    # Pattern matches "__Answer: B. witty__" or "**Answer: A.**" or "**Answer : A.**" or "**  Answer: A. option text**"
     answer_match = re.search(r'__Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
     if not answer_match:
         # Try with bold markers
@@ -207,11 +185,8 @@ def parse_single_question(content):
         # Try with single asterisk
         answer_match = re.search(r'\*\s*Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
     if not answer_match:
-        # Try without bold markers (handles "Answer : A.7" format)
+        # Try without bold markers
         answer_match = re.search(r'Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
-    if not answer_match:
-        # Try with equals sign format (handles "Answer : A = text" format)
-        answer_match = re.search(r'Answer\s*:\s*([A-E])\s*=', remaining_content, re.IGNORECASE)
 
     if answer_match:
         answer_letter = answer_match.group(1).upper()
@@ -220,16 +195,17 @@ def parse_single_question(content):
 
     # Extract solution/explanation
     # Look for "**Explanation:" or "**Solution:**" or "**Solution**" with optional colon
-    # solution_match = re.search(r'\*\*\s*Explanation\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
-
-    solution_match = re.search(r'\*\*\s*Solution\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+    solution_match = re.search(r'\*\*\s*Explanation\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+    if not solution_match:
+        solution_match = re.search(r'\*\*\s*Solution\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
     if solution_match:
         explanation = solution_match.group(1).strip()
     else:
-        # Try without bold markers (handles "Solution:" or "Solution :" format)
-        solution_match = re.search(r'Solution\s*:?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+        # Try without bold markers
+        solution_match = re.search(r'Explanation\s*:?\s*(.*)|Solution\s*:?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
         if solution_match:
-            explanation = solution_match.group(1).strip()
+            # Get the first non-None group
+            explanation = (solution_match.group(1) or solution_match.group(2) or '').strip()
         else:
             # Try to find any text after Answer
             answer_pos = remaining_content.lower().find('answer')
