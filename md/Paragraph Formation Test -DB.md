@@ -1,0 +1,469 @@
+1\. Rearrange the following five sentences in proper sequence so as to form a meaningful paragraph, then answer the questions given below them.
+
+- Realising his mistake, Aman apologised to his friend the next day.
+- Without checking the facts, Aman believed the rumour and got angry.
+- Aman heard a rumour about his friend during the lunch break.
+- His friend calmly explained the truth and forgave him.
+- He avoided speaking to his friend for the rest of the day.
+
+Which sentence should come first in the paragraph?
+
+Options:  
+1  
+2  
+3  
+4  
+5
+
+Answer: 3
+
+Explanation: The paragraph must begin with the event that starts the story. Aman first heard the rumour, so sentence 3 comes first.
+
+Correct sequence: 3 - 2 - 5 - 1 - 4
+
+**2\. Rearrange the following five sentences in proper sequence so as to form a meaningful paragraph, then answer the questions given below them.**
+
+- Realising his mistake, Aman apologised to his friend the next day.
+- Without checking the facts, Aman believed the rumour and got angry.
+- Aman heard a rumour about his friend during the lunch break.
+- His friend calmly explained the truth and forgave him.
+- He avoided speaking to his friend for the rest of the day.
+
+**Which sentence should come second in the paragraph?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5
+
+**Answer:** 2
+
+**Explanation:** After hearing the rumour (sentence 3), Aman believed it and got angry, making sentence 2 the second sentence.
+
+**Correct sequence:** 3 - 2 - 5 - 1 - 4
+
+**3\. Rearrange the following five sentences in proper sequence so as to form a meaningful paragraph, then answer the questions given below them.**
+
+- Realising his mistake, Aman apologised to his friend the next day.
+- Without checking the facts, Aman believed the rumour and got angry.
+- Aman heard a rumour about his friend during the lunch break.
+- His friend calmly explained the truth and forgave him.
+- He avoided speaking to his friend for the rest of the day.
+
+**Which sentence should come third in the paragraph?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5
+
+**Answer:** 5
+
+**Explanation:** Because he was angry, Aman avoided speaking to his friend, which logically follows next. Sentence 5 comes third.
+
+**Correct sequence:** 3 - 2 - 5 - 1 - 4
+
+**4\. Rearrange the following five sentences in proper sequence so as to form a meaningful paragraph, then answer the questions given below them.**
+
+- Realising his mistake, Aman apologised to his friend the next day.
+- Without checking the facts, Aman believed the rumour and got angry.
+- Aman heard a rumour about his friend during the lunch break.
+- His friend calmly explained the truth and forgave him.
+- He avoided speaking to his friend for the rest of the day.
+
+**Which sentence should come fourth in the paragraph?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5
+
+**Answer:** 1
+
+**Explanation:** Later, Aman realizes his mistake and apologises, so sentence 1 comes fourth.
+
+**Correct sequence:** 3 - 2 - 5 - 1 - 4
+
+**5\. Rearrange the following five sentences in proper sequence so as to form a meaningful paragraph, then answer the questions given below them.**
+
+- Realising his mistake, Aman apologised to his friend the next day.
+- Without checking the facts, Aman believed the rumour and got angry.
+- Aman heard a rumour about his friend during the lunch break.
+- His friend calmly explained the truth and forgave him.
+- He avoided speaking to his friend for the rest of the day.
+
+**Which sentence should come last in the paragraph?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5
+
+**Answer:** 4
+
+**Explanation:** The paragraph concludes with resolution, where the friend explains the truth and forgives him. Hence, sentence 4 comes last.
+
+**Correct sequence:** 3 - 2 - 5 - 1 - 4
+
+**6\. Rearrange the following sentences and answer the questions below:**
+
+**(A) As a result, the team realised that proper planning was essential for success.  
+(B) Initially, the project seemed simple and easy to execute.  
+(C) Unexpected challenges began to appear during the early stages of execution.  
+(D) The team then reviewed their strategy and redistributed responsibilities.  
+(E) This careful reorganisation ultimately led to the successful completion of the project.**
+
+**Which should be the FIRST sentence after rearrangement?**
+
+**Options:  
+A  
+B  
+C  
+D  
+E**
+
+**Answer: B**
+
+**Explanation: The paragraph logically begins with the initial impression of the project.**
+
+**Correct sequence: B C A D E**
+
+**7\. Rearrange the following sentences and answer the questions below:**
+
+(A) As a result, the team realised that proper planning was essential for success.  
+(B) Initially, the project seemed simple and easy to execute.  
+(C) Unexpected challenges began to appear during the early stages of execution.  
+(D) The team then reviewed their strategy and redistributed responsibilities.  
+(E) This careful reorganisation ultimately led to the successful completion of the project.
+
+**Which should be the SECOND sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** C
+
+**Explanation:** After the project seemed simple, challenges started appearing. Hence, sentence C follows.
+
+**Correct sequence:** B C A D E
+
+**8\. Rearrange the following sentences and answer the questions below:**
+
+(A) As a result, the team realised that proper planning was essential for success.  
+(B) Initially, the project seemed simple and easy to execute.  
+(C) Unexpected challenges began to appear during the early stages of execution.  
+(D) The team then reviewed their strategy and redistributed responsibilities.  
+(E) This careful reorganisation ultimately led to the successful completion of the project.
+
+**Which should be the THIRD sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** A
+
+**Explanation:** Realising the importance of planning comes after facing challenges, so sentence A fits third.
+
+**Correct sequence:** B C A D E
+
+**9\. Rearrange the following sentences and answer the questions below:**
+
+(A) As a result, the team realised that proper planning was essential for success.  
+(B) Initially, the project seemed simple and easy to execute.  
+(C) Unexpected challenges began to appear during the early stages of execution.  
+(D) The team then reviewed their strategy and redistributed responsibilities.  
+(E) This careful reorganisation ultimately led to the successful completion of the project.
+
+**Which should be the FOURTH sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** D
+
+**Explanation:** Once the team understood the issue, they reviewed their strategy. Sentence D logically comes next.
+
+**Correct sequence:** B C A D E
+
+**10\. Rearrange the following sentences and answer the questions below:**
+
+(A) As a result, the team realised that proper planning was essential for success.  
+(B) Initially, the project seemed simple and easy to execute.  
+(C) Unexpected challenges began to appear during the early stages of execution.  
+(D) The team then reviewed their strategy and redistributed responsibilities.  
+(E) This careful reorganisation ultimately led to the successful completion of the project.
+
+**Which should be the FIFTH sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** E
+
+**Explanation:** The paragraph concludes with the final outcome-the successful completion of the project-making sentence E the last one.
+
+**Correct sequence:** B C A D E
+
+**11\. Rearrange the following sentences in the proper sequence to form a meaningful paragraph; then answer the questions given below them.**
+
+(A) Gradually, he realised that discipline and consistency were more important than talent alone.  
+(B) A young musician once dreamed of becoming famous overnight.  
+(C) He practised every day, learning from mistakes and improving step by step.  
+(D) After several years of hard work, he finally earned recognition and respect.  
+(E) At first, he believed that success depended only on luck and opportunity.
+
+**Which should be the FIRST sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** B
+
+**Explanation:** The paragraph must begin with the introduction of the subject.
+
+**Correct sequence:** B E A C D
+
+**12\. Rearrange the following sentences in the proper sequence to form a meaningful paragraph; then answer the questions given below them.**
+
+(A) Gradually, he realised that discipline and consistency were more important than talent alone.  
+(B) A young musician once dreamed of becoming famous overnight.  
+(C) He practised every day, learning from mistakes and improving step by step.  
+(D) After several years of hard work, he finally earned recognition and respect.  
+(E) At first, he believed that success depended only on luck and opportunity.
+
+**Which should be the SECOND sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** E
+
+**Explanation:** After introducing the musician, his initial belief about success logically follows.
+
+**Correct sequence:** B E A C D
+
+**13\. Rearrange the following sentences in the proper sequence to form a meaningful paragraph; then answer the questions given below them.**
+
+(A) Gradually, he realised that discipline and consistency were more important than talent alone.  
+(B) A young musician once dreamed of becoming famous overnight.  
+(C) He practised every day, learning from mistakes and improving step by step.  
+(D) After several years of hard work, he finally earned recognition and respect.  
+(E) At first, he believed that success depended only on luck and opportunity.
+
+**Which should be the THIRD sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** A
+
+**Explanation:** The realisation about discipline comes after his initial belief, making sentence A the third.
+
+**Correct sequence:** B E A C D
+
+**14\. Rearrange the following sentences in the proper sequence to form a meaningful paragraph; then answer the questions given below them.**
+
+(A) Gradually, he realised that discipline and consistency were more important than talent alone.  
+(B) A young musician once dreamed of becoming famous overnight.  
+(C) He practised every day, learning from mistakes and improving step by step.  
+(D) After several years of hard work, he finally earned recognition and respect.  
+(E) At first, he believed that success depended only on luck and opportunity.
+
+**Which should be the FOURTH sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** C
+
+**Explanation:** Once he realises the importance of discipline, he begins practising regularly. Hence, C comes fourth.
+
+**Correct sequence:** B E A C D
+
+**15\. Rearrange the following sentences in the proper sequence to form a meaningful paragraph; then answer the questions given below them.**
+
+(A) Gradually, he realised that discipline and consistency were more important than talent alone.  
+(B) A young musician once dreamed of becoming famous overnight.  
+(C) He practised every day, learning from mistakes and improving step by step.  
+(D) After several years of hard work, he finally earned recognition and respect.  
+(E) At first, he believed that success depended only on luck and opportunity.
+
+**Which should be the FIFTH sentence after rearrangement?**
+
+**Options:  
+**A  
+B  
+C  
+D  
+E
+
+**Answer:** D
+
+**Explanation:** The paragraph concludes with the final outcome-his success after years of effort-so sentence D comes last.
+
+**Correct sequence:** B E A C D
+
+**16\. Rearrange the following six sentences in proper sequence to form a meaningful paragraph, then answer the questions given below.**
+
+- Eventually, Ramesh became confident and comfortable in his new role.
+- At first, he found the work environment very challenging.
+- Ramesh joined the company as a trainee last year.
+- With time, his seniors guided and supported him patiently.
+- He was unfamiliar with the systems and office procedures.
+- Today, he feels proud to be a part of the organization.
+
+**Which should be the FIRST sentence?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5  
+6
+
+**Answer:** 3
+
+**Explanation:** The paragraph must begin with Ramesh joining the company.
+
+**Correct sequence:** 3 - 2 - 5 - 4 - 1 - 6
+
+**17\. Rearrange the following six sentences in proper sequence to form a meaningful paragraph, then answer the questions given below.**
+
+- Eventually, Ramesh became confident and comfortable in his new role.
+- At first, he found the work environment very challenging.
+- Ramesh joined the company as a trainee last year.
+- With time, his seniors guided and supported him patiently.
+- He was unfamiliar with the systems and office procedures.
+- Today, he feels proud to be a part of the organization.
+
+**Which should be the SECOND sentence?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5  
+6
+
+**Answer:** 2
+
+**Explanation:** After joining the company, Ramesh initially found the environment challenging. Hence, sentence 2 comes second.
+
+**Correct sequence:** 3 - 2 - 5 - 4 - 1 - 6
+
+**18\. Rearrange the following six sentences in proper sequence to form a meaningful paragraph, then answer the questions given below.**
+
+- Eventually, Ramesh became confident and comfortable in his new role.
+- At first, he found the work environment very challenging.
+- Ramesh joined the company as a trainee last year.
+- With time, his seniors guided and supported him patiently.
+- He was unfamiliar with the systems and office procedures.
+- Today, he feels proud to be a part of the organization.
+
+**Which should be the THIRD sentence?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5  
+6
+
+**Answer:** 5
+
+**Explanation:** The reason for the challenge is explained next-he was unfamiliar with the systems. Sentence 5 fits third.
+
+**Correct sequence:** 3 - 2 - 5 - 4 - 1 - 6
+
+**19\. Rearrange the following six sentences in proper sequence to form a meaningful paragraph, then answer the questions given below.**
+
+- Eventually, Ramesh became confident and comfortable in his new role.
+- At first, he found the work environment very challenging.
+- Ramesh joined the company as a trainee last year.
+- With time, his seniors guided and supported him patiently.
+- He was unfamiliar with the systems and office procedures.
+- Today, he feels proud to be a part of the organization.
+
+**Which should be the FOURTH sentence?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5  
+6
+
+**Answer:** 4
+
+**Explanation:** After facing difficulties, support from seniors follows logically. Sentence 4 comes fourth.
+
+**Correct sequence:** 3 - 2 - 5 - 4 - 1 - 6
+
+**20\. Rearrange the following six sentences in proper sequence to form a meaningful paragraph, then answer the questions given below.**
+
+- Eventually, Ramesh became confident and comfortable in his new role.
+- At first, he found the work environment very challenging.
+- Ramesh joined the company as a trainee last year.
+- With time, his seniors guided and supported him patiently.
+- He was unfamiliar with the systems and office procedures.
+- Today, he feels proud to be a part of the organization.
+
+**Which should be the FIFTH sentence?**
+
+**Options:  
+**1  
+2  
+3  
+4  
+5  
+6
+
+**Answer:** 1
+
+**Explanation:** With guidance and time, Ramesh becomes confident, making sentence 1 the fifth sentence.
+
+**Correct sequence:** 3 - 2 - 5 - 4 - 1 - 6
