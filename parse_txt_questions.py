@@ -25,9 +25,29 @@ def parse_questions_from_file(file_path):
 
     questions = []
 
-    # Split by question number pattern at line start (e.g., "1.", "2.", etc.)
-    pattern = r'(?m)^(?=\d+\.)'
+    # Handle files with literal \n escape sequences (single line format)
+    # Replace literal \n with actual newlines
+    if '\\n' in content and content.count('\n') < 5:
+        content = content.replace('\\n', '\n')
+
+    # Remove BOM character if present at the start
+    if content.startswith('\ufeff'):
+        content = content[1:]
+
+    # Ensure content ends with a newline so the last question is captured
+    if not content.endswith('\n'):
+        content += '\n'
+
+    # Split by question number pattern (e.g., "1.", "2.", etc.) - look for it at line start
+    # or after whitespace to handle various formats
+    # Pattern: newline + optional spaces + digit + dot + space
+    pattern = r'\n\s*(?=\d+\.\s)'
     parts = re.split(pattern, content)
+
+    # Also handle case where content starts with a question number (no leading newline)
+    if parts and parts[0].strip() and not re.match(r'^\d+\.', parts[0].strip()):
+        # First part might be content before first question, skip it
+        parts = parts[1:]
 
     for part in parts:
         part = part.strip()

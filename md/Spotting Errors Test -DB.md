@@ -1,0 +1,379 @@
+1.Read the sentence to find out whether there is any grammatical error in it.  
+The error, if any, will be in one part of the sentence.  
+The letter of that part is the answer.  
+If there is no error, the answer is 'D'.
+
+**Options:  
+**A. He explained the concept very clearly  
+B. Before the students arrived  
+C. That everyone understood it easily  
+D. No error
+
+**Answer:** A
+
+**Explanation:  
+**The phrase "very clearly" is incorrect when followed by "that".  
+The correct correlative construction is **"so … that"**.
+
+**Correct sentence:  
+**He explained the concept **so clearly** that everyone understood it easily.
+
+Read the sentence to find out whether there is any grammatical error in it.  
+The error, if any, will be in one part of the sentence.  
+The letter of that part is the answer.  
+If there is no error, the answer is 'D'.
+
+**Options:  
+**A. A cargo train  
+B. Loaded with coal  
+C. Got drowned in the river  
+D. No error
+
+**Answer:** C
+
+**Explanation:  
+**The word "drowned" is incorrect when used for vehicles or inanimate objects.  
+The correct verb is **"sank"**.
+
+**Correct sentence:  
+**A cargo train loaded with coal **sank** in the river.
+
+**3.Spot the error:**
+
+**(P) She was confident that  
+(Q) the committee would approve her proposal  
+(R) for improving the overall performance of the team  
+(S) No error**
+
+**Options:  
+A. She was confident that  
+B. The committee would approve her proposal  
+C. For improving the overall performance of the team  
+D. No error**
+
+**Answer: D**
+
+**Explanation:  
+The sentence is grammatically correct.  
+The phrase "proposal for improving the overall performance of the team" is an acceptable and standard construction in English.  
+Hence, there is no error.**
+
+**4.Spot the error:**
+
+**No student can achieve success (1)/  
+Unless he (2)/  
+Work hard consistently throughout the year. (3)/  
+No error (4)**
+
+**Options:  
+A. No student can achieve success  
+B. Unless he  
+C. Work hard consistently throughout the year  
+D. No error**
+
+**Answer: C**
+
+**Explanation:  
+The subject "No student" is singular, so it must take a singular verb.  
+The verb "work" should be changed to "works".**
+
+**Correct sentence:  
+No student can achieve success unless he works hard consistently throughout the year.**
+
+**5.Spot the error:**
+
+**She is one of the best and most dedicated employee in this company.**
+
+**Options:  
+A. She is one of the best  
+B. And most dedicated employee  
+C. In this company  
+D. No error**
+
+**Answer: B**
+
+**Explanation:  
+The phrase "one of the best" must be followed by a plural noun.  
+Therefore, "employee" should be changed to "employees".**
+
+**Correct sentence:  
+She is one of the best and most dedicated employees in this company.**
+
+6.Spot the error:
+
+The manager refused to approve the proposal until the issues were not resolved.
+
+**Options:  
+**A. The manager refused  
+B. To approve the proposal  
+C. Until the issues were  
+D. Not resolved
+
+**Answer:** D
+
+**Explanation:  
+**The sentence contains a **double negative** in the phrase "until the issues were not resolved".  
+The word "not" should be removed.
+
+**Correct sentence:  
+**The manager refused to approve the proposal until the issues were **resolved**.
+
+7.Spot the error:
+
+The management has recently took a decision to revise the existing guidelines in order to ensure better compliance across all departments.
+
+**Options:  
+**A. The management has recently  
+B. Took a decision to revise  
+C. The existing guidelines in order to ensure  
+D. Better compliance across all departments  
+E. No error
+
+**Answer:** B
+
+**Explanation:  
+**The auxiliary verb **"has"** must be followed by the **past participle** form of the verb.  
+"Took" is incorrect and should be replaced with **"taken"**.
+
+**Correct sentence:  
+**The management has recently **taken** a decision to revise the existing guidelines in order to ensure better compliance across all departments.
+
+8.Read the sentence to find out whether there is any error in it:
+
+A robust financial ecosystem offers multiple opportunities to enterprises for growing capital efficiently and lowers dependence of firms on traditional lending sources.
+
+**Options:  
+**A. A robust financial ecosystem offers  
+B. Multiple opportunities to enterprises  
+C. For growing capital efficiently  
+D. And lowers dependence of firms on traditional lending sources  
+E. No error
+
+**Answer:** C
+
+**Explanation:  
+**The word **"growing"** is incorrect in this context.  
+Capital is **raised**, not grown.  
+Therefore, "growing" should be replaced with **"raising"**.
+
+**Correct sentence:  
+**A robust financial ecosystem offers multiple opportunities to enterprises for **raising capital** efficiently and lowers dependence of firms on traditional lending sources.
+
+9.Spot the error:
+
+She prefers (A) /  
+to read (B) /  
+novels (C) /  
+before sleeping. (D) /  
+No error (E)
+
+**Options:  
+**A. She prefers  
+B. To read  
+C. Novels  
+D. Before sleeping  
+E. No error
+
+**Answer:** E
+
+**Explanation:  
+**The structure **"prefer + to + verb"** is correctly used in the sentence.  
+All parts of the sentence are grammatically correct.
+
+**Correct sentence:  
+**She prefers to read novels before sleeping.
+
+10.Spot the error:
+
+The company is focused on (A) /  
+expand its global presence (B) /  
+across emerging markets (C) /  
+in the coming years. (D) /  
+No error (E)
+
+**Options:  
+**A. The company is focused on  
+B. Expand its global presence  
+C. Across emerging markets  
+D. In the coming years  
+E. No error
+
+**Answer:** B
+
+**Explanation:  
+**After the preposition **"on"**, the **gerund form (-ing)** must be used.  
+Therefore, "expand" should be replaced with **"expanding"**.
+
+**Correct sentence:  
+**The company is focused on **expanding** its global presence across emerging markets in the coming years.
+
+11.Spot the error:
+
+She is usually going (A) /  
+to the gym (B) /  
+in the mornings (C) /  
+No error (D)
+
+**Options:  
+**A. She is usually going  
+B. To the gym  
+C. In the mornings  
+D. No error
+
+**Answer:** A
+
+**Explanation:  
+**The sentence describes a **habitual action**, so the **simple present tense** should be used instead of the present continuous.
+
+**Correct sentence:  
+**She usually **goes** to the gym in the mornings.
+
+**12.Spot the error in the following sentence:**
+
+**If she had reached (A) /  
+the station earlier I am sure she (B) /  
+would have caught the train (C) /  
+No error (D)**
+
+**Options:  
+A. If she had reached  
+B. The station earlier I am sure she  
+C. Would have caught the train  
+D. No error**
+
+**Answer: D**
+
+**Explanation:  
+The sentence is grammatically correct.  
+It correctly follows the third conditional structure:  
+If + past perfect → would have + past participle.**
+
+**Correct sentence:  
+If she had reached the station earlier, I am sure she would have caught the train.**
+
+13.Spot the error:
+
+I have been (1)/  
+told that (2)/  
+the Prime Minister will visit France (3)/  
+next week. (4)/  
+No error (5)
+
+**Answer:** 5
+
+**Explanation:  
+**The sentence is grammatically correct.  
+The passive structure **"have been told"** is properly used, and reporting a future event with **"will visit"** is appropriate.  
+Hence, there is **no error**.
+
+14.Spot the error:
+
+In the field of education (1)/  
+the credit often goes to a teacher (2)/  
+who inspires students (3)/  
+through his actions rather than his words. (4)/  
+No Error (5)
+
+**Answer:** 5
+
+**Explanation:  
+**The sentence is grammatically correct.  
+The phrase **"a teacher"** is correctly used to refer to any teacher in general, not a specific one.  
+Hence, there is **no error** in the sentence.
+
+15.Spot the error in the following:
+
+Many problems arising (A) /  
+during the discussion were (B) /  
+successfully addressed (C) /  
+because of her calm approach. (D) /  
+No error (E)
+
+**Answer:** E
+
+**Explanation:  
+**The sentence is grammatically correct.  
+The word **"arising"** is correctly used as a present participle to describe problems that occurred during the discussion.  
+Therefore, there is **no error**.
+
+16.Spot the error:
+
+Rohit's cousin, who works (A) /  
+in Mumbai, is planning to visit (B) /  
+Chennai to attend (C) /  
+a conference. (D) /  
+No error (E)
+
+**Answer:** E
+
+**Explanation:  
+**The sentence is grammatically correct.  
+There is no error in **structure, tense, punctuation, or usage**.
+
+**Correct sentence:  
+**Rohit's cousin, who works in Mumbai, is planning to visit Chennai to attend a conference.
+
+17.Spot the error:
+
+The new software bears (A)/  
+a close resemblance (B)/  
+to the previous version. (C)/  
+No error (D)
+
+**Answer:** D
+
+**Explanation:  
+**The sentence is grammatically correct.  
+The expression **"bears a close resemblance to"** is a correct and standard usage in English.  
+Hence, there is **no error**.
+
+18.Spot the error:
+
+The attitude of people (1)/  
+especially close relatives (2)/  
+improved after she (3)/  
+qualified on a reputed examination. (4)/  
+No error (5)
+
+**Answer:** 4
+
+**Explanation:  
+**The correct preposition used with "qualified" is **"for"**, not "on".  
+Therefore, "qualified on" should be replaced with **"qualified for"**.
+
+**Correct sentence:  
+**The attitude of people, especially close relatives, improved after she **qualified for** a reputed examination.
+
+19.Spot the error:
+
+She pretends to be an expert (1)/  
+but actually she (2)/  
+does not understand even (3)/  
+X Y Z of the subject. (4)/  
+No error (5)
+
+**Answer:** 4
+
+**Explanation:  
+**The definite article **"the"** is required before the expression "X Y Z".  
+The correct expression is **"the X Y Z of the subject"**, which means the basic elements of a subject.
+
+**Correct sentence:  
+**She pretends to be an expert, but actually she does not understand even **the X Y Z of the subject**.
+
+20.Spot the error:
+
+He prefers to travel (1)/  
+long distances (2)/  
+by a train (3)/  
+during holidays. (4)/  
+No error (5)
+
+**Answer:** 3
+
+**Explanation:  
+**When referring to a mode of transport in general, no article is used.  
+The correct expression is **"by train"**, not "by a train".
+
+**Correct sentence:  
+**He prefers to travel long distances **by train** during holidays.

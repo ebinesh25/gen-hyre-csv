@@ -1,0 +1,307 @@
+**1\. The Moon is Earth's natural satellite and is the closest \_**\_**\___ (a) to our planet. It does not produce its own light but reflects sunlight. The Moon is much smaller \_**\_**\__ (b) Earth and has a weaker gravitational pull. The surface of the Moon appears \_**\_**\__ (c) because it has many craters formed by meteor impacts over millions of years. Unlike Earth, the Moon has no atmosphere, so there is no air or water present. Scientists believe that early studies of the Moon helped humans understand the origin of the solar system. Some of the rocks found on the Moon were brought back to Earth by \_**\_**\__ (d).**
+
+**Find the appropriate word to be filled in blank (a)**
+
+**Options:  
+**A. Planet  
+B. Star  
+C. Satellite  
+D. Asteroid  
+E. Galaxy
+
+**Answer:** C
+
+**Explanation:** The Moon is Earth's natural satellite, as stated in the first sentence. The word "satellite" fits logically in the blank, making the sentence read: "the closest satellite to our planet."
+
+**2\. The Moon is Earth's natural satellite and is the closest \_**\_**\___ (a) to our planet. It does not produce its own light but reflects sunlight. The Moon is much smaller \_**\_**\__ (b) Earth and has a weaker gravitational pull. The surface of the Moon appears \_**\_**\__ (c) because it has many craters formed by meteor impacts over millions of years. Unlike Earth, the Moon has no atmosphere, so there is no air or water present. Scientists believe that early studies of the Moon helped humans understand the origin of the solar system. Some of the rocks found on the Moon were brought back to Earth by \_**\_**\__ (d).**
+
+**Find the appropriate word to be filled in blank (b)**
+
+**Options:  
+**A. Then  
+B. Than  
+C. There  
+D. For  
+E. On
+
+**Answer:** B
+
+**Explanation:** "Than" is used to make comparisons. The sentence compares the Moon's size to Earth's size, so "much smaller than Earth" is the correct construction.
+
+**3\. The Moon is Earth's natural satellite and is the closest \_**\_**\___ (a) to our planet. It does not produce its own light but reflects sunlight. The Moon is much smaller \_**\_**\__ (b) Earth and has a weaker gravitational pull. The surface of the Moon appears \_**\_**\__ (c) because it has many craters formed by meteor impacts over millions of years. Unlike Earth, the Moon has no atmosphere, so there is no air or water present. Scientists believe that early studies of the Moon helped humans understand the origin of the solar system. Some of the rocks found on the Moon were brought back to Earth by \_**\_**\__ (d).**
+
+**Find the appropriate word to be filled in blank (c)**
+
+**Options:  
+**A. Smooth  
+B. Flat  
+C. Cracked  
+D. Uneven  
+E. Polished
+
+**Answer:** D
+
+**Explanation:** The Moon's surface is uneven due to numerous craters formed by meteor impacts over millions of years.
+
+**4\. The Moon is Earth's natural satellite and is the closest \_**\_**\___ (a) to our planet. It does not produce its own light but reflects sunlight. The Moon is much smaller \_**\_**\__ (b) Earth and has a weaker gravitational pull. The surface of the Moon appears \_**\_**\__ (c) because it has many craters formed by meteor impacts over millions of years. Unlike Earth, the Moon has no atmosphere, so there is no air or water present. Scientists believe that early studies of the Moon helped humans understand the origin of the solar system. Some of the rocks found on the Moon were brought back to Earth by \_**\_**\__ (d).**
+
+**Find the appropriate word to be filled in blank (d)**
+
+**Options:  
+**A. Astronauts  
+B. Scientists  
+C. Engineers  
+D. Astronomers  
+E. Pilots
+
+**Answer:** A
+
+**Explanation:** Astronauts brought Moon rocks back to Earth during space missions.
+
+5\. I do appreciate his help. And I acknowledge it. But I cannot ignore the fact that a man capable of reshaping other people's plans and tossing them aside as casually as playing cards, as he did with ours, is bound to disrupt things again. So, my appreciation for him is the kind of (1) \_**\_** one might feel toward a thunderstorm that clears the air but leaves destruction behind. Moreover, Uncle Raymond is a human (2) \_**\__ \[force\]. At times, he resembles a flood more than a person, since he has a habit of overflowing boundaries whenever it suits him. I am far too content with my current situation to (3) \_**\__ \[enjoy\] the idea of sudden upheaval.
+
+Gradually, the group that gathered at the house had been (4) \_**\_**_ \[reduce\] down. Except for Mark, there were no frequent visitors. Liam was mostly away for work, and Jonah stopped coming altogether. The rest of the acquaintances faded out without explanation.
+
+Find the appropriate word to be filled in blank (1)
+
+Options:  
+A. Respect  
+B. Anger  
+C. Fear  
+D. Courtesy  
+E. None of the Above
+
+Answer: A
+
+Explanation: The blank requires a word that describes a feeling of appreciation mixed with caution. "Respect" fits the context, as the narrator acknowledges Uncle Raymond's capabilities while being wary of the disruption he causes, similar to respecting a powerful but potentially destructive force like a thunderstorm.
+
+6\. I do appreciate his help. And I acknowledge it. But I cannot ignore the fact that a man capable of reshaping other people's plans and tossing them aside as casually as playing cards, as he did with ours, is bound to disrupt things again. So, my appreciation for him is the kind of (1) \_**\_** one might feel toward a thunderstorm that clears the air but leaves destruction behind. Moreover, Uncle Raymond is a human (2) \_**\__. At times, he resembles a flood more than a person, since he has a habit of overflowing boundaries whenever it suits him. I am far too content with my current situation to (3) \_**\__ \[enjoy\] the idea of sudden upheaval.
+
+Gradually, the group that gathered at the house had been (4) \_**\_**_ \[reduce\] down. Except for Mark, there were no frequent visitors. Liam was mostly away for work, and Jonah stopped coming altogether. The rest of the acquaintances faded out without explanation.
+
+Find the appropriate word to be filled in blank (2)
+
+Options:  
+A. Force  
+B. Machine  
+C. Giant  
+D. Stranger  
+E. None of the Above
+
+Answer: A
+
+Explanation: The word "force" matches the metaphor comparing Uncle Raymond to a powerful natural phenomenon like a flood or thunderstorm.
+
+**7\. I do appreciate his help. And I acknowledge it. But I cannot ignore the fact that a man capable of reshaping other people's plans and tossing them aside as casually as playing cards, as he did with ours, is bound to disrupt things again. So, my appreciation for him is the kind of (1) \_**\_** one might feel toward a thunderstorm that clears the air but leaves destruction behind. Moreover, Uncle Raymond is a human (2) \_**\__. At times, he resembles a flood more than a person, since he has a habit of overflowing boundaries whenever it suits him. I am far too content with my current situation to (3) \_**\__ \[enjoy\] the idea of sudden upheaval.**
+
+**Gradually, the group that gathered at the house had been (4) \_**\_**_ \[reduce\] down. Except for Mark, there were no frequent visitors. Liam was mostly away for work, and Jonah stopped coming altogether. The rest of the acquaintances faded out without explanation.**
+
+**Find the appropriate word to be filled in blank (3)**
+
+**Options:  
+**A. Accept  
+B. Relish  
+C. Prefer  
+D. Desire  
+E. None of the Above
+
+**Answer:** B
+
+**Explanation:** "Relish" is the closest synonym for "enjoy" in this context, meaning to take pleasure in or appreciate something.
+
+**8\. I do appreciate his help. And I acknowledge it. But I cannot ignore the fact that a man capable of reshaping other people's plans and tossing them aside as casually as playing cards, as he did with ours, is bound to disrupt things again. So, my appreciation for him is the kind of (1) \_**\_** one might feel toward a thunderstorm that clears the air but leaves destruction behind. Moreover, Uncle Raymond is a human (2) \_**\__. At times, he resembles a flood more than a person, since he has a habit of overflowing boundaries whenever it suits him. I am far too content with my current situation to (3) \_**\__ \[enjoy\] the idea of sudden upheaval.**
+
+**Gradually, the group that gathered at the house had been (4) \_**\_**_ \[reduce\] down. Except for Mark, there were no frequent visitors. Liam was mostly away for work, and Jonah stopped coming altogether. The rest of the acquaintances faded out without explanation.**
+
+**Find the appropriate word to be filled in blank (4)**
+
+**Options:  
+**A. Removed  
+B. Whittled  
+C. Broken  
+D. Destroyed  
+E. None of the Above
+
+**Answer:** B
+
+**Explanation:** "Whittled down" correctly conveys the gradual reduction of the group over time. The phrase "whittled down" is an idiomatic expression meaning to gradually reduce in size or number.
+
+**9\. Interactive learning tools can \_**(1) students of all ages understand complex concepts more easily due to their visually rich and \_**(2) engaging nature. This is why many educational institutions are now \_**(3) digital platforms into their teaching framework to \_**(4) instruction more effectively.**
+
+**Find the appropriate word to be filled in blank (1)**
+
+**Options:  
+**A. Assist  
+B. Prevent  
+C. Ignore  
+D. Replace  
+E. Delay
+
+**Answer:** A
+
+**Explanation:** The sentence talks about helping students learn better. "Assist" correctly fits the context.
+
+**10\. Interactive learning tools can \_**(1) students of all ages understand complex concepts more easily due to their visually rich and \_**(2) engaging nature. This is why many educational institutions are now \_**(3) digital platforms into their teaching framework to \_**(4) instruction more effectively.**
+
+**Find the appropriate word to be filled in blank (2)**
+
+**Options:  
+**A. Barely  
+B. Randomly  
+C. Highly  
+D. Slowly  
+E. Weakly
+
+**Answer:** C
+
+**Explanation:** "Highly engaging" is the correct and commonly used collocation. Other options do not suit the context.
+
+**11\. Interactive learning tools can \_**(1) students of all ages understand complex concepts more easily due to their visually rich and \_**(2) engaging nature. This is why many educational institutions are now \_**(3) digital platforms into their teaching framework to \_**(4) instruction more effectively.**
+
+**Find the appropriate word to be filled in blank (3)**
+
+**Options:  
+**A. Removing  
+B. Incorporating  
+C. Rejecting  
+D. Avoiding  
+E. Forgetting
+
+**Answer:** B
+
+**Explanation:** The sentence requires a word meaning including or adding. "Incorporating" is the correct choice.
+
+**12\. Interactive learning tools can \_**(1) students of all ages understand complex concepts more easily due to their visually rich and \_**(2) engaging nature. This is why many educational institutions are now \_**(3) digital platforms into their teaching framework to \_**(4) instruction more effectively.**
+
+**Find the appropriate word to be filled in blank (4)**
+
+**Options:  
+**A. Delay  
+B. Complicate  
+C. Impart  
+D. Restrict  
+E. Destroy
+
+**Answer:** C
+
+**Explanation:** "Impart instruction" is grammatically and contextually correct. Other options do not fit the meaning.
+
+13\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"
+
+Find the appropriate word to be filled in blank (1)
+
+Options:  
+A. Addressing  
+B. Telling  
+C. Sharing  
+D. Discussing  
+E. Expressing
+
+Answer: A
+
+Explanation: The coach was speaking formally to a group. "Addressing" is the correct word for speaking to an audience.
+
+**14\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__ that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"**
+
+**Find the appropriate word to be filled in blank (2)**
+
+**Options:  
+**A. Example  
+B. Illustration  
+C. Thought  
+D. Memory  
+E. Expression
+
+**Answer:** B
+
+**Explanation:** The coach used a visual demonstration to teach a lesson. "Illustration" best fits this context, meaning a practical example or demonstration.
+
+**15\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__ that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"**
+
+**Find the appropriate word to be filled in blank (3)**
+
+**Options:  
+**A. Chance  
+B. Opportunity  
+C. Time  
+D. Moment  
+E. Period
+
+**Answer:** C
+
+**Explanation:** The common and grammatically correct phrase is "it's time for…"
+
+**16\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__ that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"**
+
+**Find the appropriate word to be filled in blank (4)**
+
+**Options:  
+**A. Collected  
+B. Pulled  
+C. Threw  
+D. Built  
+E. Dug
+
+**Answer:** B
+
+**Explanation:** "Pulled" correctly conveys the action of taking the blocks out or retrieving them to arrange in the box.
+
+**17\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__ that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"**
+
+**Find the appropriate word to be filled in blank (5)**
+
+**Options:  
+**A. Any  
+B. No  
+C. Few  
+D. Some  
+E. Much
+
+**Answer:** B
+
+**Explanation:** The sentence implies the container was completely filled, so "no more space was left."
+
+**18\. One afternoon, a well-known leadership coach was (1)\_**\__ to a room full of young professionals and, to make his lesson memorable, he used an (2)\_**\__ that left a lasting impression. Standing confidently before the audience, he announced, "Now it's (3)\_**\__ for a short exercise." He then placed a transparent box on the desk in front of him. Next, he (4)\_**\__ several large blocks and arranged them carefully until (5)\_**\__ more space was left. Turning to the audience, he asked, "Is the box full?" The group (6)\_**\__ replied, "Yes!"**
+
+**Find the appropriate word to be filled in blank (6)**
+
+**Options:  
+**A. Clearly  
+B. Loudly  
+C. Confidently  
+D. Certainly  
+E. Emphatically
+
+**Answer:** E
+
+**Explanation:** The response was strong and unanimous. "Emphatically" is the correct adverb describing how they replied, indicating they responded with emphasis and conviction.
+
+**19\. The ant is a highly organized kind of insect. (1)\_**\__ most insects that prefer to survive independently, ants function as a (2)\_**\__ of a highly structured group. They work together to gather food, protect their nest, and care for their young.**
+
+**Find the appropriate word to be filled in blank (1)**
+
+**Options:  
+**A. Like  
+B. Unlike  
+C. As  
+D. Because  
+E. None of the Above
+
+**Answer:** B
+
+**Explanation:** The sentence contrasts ants with insects that live independently. "Unlike" correctly shows this difference.
+
+**20\. The ant is a highly organized kind of insect. (1)\_**\__ most insects that prefer to survive independently, ants function as a (2)\_**\__ of a highly structured group. They work together to gather food, protect their nest, and care for their young.**
+
+**Find the appropriate word to be filled in blank (2)**
+
+**Options:  
+**A. Leader  
+B. Stranger  
+C. Member  
+D. Enemy  
+E. None of the Above
+
+**Answer:** C
+
+**Explanation:** Ants live and work together as part of a group, making "member" the most appropriate choice.

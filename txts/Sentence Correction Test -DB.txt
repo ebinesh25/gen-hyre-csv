@@ -1,0 +1,254 @@
+﻿1. Does the following sentence have an S–V error?
+ She and her friends was waiting outside.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The subject “She and her friends” is a compound subject and is plural, so it requires the plural verb “were” instead of the singular verb “was”.
+Correct sentence:
+ She and her friends were waiting outside.
+2.Does the following sentence have an S–V error?
+The committee have taken a final decision.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The subject “the committee” is a collective noun and is treated as singular when acting as a single unit.
+A singular subject requires a singular verb.
+The verb “have” is plural and incorrect here.
+Correct sentence:
+ The committee has taken a final decision.
+
+
+3.Is there a subject–verb agreement error in the following sentence?
+The teacher and the principal was present at the meeting.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The subject “the teacher and the principal” is a compound subject, which is plural.
+A plural subject requires a plural verb.
+The verb “was” is singular and incorrect.
+Correct sentence:
+ The teacher and the principal were present at the meeting.
+
+
+4.Is there a subject–verb agreement error in the following sentence?
+The players, along with the coach, was confident about the match.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The main subject “the players” is plural.
+The phrase “along with the coach” is only additional information and does not affect verb agreement.
+According to the non-intervention principle, the verb must agree with the main subject.
+The verb “was” is singular and incorrect.
+Correct sentence:
+ The players, along with the coach, were confident about the match.
+5.Does the following sentence have a misplaced modifier?
+He saw a dog on the way to school that was injured.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The relative clause “that was injured” is intended to describe the dog, but due to its placement, it appears to describe “the way to school”, causing ambiguity.
+This results in a misplaced modifier.
+Correct sentence (preferred):
+ He saw an injured dog on the way to school.
+6.Does the following sentence have a misplaced modifier?
+The teacher explained the concept clearly.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The modifier “clearly” correctly describes the verb “explained”.
+There is no ambiguity in meaning, and the modifier is properly placed.
+Hence, the sentence does not contain a misplaced modifier.
+7.Do you find any parallelism errors?
+She is interested in reading novels, to watch movies and painting.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The sentence violates the rule of parallelism.
+The list contains mixed verb forms:
+* reading novels (gerund)
+* to watch movies (infinitive)
+* painting (gerund)
+All items should be in the gerund form.
+Correct sentence:
+ She is interested in reading novels, watching movies, and painting.
+8.Do you find any parallelism errors?
+Her daily routine includes jogging in the park, to meditate in the morning and reading books.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The sentence violates the rule of parallelism.
+The list contains mixed verb forms:
+* jogging in the park (gerund)
+
+* to meditate in the morning (infinitive)
+
+* reading books (gerund)
+
+All items should be in the gerund form.
+Correct sentence:
+ Her daily routine includes jogging in the park, meditating in the morning, and reading books.
+9.Is there a pronoun agreement error in the following sentence?
+Every student must submit their assignment before Friday.
+Options:
+ Yes
+No
+Answer: Yes
+Explanation:
+ The antecedent “Every student” is singular.
+According to traditional grammar rules used in exams, a singular antecedent requires a singular pronoun.
+The pronoun “their” is plural and does not agree with the singular antecedent.
+Correct sentence (exam standard):
+ Every student must submit his or her assignment before Friday.
+10.Is there a pronoun agreement error in the following sentence?
+Each child should brush his/her teeth before going to bed.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The antecedent “each child” is singular.
+The pronoun “his/her” is also singular and correctly agrees with the antecedent.
+Therefore, there is no pronoun agreement error.
+
+
+11.Is the following sentence correct?
+Yesterday, she will attend the conference.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The time expression “yesterday” refers to the past, but the verb “will attend” is in the future tense.
+This creates a tense mismatch.
+The verb should be in the simple past tense.
+Correct sentence:
+ Yesterday, she attended the conference.
+12.Is the following sentence correct?
+She had been waiting for the bus since morning today.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The verb “had been waiting” is in the past perfect continuous tense, which requires a reference to another past action.
+The time expression “today” refers to the present, creating a tense mismatch.
+The correct tense is present perfect continuous.
+Correct sentence:
+ She has been waiting for the bus since morning.
+(or)
+ She has been waiting for the bus since this morning.
+13.Check whether the following comparison is logically correct:
+This smartphone has a better camera than my laptop.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The comparison is logically incorrect because it compares the camera of the smartphone with the laptop itself, instead of comparing camera with camera.
+In comparisons, similar items must be compared.
+Correct sentence:
+ This smartphone has a better camera than my laptop does.
+(or)
+ This smartphone has a better camera than the camera of my laptop.
+14.Check whether the following comparison is logically correct:
+Her handwriting is neater than his brother.
+Options:
+ Yes
+No
+Answer: No
+Explanation:
+ The sentence compares her handwriting with his brother, which is illogical.
+The comparison should be between handwriting and handwriting.
+Correct sentence:
+ Her handwriting is neater than his brother’s.
+(or)
+ Her handwriting is neater than that of his brother.
+15.Fill in the blank with the appropriate determiner:
+________ of the students who participated in the competition have been selected for the next round.
+Options:
+ A. Few
+B. Some
+C. Every
+D. No
+Answer: B
+Explanation:
+ The sentence refers to a specific group of students (“the students who participated”).
+The determiner “some” correctly indicates that not all, but a certain number of them have been selected.
+
+
+16.Fill up the blank with appropriate determiner:
+ ________ did she know that her words would hurt so many people.
+A little
+Little
+Many
+Every
+Answer: B
+Explanation:
+ The sentence conveys lack of awareness or realization.
+Using “Little” emphasizes that she had very little knowledge or understanding of the consequences of her words.
+17. Spot the errors in the following sentence:
+A detailed survey of the city hospitals (A) /
+indicate that (B) /
+there is now two doctors for every hundred patients, (C) /
+which is a significant improvement over the past decade. (D)
+(A)
+(B)
+(C)
+(D)
+Answer: B
+Explanation:
+ The subject “A detailed survey” is singular.
+The verb must therefore be singular: “indicates”, not “indicate”.
+✔ Correct usage: A detailed survey of the city hospitals indicates that…
+
+
+18.Spot the errors in the following sentence:
+Once elected by the members, (A)/
+the selection committee (B)/
+are accountable (C)/
+to the governing body. (D)
+(A)
+(B)
+(C)
+(D)
+Answer: C
+Explanation:
+ The subject “selection committee” is a collective noun and is treated as a singular unit.
+Hence, the verb should be singular.
+The correct usage is: “is accountable”, not “are accountable”.
+19.Choose the best alternative for the underlined:
+The company decided to take the supplier to the court over the breach of contract.
+to the court
+in the court
+to court
+into the court
+Answer: C
+Explanation:
+ The correct idiomatic expression is “to court”, which means to initiate legal action against someone.
+The other options do not correctly convey the legal sense of the sentence.
+20.Choose the best alternative for the underlined:
+ She prefers to travel by the train when visiting nearby cities.
+by the train
+on train
+by train
+with train
+Answer: C
+Explanation:
+ The correct idiomatic expression is “by train”, which is used to indicate the mode of transport.
+The other options are grammatically incorrect or non-idiomatic.
