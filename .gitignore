@@ -16,3 +16,6 @@ docs-txt/
 
 # Temp files for API
 temp/
+aptitude-topics-csv/
+md/
+txts/
