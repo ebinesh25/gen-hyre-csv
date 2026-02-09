@@ -21,6 +21,9 @@ def parse_questions_from_file(file_path):
     # This is needed because some markdown files escape question numbers
     content = content.replace(r'\.', '.')
 
+    # Matches <br>, <br/>, <br />, with any capitalization and optional spaces
+    content = re.sub(r'<\s*br\s*/?>', '\n', content, flags=re.IGNORECASE)
+
     # Split by question number pattern at line start.
     # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", with whitespace variations
     # Uses negative lookahead (?!\d) to avoid matching decimals like "1.1236"
