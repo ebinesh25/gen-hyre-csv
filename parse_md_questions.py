@@ -24,10 +24,21 @@ def parse_questions_from_file(file_path):
     # Matches <br>, <br/>, <br />, with any capitalization and optional spaces
     content = re.sub(r'<\s*br\s*/?>', '\n', content, flags=re.IGNORECASE)
 
+    content = re.sub(
+        r'(\*\*)?\bexplanation\b(\*\*)?\s*:\s*',
+        r'\1Solution\2: ',
+        content,
+        flags=re.IGNORECASE
+    )
+
+
+
+
+
     # Split by question number pattern at line start.
-    # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", with whitespace variations
+    # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", "1.Ravi's" with whitespace variations
     # Uses negative lookahead (?!\d) to avoid matching decimals like "1.1236"
-    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|\s*\d+\s*(?:\\.)?\.\s*(?!\d))'
+    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?!\d)|\s*\d+\s*(?:\\.)?\.\s*(?!\d)|^\d+\.)'
     parts = re.split(pattern, content)
 
     for part in parts:
@@ -102,12 +113,12 @@ def parse_single_question(content):
     # Get question text
     while i < len(lines):
         line = lines[i].strip()
-        # Check for "**Options:**" header
-        if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:\*\*$', line, re.IGNORECASE):
+        # Check for "**Options:**" header or "**Options:" (without closing **)
+        if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE):
             i += 1
             break
         # Check if this looks like an option line
-        if re.match(r'^[A-D]\.', line) or re.match(r'^\*\*[A-D]\.', line):
+        if re.match(r'^[A-E]\.', line) or re.match(r'^\*\*[A-E]\.', line):
             break
         if line:  # Only add non-empty lines
             question_lines.append(line)
@@ -123,14 +134,14 @@ def parse_single_question(content):
     while i < len(lines):
         line = lines[i].strip()
 
-        # Check if line starts with **Answer or **Solution
-        if re.search(r'^\*\*\s*Answer', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution', line, re.IGNORECASE):
+        # Check if line starts with **Answer, __Answer:, or **Solution
+        if re.search(r'^\*\*\s*Answer|^__Answer\s*:', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution', line, re.IGNORECASE):
             break
 
         # Check for bold option markers like **A.**
-        opt_match_bold = re.match(r'^\*\*([A-D])\.\s*\*\*(.+)', line)
+        opt_match_bold = re.match(r'^\*\*([A-E])\.\s*\*\*(.+)', line)
         # Check for regular option markers like A.
-        opt_match = re.match(r'^([A-D])\.\s*(.+)', line)
+        opt_match = re.match(r'^([A-E])\.\s*(.+)', line)
 
         if opt_match_bold:
             option_text = process_base64_images(opt_match_bold.group(2))
@@ -163,20 +174,18 @@ def parse_single_question(content):
     # Find answer and solution
     remaining_content = '\n'.join(lines[i:])
 
-    # Split remaining content at Solution marker to avoid picking up answers from later questions
-    # that might be embedded in the solution text
-    solution_split = re.split(r'\*\*\s*Solution\s*:', remaining_content, maxsplit=1, flags=re.IGNORECASE)
-    answer_section = solution_split[0] if solution_split else remaining_content
-
-    # Extract answer from answer_section only (before Solution)
-    # Pattern matches "**Answer: A.**" or "**Answer : A.**" or "**  Answer: A. option text**"
-    answer_match = re.search(r'\*\*\s*Answer\s*:\s*\*?\s*([A-D])\.', answer_section, re.IGNORECASE)
+    # Extract answer from the full remaining content first (before any splitting)
+    # Pattern matches "__Answer: B. witty__" or "**Answer: A.**" or "**Answer : A.**" or "**  Answer: A. option text**"
+    answer_match = re.search(r'__Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
+    if not answer_match:
+        # Try with bold markers
+        answer_match = re.search(r'\*\*\s*Answer\s*:\s*\*?\s*([A-E])\.', remaining_content, re.IGNORECASE)
     if not answer_match:
         # Try with single asterisk
-        answer_match = re.search(r'\*\s*Answer\s*:\s*([A-D])\.', answer_section, re.IGNORECASE)
+        answer_match = re.search(r'\*\s*Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
     if not answer_match:
         # Try without bold markers
-        answer_match = re.search(r'Answer\s*:\s*([A-D])\.', answer_section, re.IGNORECASE)
+        answer_match = re.search(r'Answer\s*:\s*([A-E])\.', remaining_content, re.IGNORECASE)
 
     if answer_match:
         answer_letter = answer_match.group(1).upper()
@@ -184,15 +193,18 @@ def parse_single_question(content):
         answer_index = ord(answer_letter) - ord('A')
 
     # Extract solution/explanation
-    # Look for "**Solution:**" or "**Solution**" with optional colon
-    solution_match = re.search(r'\*\*\s*Solution\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+    # Look for "**Explanation:" or "**Solution:**" or "**Solution**" with optional colon
+    solution_match = re.search(r'\*\*\s*Explanation\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+    if not solution_match:
+        solution_match = re.search(r'\*\*\s*Solution\s*:?\s*\*?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
     if solution_match:
         explanation = solution_match.group(1).strip()
     else:
         # Try without bold markers
-        solution_match = re.search(r'Solution\s*:?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
+        solution_match = re.search(r'Explanation\s*:?\s*(.*)|Solution\s*:?\s*(.*)', remaining_content, re.DOTALL | re.IGNORECASE)
         if solution_match:
-            explanation = solution_match.group(1).strip()
+            # Get the first non-None group
+            explanation = (solution_match.group(1) or solution_match.group(2) or '').strip()
         else:
             # Try to find any text after Answer
             answer_pos = remaining_content.lower().find('answer')
@@ -272,7 +284,7 @@ def main():
     docx_path = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/docs')
     md_output_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/md')
 
-    md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
+    # md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
     # convert_docx_to_md("document.docx", "output")
 
     md_dir = md_output_dir
