@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-02-09T11:13:36.500Z",
+  "summary": {
+    "total": 24,
+    "passed": 6,
+    "failed": 18
+  },
+  "passed": [
+    {
+      "file": "Coordinate Geometry Test - DB_questions.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Averages Test - DB_questions.csv",
+      "rowCount": 30,
+      "questionCount": 30
+    },
+    {
+      "file": "Height & Distace Test  - DB_questions.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Time Speed & Distance Test - DB_questions.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Geometric Progression Test - DB_questions.csv",
+      "rowCount": 7,
+      "questionCount": 7
+    },
+    {
+      "file": "Races and Games Test - DB_questions.csv",
+      "rowCount": 8,
+      "questionCount": 8
+    }
+  ],
+  "failed": [
+    {
+      "file": "Simple Interest Test -DB_questions.csv",
+      "error": "Row 4: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"A sum of money amounts to Rs 8,000 after 3 years a...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Probability Test - DB_questions.csv",
+      "error": "Row 9: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"One bag contains 4 white and 6 blue marbles, while...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Numbers Test -DB_questions.csv",
+      "error": "Row 7: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"Determine the smallest whole number to replace Y i...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Problem on Trains Test - DB_questions.csv",
+      "error": "Row 5: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"Twotrains running in opposite directions cross a p...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Mixtures & Alligations Test - DB_questions.csv",
+      "error": "Row 4: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"Gold and copper are as heavy as water by 19 and 9 ...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Ratio & Proportion Test - DB_questions.csv",
+      "error": "Row 12: Maximum options 2-6 - Question: \"The annual incomes of A and B are in the ratio 3 :...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Chain Rule Test - DB_questions.csv",
+      "error": "Row 1: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"If 2 mat-weavers can weave 3 mats in 3 days, how m...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Mensuration Test - DB_questions.csv",
+      "error": "Row 12: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"An order was placed for the supply of a cylindrica...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Partnership Test - DB_questions.csv",
+      "error": "Row 2: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"Amit, Priya, and Rajesh decided to invest in a bus...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Ages Test - DB_questions.csv",
+      "error": "Row 9: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"X is as much younger than Y as he is older than Z....\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Percentage Test - DB_questions.csv",
+      "error": "Row 9: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"Due to a 20% reduction in price, a man can buy 8 k...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "LCM HCF Test  - DB_questions.csv",
+      "error": "Row 2: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"The product of two numbers is 6930. If their HCF i...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Arithmatic Progression Test-DB_questions.csv",
+      "error": "Row 1: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"A car travels 700 miles in seven hours, each hour ...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Time & Work Test - DB_questions.csv",
+      "error": "Row 5: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"A, B, and C can do work in 20, 12, and 15 days res...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Pipes & Cistern Test - DB_questions.csv",
+      "error": "Row 1: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"A hose can fill a water tank in 3 hours, but due t...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Logarithm Test - DB_questions.csv",
+      "error": "Row 6: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"If log₆ P = Q, then log₂₁₆ P⁴ is equal to? ...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Compound Interest Test  - DB_questions.csv",
+      "error": "Row 9: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"The simple interest on a certain sum for 2 years i...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    },
+    {
+      "file": "Profit and Loss Test - DB_questions.csv",
+      "error": "Row 3: Invalid answer: answer is 4 but only 3 options exist (answer must be 1-3) - Question: \"A loss of 25% is made by selling a car. Had it bee...\"",
+      "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided"
+    }
+  ]
+}

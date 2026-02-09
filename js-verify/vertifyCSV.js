@@ -203,7 +203,57 @@ function verifyAllCSVs() {
     });
   }
 
+  // Generate JSON report
+  const reportPath = path.join(__dirname, 'verification-report.json');
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      total: files.length,
+      passed: results.passed.length,
+      failed: results.failed.length,
+    },
+    passed: results.passed.map(p => ({
+      file: p.file,
+      rowCount: p.rowCount,
+      questionCount: p.questionCount,
+    })),
+    failed: results.failed.map(f => ({
+      file: f.file,
+      error: f.error,
+      reason: getFailureReason(f.error),
+    })),
+  };
+
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log('\nJSON report saved to:', reportPath);
+
   return results;
+}
+
+// Get human-readable failure reason
+function getFailureReason(error) {
+  if (error.includes('No data rows found')) {
+    return 'File is empty or contains no valid data rows';
+  }
+  if (error.includes('only') && error.includes('options exist')) {
+    return 'Answer key exceeds option count - the answer number is greater than the number of options provided';
+  }
+  if (error.includes('Question')) {
+    return 'Invalid question format or missing required question fields';
+  }
+  if (error.includes('Option')) {
+    return 'Invalid option format or exceeds maximum option count';
+  }
+  if (error.includes('Answer')) {
+    return 'Invalid answer key or answer does not match any option';
+  }
+  if (error.includes('TestCase')) {
+    return 'Invalid test case format or exceeds maximum test case count';
+  }
+  if (error.includes('Explanation')) {
+    return 'Invalid explanation format';
+  }
+  return 'Unknown validation error';
 }
 
 // Run verification

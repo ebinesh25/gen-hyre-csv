@@ -89,8 +89,8 @@ def process_base64_images(text):
             return ''
 
     # Replace all base64 images with S3 URLs
-    return re.sub(pattern, replace_base64_with_s3, text)
-    # return re.sub(pattern, "IMAGE_URL", text)
+    # return re.sub(pattern, replace_base64_with_s3, text)
+    return re.sub(pattern, "", text)
 
 def parse_single_question(content):
     """Parse a single question with its options, answer, and solution."""
@@ -117,7 +117,7 @@ def parse_single_question(content):
         if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE):
             i += 1
             break
-        # Check if this looks like an option line
+        # Check if this looks like an option line (including partial bolding like **A.)
         if re.match(r'^[A-E]\.', line) or re.match(r'^\*\*[A-E]\.', line):
             break
         if line:  # Only add non-empty lines
@@ -138,8 +138,8 @@ def parse_single_question(content):
         if re.search(r'^\*\*\s*Answer|^__Answer\s*:', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution', line, re.IGNORECASE):
             break
 
-        # Check for bold option markers like **A.**
-        opt_match_bold = re.match(r'^\*\*([A-E])\.\s*\*\*(.+)', line)
+        # Check for bold option markers like **A.** or **A. (with partial bolding)
+        opt_match_bold = re.match(r'^\*\*([A-E])\.\s*\*?\s*(.+)', line)
         # Check for regular option markers like A.
         opt_match = re.match(r'^([A-E])\.\s*(.+)', line)
 
@@ -163,7 +163,8 @@ def parse_single_question(content):
             i += 1
         elif line:
             # Handle continuation lines - only if it's not starting with ** and not an answer line
-            if options and not line.startswith('**') and not re.search(r'Answer', line, re.IGNORECASE):
+            # Also skip lines that start with option markers (A., B., etc.)
+            if options and not line.startswith('**') and not re.search(r'Answer', line, re.IGNORECASE) and not re.match(r'^[A-E]\.', line):
                 cleaned_line = process_base64_images(line)
                 cleaned_line = remove_markdown_formatting(cleaned_line)
                 options[-1] += ' ' + cleaned_line
@@ -284,7 +285,7 @@ def main():
     docx_path = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/docs')
     md_output_dir = Path('/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/md')
 
-    md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
+    # md_files = convert_docx_to_md(str(docx_path), str(md_output_dir))
     # convert_docx_to_md("document.docx", "output")
 
     md_dir = md_output_dir

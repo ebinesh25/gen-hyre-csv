@@ -77,7 +77,7 @@ class CSVParser {
     this.nextIndex += 1;
     const answer = Number(row[this.nextIndex]);
     if (Number.isNaN(answer) || !Number.isInteger(answer)) throw new Error('Invalid answer');
-    if (answer < 1 || answer > optionCount) throw new Error('Invalid answer');
+    if (answer < 1 || answer > optionCount) throw new Error(`Invalid answer: answer is ${answer} but only ${optionCount} options exist (answer must be 1-${optionCount})`);
     this.obj.answer = answer;
     this.validateCategory(row);
     this.validateDifficulty(row);
