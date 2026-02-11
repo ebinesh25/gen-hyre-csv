@@ -1,15 +1,15 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import CSVParser from './csvParser.js';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import CSVParser from "./csvParser.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.dirname(__dirname);
-const SOURCE_DIR = path.join(ROOT_DIR, 'csv');
-const VERIFIED_DIR = path.join(__dirname, 'verified-csv');
-const FAILED_DIR = path.join(__dirname, 'failed-csv');
+const SOURCE_DIR = path.join(ROOT_DIR, "csv");
+const VERIFIED_DIR = path.join(__dirname, "verified-csv");
+const FAILED_DIR = path.join(__dirname, "failed-csv");
 
 // Configuration
 const CONFIG = {
@@ -22,11 +22,11 @@ const CONFIG = {
 
 // Parse CSV file into array of rows
 function parseCSV(filePath) {
-  const content = fs.readFileSync(filePath, 'utf-8');
+  const content = fs.readFileSync(filePath, "utf-8");
   const rows = [];
   let currentRow = [];
   let inQuotes = false;
-  let currentCell = '';
+  let currentCell = "";
 
   for (let i = 0; i < content.length; i++) {
     const char = content[i];
@@ -41,11 +41,11 @@ function parseCSV(filePath) {
         // Toggle quote mode
         inQuotes = !inQuotes;
       }
-    } else if (char === ',' && !inQuotes) {
+    } else if (char === "," && !inQuotes) {
       // End of cell
       currentRow.push(currentCell);
-      currentCell = '';
-    } else if ((char === '\r' || char === '\n') && !inQuotes) {
+      currentCell = "";
+    } else if ((char === "\r" || char === "\n") && !inQuotes) {
       // End of row
       if (currentCell || currentRow.length > 0) {
         currentRow.push(currentCell);
@@ -54,9 +54,9 @@ function parseCSV(filePath) {
         rows.push(currentRow);
       }
       currentRow = [];
-      currentCell = '';
+      currentCell = "";
       // Skip \r\n
-      if (char === '\r' && nextChar === '\n') {
+      if (char === "\r" && nextChar === "\n") {
         i++;
       }
     } else {
@@ -80,19 +80,21 @@ function validateCSV(filePath) {
     const parser = new CSVParser(path.basename(filePath));
 
     // Filter out empty rows
-    const dataRows = rows.filter(row => row.length > 0 && row[0] && row[0].trim());
+    const dataRows = rows.filter(
+      (row) => row.length > 0 && row[0] && row[0].trim(),
+    );
 
     if (dataRows.length === 0) {
-      return { valid: false, error: 'No data rows found', rowCount: 0 };
+      return { valid: false, error: "No data rows found", rowCount: 0 };
     }
 
     // Validate row by row to get better error info
     let validResult = [];
     let rowIndex = 0;
     for (const row of dataRows) {
-      const questionType = row[0].replaceAll(' ', '').toLowerCase();
+      const questionType = row[0].replaceAll(" ", "").toLowerCase();
 
-      if (questionType === 'questiontype') {
+      if (questionType === "questiontype") {
         rowIndex++;
         continue;
       }
@@ -102,26 +104,30 @@ function validateCSV(filePath) {
           [row],
           CONFIG.maxOptionCount,
           CONFIG.maxTestCaseCount,
-          CONFIG.features
+          CONFIG.features,
         );
 
         if (error) {
-          const questionPreview = row[1] ? row[1].substring(0, 50) : '(no question)';
+          const questionPreview = row[1]
+            ? row[1].substring(0, 50)
+            : "(no question)";
           return {
             valid: false,
             error: `Row ${rowIndex}: ${error} - Question: "${questionPreview}..."`,
-            rowCount: dataRows.length
+            rowCount: dataRows.length,
           };
         }
         if (result && result.length > 0) {
           validResult.push(result[0]);
         }
       } catch (e) {
-        const questionPreview = row[1] ? row[1].substring(0, 50) : '(no question)';
+        const questionPreview = row[1]
+          ? row[1].substring(0, 50)
+          : "(no question)";
         return {
           valid: false,
           error: `Row ${rowIndex}: ${e.message} - Question: "${questionPreview}..."`,
-          rowCount: dataRows.length
+          rowCount: dataRows.length,
         };
       }
       rowIndex++;
@@ -148,10 +154,10 @@ function verifyAllCSVs() {
   }
 
   // Get all CSV files from source directory
-  const files = fs.readdirSync(SOURCE_DIR).filter(f => f.endsWith('.csv'));
+  const files = fs.readdirSync(SOURCE_DIR).filter((f) => f.endsWith(".csv"));
 
   console.log(`Found ${files.length} CSV files to verify\n`);
-  console.log('='.repeat(80));
+  console.log("=".repeat(80));
 
   const results = {
     passed: [],
@@ -183,28 +189,28 @@ function verifyAllCSVs() {
       console.log(`✗ FAIL: ${file}`);
       console.log(`  Error: ${validationResult.error}`);
     }
-    console.log('-'.repeat(80));
+    console.log("-".repeat(80));
   }
 
   // Summary
-  console.log('\n' + '='.repeat(80));
-  console.log('SUMMARY');
-  console.log('='.repeat(80));
+  console.log("\n" + "=".repeat(80));
+  console.log("SUMMARY");
+  console.log("=".repeat(80));
   console.log(`Total files: ${files.length}`);
   console.log(`Passed: ${results.passed.length}`);
   console.log(`Failed: ${results.failed.length}`);
-  console.log('\nVerified files saved to:', VERIFIED_DIR);
-  console.log('Failed files saved to:', FAILED_DIR);
+  console.log("\nVerified files saved to:", VERIFIED_DIR);
+  console.log("Failed files saved to:", FAILED_DIR);
 
   if (results.failed.length > 0) {
-    console.log('\nFailed files:');
+    console.log("\nFailed files:");
     results.failed.forEach(({ file, error }) => {
       console.log(`  - ${file}: ${error}`);
     });
   }
 
   // Generate JSON report
-  const reportPath = path.join(__dirname, 'verification-report.json');
+  const reportPath = path.join(__dirname, "verification-report.json");
   const report = {
     timestamp: new Date().toISOString(),
     summary: {
@@ -212,12 +218,12 @@ function verifyAllCSVs() {
       passed: results.passed.length,
       failed: results.failed.length,
     },
-    passed: results.passed.map(p => ({
+    passed: results.passed.map((p) => ({
       file: p.file,
       rowCount: p.rowCount,
       questionCount: p.questionCount,
     })),
-    failed: results.failed.map(f => ({
+    failed: results.failed.map((f) => ({
       file: f.file,
       error: f.error,
       reason: getFailureReason(f.error),
@@ -225,36 +231,72 @@ function verifyAllCSVs() {
   };
 
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log('\nJSON report saved to:', reportPath);
+  console.log("\nJSON report saved to:", reportPath);
 
   return results;
 }
 
 // Get human-readable failure reason
 function getFailureReason(error) {
-  if (error.includes('No data rows found')) {
-    return 'File is empty or contains no valid data rows';
+  if (error.includes("No data rows found")) {
+    return "File is empty or contains no valid data rows";
   }
-  if (error.includes('only') && error.includes('options exist')) {
-    return 'Answer key exceeds option count - the answer number is greater than the number of options provided';
+  if (error.includes("only") && error.includes("options exist")) {
+    return "Answer key exceeds option count - the answer number is greater than the number of options provided";
   }
-  if (error.includes('Question')) {
-    return 'Invalid question format or missing required question fields';
+  if (error.includes("Question")) {
+    return "Invalid question format or missing required question fields";
   }
-  if (error.includes('Option')) {
-    return 'Invalid option format or exceeds maximum option count';
+  if (error.includes("Option")) {
+    return "Invalid option format or exceeds maximum option count";
   }
-  if (error.includes('Answer')) {
-    return 'Invalid answer key or answer does not match any option';
+  if (error.includes("Answer")) {
+    return "Invalid answer key or answer does not match any option";
   }
-  if (error.includes('TestCase')) {
-    return 'Invalid test case format or exceeds maximum test case count';
+  if (error.includes("TestCase")) {
+    return "Invalid test case format or exceeds maximum test case count";
   }
-  if (error.includes('Explanation')) {
-    return 'Invalid explanation format';
+  if (error.includes("Explanation")) {
+    return "Invalid explanation format";
   }
-  return 'Unknown validation error';
+  return "Unknown validation error";
 }
 
-// Run verification
+function verifyCSV(file_path) {
+  const validationResult = validateCSV(file_path);
+  const file = "aptitude_all_questions.csv";
+  const results = {
+    passed: [],
+    failed: [],
+  };
+  if (validationResult.valid) {
+    // Copy to verified folder
+    const destPath = path.join(VERIFIED_DIR, file);
+    fs.copyFileSync(sourcePath, destPath);
+    results.passed.push({
+      file,
+      ...validationResult,
+    });
+    console.log(`✓ PASS: ${file}`);
+    console.log(`  Questions: ${validationResult.questionCount}`);
+  } else {
+    // Copy to failed folder
+    // const destPath = path.join(FAILED_DIR, file);
+    // fs.copyFileSync(sourcePath, destPath);
+    results.failed.push({
+      file,
+      error: validationResult.error,
+    });
+    console.log(`✗ FAIL: ${file}`);
+    console.log(`  Error: ${validationResult.error}`);
+  }
+  console.log("-".repeat(80));
+}
+
+// Run verification for a CSV
+// const file_path =
+//   "/home/positron/Documents/Guvi/test-automation/hyrenet-question-lib/aptitude_all_questions.csv";
+// verifyCSV(fileURLToPath)
+
+// Run verification for all CSV
 verifyAllCSVs();

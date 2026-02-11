@@ -10,13 +10,13 @@ wheels/
 .venv
 .env
 
-csv/
-docs/
-docs-txt/
+csv*/
+docs*/
 
 # Temp files for API
 temp/
 aptitude-topics-csv/
-md/
+md*/
 txts/
 wrong-csv/
+output/

@@ -241,8 +241,11 @@ def parse_single_question(content):
 
     # Remove markdown formatting and clean up explanation
     explanation = remove_markdown_formatting(explanation)
-    # Clean up extra whitespace and newlines
-    explanation = ' '.join(explanation.split())
+
+    # Preserve newlines as \n for frontend parsing, but clean up extra whitespace within lines
+    lines = explanation.split('\n')
+    cleaned_lines = [' '.join(line.split()) for line in lines if line.strip()]
+    explanation = '\\n'.join(cleaned_lines)
 
     return {
         'question_type': 'objective',

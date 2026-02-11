@@ -8,6 +8,7 @@ dependencies = [
     "boto3>=1.42.42",
     "doc-to-md-cli>=0.1.2",
     "fastapi>=0.115.0",
+    "groq>=1.0.0",
     "gspread>=6.2.1",
     "pandas>=2.3.3",
     "pillow>=12.1.0",
