@@ -49,12 +49,17 @@ class CSVParser {
  * 0      -  questionType
  * 1      -  question
  * 2      -  optionCount
- * 3      -  options
- * 4      -  answers
- * 6      -  category
- * 7      -  difficulty
- * 8      -  score
- * 9      -  tags
+ * 3...N  -  options (dynamic, based on maxOptionCount)
+ * N+1    -  answer
+ * N+2    -  category
+ * N+3    -  difficulty
+ * N+4    -  score
+ * N+5    -  tags
+ * N+6    -  answerExplanation (if enabled)
+ *
+ * Example with maxOptionCount=4: options at columns 3-6, answer at column 7
+ * Example with maxOptionCount=5: options at columns 3-7, answer at column 8
+ * Example with maxOptionCount=6: options at columns 3-8, answer at column 9
  */
   validateObjective(row, maxOptionCount, features) {
     this.nextIndex = 0;
@@ -63,7 +68,7 @@ class CSVParser {
     this.nextIndex += 1;
     const optionCount = Number(row[this.nextIndex]);
     if (Number.isNaN(optionCount) || !Number.isInteger(optionCount)) throw new Error('Invalid option count');
-    if (optionCount < 2 || optionCount > 6) throw new Error('Maximum options 2-6');
+    if (optionCount < 2) throw new Error('Option count must be at least 2');
     for (let i = 1; i <= optionCount; i += 1) {
       this.nextIndex += 1;
       const option = row[this.nextIndex].trim();

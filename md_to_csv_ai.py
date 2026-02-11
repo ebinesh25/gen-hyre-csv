@@ -66,117 +66,6 @@ Simplifying this equation, we get:
 
 x = 40
 
-2.A, B, C and D are four consecutive even numbers respectively and their average is 65. What is the product of A and D?  
-
-**Options:  
-**A. 3968
-
-B. 4092
-
-C. 4216
-
-D. 4352  
-
-**Answer: C.4216**
-
-**Solution:**
-
-Let x, x + 2, x + 4 and x + 6 represent numbers A, B, C and D respectively.
-
-Then,  
-x+(x+2)+(x+4)+(x+6)4=65
-
-4x+12=260
-
-4x=248
-
-x=62
-
-So, A = 62, B = 64, C = 66, D = 68
-
-∴ A × D = 62 × 68 = 4216
-
-3.The average of 5 consecutive multiples of 3 M, N, O, P, and Q is 54. What is the product of M and Q?
-
-**Options:  
-**A. 2916
-
-B. 2880
-
-C. 3136
-
-D. 3249  
-
-**Answer: B. 2880**
-
-**Solution:**
-
-Since M, N, O, P, and Q are five consecutive multiples of 3,
-
-and we know that the average of numbers at equal intervals is the middle number.
-
-Here the average is 54. So the numbers are 48, 51, 54, 57, 60.
-
-Finally, the product of M and Q is 48 \* 60 = 2880.
-
-4.The sum of 3 consecutive multiples of 5 is 60 more than the average of these numbers. What will be the highest of these numbers?  
-
-**Options:  
-**A. 15
-
-B. 35
-
-C. 25
-
-D. 30  
-
-**Answer: B. 35**
-
-**Solution:**
-
-Let's call the smallest of the 3 consecutive multiples of 5 "x".
-
-Then we know that the next two numbers are x + 5 and x + 10.
-
-The sum of these numbers is x + (x + 5) + (x + 10) = 3x + 15.
-
-The average of these numbers is (x + (x + 5) + (x + 10)) / 3 = (3x + 15) / 3 = x + 5.
-
-So the sum of the numbers is 60 more than the average:
-
-3x + 15 = (x + 5) + 60
-
-2x + 15 = 65
-
-2x = 50
-
-x = 25
-
-Therefore, the highest of the 3 numbers is x + 10 = 25 + 10 = 35.
-
-5.Find the value of 1000 + 1010 + 1020 + … + 1300.
-
-**Options:  
-**A. 91000
-
-B. 93500
-
-C. 35650
-
-D. 98500  
-
-**Answer: C. 35650**
-
-**Solution:**
-
-The sequence of numbers is 1000, 1010, 1020, …, 1300, and the number of terms in the sequence is (1300 - 1000) / 10 + 1 = 31.
-
-Summation of the series in AP = Average x Number of elements
-
-Here, the average of the arithmetic sequence is (first number + last number) / 2(1000 + 1300) / 2 = 1150
-
-Total = 31 \* 1150 = 35650.
-
 6\. The sequence 12, 18, x, y, 36 is an arithmetic progression (AP). Find the values of x and y.
 
 **Options:  
@@ -219,112 +108,6 @@ Fifth term: 30 + 6 = 36
 
 Therefore, x = 24 and y = 30.
 
-7.Find the 9th term of the arithmetic progression 2, 5, 8, …
-
-**Options:  
-**A. 48
-
-B. 26
-
-C. 32
-
-D. 36  
-
-**Answer: B. 26  
-**
-
-**Solution:**
-
-The common difference in this AP is 3.
-
-Therefore,
-
-a9 = a1 + (n-1)d
-
-\= 2 + (9-1)3
-
-\= 26
-
-Hence, the 9th term of the given AP is 26.
-
-8.If the first term of an AP is 12, the common difference is 2, and the last term is 22, find the total number of terms in the AP.
-
-**Options:  
-**A. 8
-
-B. 6
-
-C. 12
-
-D. 16  
-
-**Answer: B. 6  
-**
-
-**Solution:**
-
-Using the same method as above, we get:
-
-22 = 12 + (n - 1)2
-
-10 = 2(n - 1)
-
-n - 1 = 5
-
-n = 6
-
-Therefore, there are 6 terms in the AP.
-
-9\. Which term of the arithmetic progression (AP) 12, 18, 24, ... is 150?
-
-**Options:  
-**A. 19th term  
-B. 20th term  
-C. 21st term  
-D. 23rd term
-
-**Answer: D. 23rd term**
-
-**Solution:**
-
-The common difference of the AP 12, 18, 24, ... is d = 18 - 12 = 6.
-
-To find which term is 150, we use the formula for the nth term of an arithmetic sequence:
-
-aₙ = a₁ + (n - 1)d
-
-Where:  
-aₙ = 150 (the term we're looking for)
-
-a₁ = 12 (the first term)
-
-d = 6 (the common difference)
-
-n = term number (what we need to find)
-
-Substituting the values:
-
-150 = 12 + (n - 1)(6)  
-150 = 12 + 6n - 6  
-150 = 6 + 6n  
-150 - 6 = 6n  
-144 = 6n  
-n = 24
-
-Wait, let me recalculate: 150 - 12 = (n - 1)(6)  
-138 = (n - 1)(6)  
-138 ÷ 6 = n - 1  
-23 = n - 1  
-n = 24
-
-Actually: 138 = 6(n - 1)  
-23 = n - 1  
-n = 24
-
-Let me verify: a₂₄ = 12 + (24-1)(6) = 12 + 138 = 150
-
-Therefore, the 24th term of the AP is 150.  
-
 10.What is the sum of the first 15 even natural numbers?
 
 **Options:  
@@ -348,6 +131,80 @@ Since we want the sum of the first 15 even natural numbers,
 we can substitute n=15 into the formula to get: 15(15+1) = 240.
 
 Therefore, the sum of the first 15 even natural numbers is 240.
+
+11.Does the following sentence have an S-V error? She and her friends was waiting outside.
+
+Options:
+ Yes
+ No
+
+Answer: Yes
+
+Explanation: The subject "She and her friends" is a compound subject and is plural, so it requires the plural verb "were".
+
+12.Rearrange the following five sentences in proper sequence:
+
+1. Realising his mistake, Aman apologised.
+2. Without checking facts, Aman believed the rumour.
+3. Aman heard a rumour during lunch.
+4. His friend explained the truth.
+5. He avoided speaking to his friend.
+
+Which sentence should come second?
+
+Options:
+ 1
+ 2
+ 3
+ 4
+ 5
+
+Answer: 2
+
+Explanation: After hearing the rumour, Aman believed it and got angry.
+
+NOTE: This question has 5 options but answer is 2 (within first 4), so we keep first 4 options.
+
+13.A modern education system should not depend on outdated methods nor rely on obsolete technology.
+
+Options:
+ should not depend
+ should neither depend
+ should either depend
+ No correction required
+
+Answer: should neither depend
+
+Explanation: The correlative conjunction "neither" must be paired with "nor".
+
+14.Fill in the blank with the appropriate determiner:
+
+_____ of the students who participated have been selected.
+
+Options:
+ A. Few
+ B. Some
+ C. Every
+ D. No
+
+Answer: B
+
+Explanation: "Some" correctly indicates that not all, but a certain number have been selected.
+
+NOTE: Original had 5 options (A-E), but option E was dropped. Answer B is within A-D.
+
+15.Choose the best alternative for the underlined phrase:
+
+The company decided to take the supplier to the court over the breach of contract.
+
+to the court
+ in the court
+ to court
+ into the court
+
+Answer: to court
+
+Explanation: The correct idiomatic expression is "to court".
 """
 
 SAMPLE_CSV = """Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation,,,,,
@@ -361,6 +218,11 @@ objective,"Find the 9th term of the arithmetic progression 2, 5, 8, …",4,48,26
 objective,"If the first term of an AP is 12, the common difference is 2, and the last term is 22, find the total number of terms in the AP.",4,8,6,12,16,2,Aptitude,medium,5,"Aptitude,Numbers","* Using the same method as above, we get: 22 = 12 + (n - 1)2 10 = 2(n - 1) n - 1 = 5 n = 6 Therefore, there are 6 terms in the AP.",,,,,
 objective,"Which term of the arithmetic progression (AP) 12, 18, 24, ... is 150?",4,19th term,20th term,21st term,23rd term,4,Aptitude,medium,5,"Aptitude,Numbers","* The common difference of the AP 12, 18, 24, ... is d = 18 - 12 = 6. To find which term is 150, we use the formula for the nth term of an arithmetic sequence: aₙ = a₁ + (n - 1)d Where: aₙ = 150 (the term we're looking for) a₁ = 12 (the first term) d = 6 (the common difference) n = term number (what we need to find) Substituting the values: 150 = 12 + (n - 1)(6) 150 = 12 + 6n - 6 150 = 6 + 6n 150 - 6 = 6n 144 = 6n n = 24 Wait, let me recalculate: 150 - 12 = (n - 1)(6) 138 = (n - 1)(6) 138 ÷ 6 = n - 1 23 = n - 1 n = 24 Actually: 138 = 6(n - 1) 23 = n - 1 n = 24 Let me verify: a₂₄ = 12 + (24-1)(6) = 12 + 138 = 150 Therefore, the 24th term of the AP is 150.",,,,,
 objective,What is the sum of the first 15 even natural numbers?,4,190,240,210,196,2,Aptitude,medium,5,"Aptitude,Numbers","* The sum of the first n even natural numbers is given by the formula n(n+1). Since we want the sum of the first 15 even natural numbers, we can substitute n=15 into the formula to get: 15(15+1) = 240. Therefore, the sum of the first 15 even natural numbers is 240.",,,,,
+objective,"Does the following sentence have an S-V error? She and her friends was waiting outside.",2,Yes,No,,,1,Aptitude,medium,5,"Aptitude,Grammar","* The subject ""She and her friends"" is a compound subject and is plural, so it requires the plural verb ""were"".",,,,,,
+objective,"Rearrange the following five sentences in proper sequence: 1. Realising his mistake, Aman apologised. 2. Without checking facts, Aman believed the rumour. 3. Aman heard a rumour during lunch. 4. His friend explained the truth. 5. He avoided speaking to his friend. Which sentence should come second?",4,1,2,3,4,2,Aptitude,medium,5,"Aptitude,Paragraph Formation","* After hearing the rumour, Aman believed it and got angry. Note: Original had 5 options but answer is 2 (within first 4), so we kept first 4 options with option count = 4.",,,,,,
+objective,"A modern education system should not depend on outdated methods nor rely on obsolete technology.",4,"should not depend","should neither depend","should either depend","No correction required",2,Aptitude,medium,5,"Aptitude,Sentence Improvement","* The correlative conjunction ""neither"" must be paired with ""nor"". Answer ""should neither depend"" matches option 2.",,,,,,
+objective,"Fill in the blank with the appropriate determiner: _____ of the students who participated have been selected.",4,"A. Few","B. Some","C. Every","D. No",2,Aptitude,medium,5,"Aptitude,Determiners","* ""Some"" correctly indicates that not all, but a certain number have been selected. Note: Original had 5 options (A-E), but option E was dropped since answer B is within first 4.",,,,,,
+objective,"Choose the best alternative for the underlined phrase: The company decided to take the supplier to the court over the breach of contract.",4,"to the court","in the court","to court","into the court",3,Aptitude,medium,5,"Aptitude,Idioms","* The correct idiomatic expression is ""to court"". Answer ""to court"" matches option 3.",,,,,,
 """
 
 # ---------------------------------------------------------
@@ -400,15 +262,157 @@ def extract_retry_after(error_msg: str) -> int:
 def get_system_prompt() -> str:
     """Get the system prompt for conversion."""
     return """You are an intelligent data extractor. Convert Markdown text into CSV format.
-Follow these STRICT rules:
-1. Output ONLY valid CSV. Do not use markdown code blocks (```csv). Do NOT include any introductory text like "Here is the output CSV:" or similar.
-2. Start IMMEDIATELY with the header row: Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation
-3. 'Question Type' is always "objective".
-4. 'Option count' is always 4.
-5. 'Category', 'Difficulty', 'Score', 'Tags' should be filled as "Aptitude", "medium", "5", "Aptitude,Numbers" respectively if not specified.
-6. For the 'Answer' column: Map the option letter to a number (A=1, B=2, C=3, D=4).
-7. In 'Answer Explanation', replace newlines with " n " to keep the CSV valid.
-8. Process ALL questions in the input. Do not skip any questions.
+
+## CRITICAL RULES - MUST FOLLOW EXACTLY
+
+### CSV FORMAT REQUIREMENTS
+1. Output ONLY valid CSV. No markdown code blocks (```csv). No introductory text.
+2. Start IMMEDIATELY with header: Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation,,,,,
+3. 'Question Type' = "objective" (always)
+4. 'Option count' = The ACTUAL number of options (2, 3, or 4) - NOT always 4!
+5. Default values: Category="Aptitude", Difficulty="medium", Score="5", Tags="Aptitude,Numbers"
+
+### CRITICAL CSV QUOTING RULES (MOST COMMON SOURCE OF ERRORS)
+
+**RULE: ANY field containing commas MUST be enclosed in double quotes**
+
+Columns that MUST be quoted if they contain commas:
+1. **Question** - Quote if it contains any commas
+2. **Options** - Quote if they contain commas
+3. **Tags** - ALWAYS quote tags because they ALWAYS contain commas (e.g., "Aptitude,Numbers", "Grammar,Subject-Verb Agreement")
+4. **Answer Explanation** - Quote if it contains commas
+
+Examples of CORRECT quoting:
+- Question: `objective,"Does the following sentence have an error? Yes or no.",2,Yes,No,...`
+- Tags: `objective,Question text...,2,Yes,No,,,1,Grammar,medium,5,"Grammar,Subject-Verb Agreement","Explanation"`
+- Answer Explanation: `...,"Grammar,Pronoun Agreement","* The ""subject"" is singular, so use ""was""."`
+
+Examples of INCORRECT (missing quotes):
+- `objective,Does the following sentence have an error? Yes or no.,2,Yes,No,,,1,Grammar,medium,5,Grammar,Subject-Verb Agreement,Explanation`
+  ^^^ WRONG - Question, Tags, and Explanation should be quoted!
+
+**Remember: In CSV, anything with commas must be in quotes!**
+
+### CRITICAL UNDERSTANDING OF CSV STRUCTURE
+
+The CSV now supports DYNAMIC option counts based on the maximum options found in the data.
+- The header will have Options1, Options2, Options3, Options4, Options5, Options6, etc. up to the maximum
+- 'Option count' should reflect the ACTUAL number of options for each question
+- All options up to 'Option count' MUST be non-empty
+- Questions with different option counts can coexist in the same CSV
+
+Example 2-option question:
+- Question,2,Yes,No,,,,1,... (optionCount=2, Options3-6 are empty strings)
+
+Example 4-option question:
+- Question,4,A,B,C,D,,,3,... (optionCount=4, Options5-6 are empty strings)
+
+Example 5-option question:
+- Question,5,A,B,C,D,E,,,3,... (optionCount=5, Options6 is empty string)
+
+Example 6-option question:
+- Question,6,1,2,3,4,5,6,,,4,... (optionCount=6, all options filled)
+
+### OPTION HANDLING
+
+**Scenario 1: 2 options (Yes/No questions)**
+- Set Option count = 2
+- Options1="Yes", Options2="No"
+- Options3+ are empty strings (padding columns)
+- Answer: 1 for Yes, 2 for No
+
+**Scenario 2: 3 options**
+- Set Option count = 3
+- Options1, Options2, Options3 filled with actual options
+- Options4+ are empty strings
+
+**Scenario 3: 4 options**
+- Set Option count = 4
+- Options1-4 filled with actual options
+- Options5+ are empty strings
+
+**Scenario 4: 5 options (A, B, C, D, E)**
+- Set Option count = 5
+- Options1-5 filled with all 5 options
+- Options6+ are empty strings
+- Answer can be 1-5
+
+**Scenario 5: 6 options (1, 2, 3, 4, 5, 6)**
+- Set Option count = 6
+- Options1-6 filled with all 6 options
+- Answer can be 1-6
+
+### ANSWER HANDLING (CRITICAL)
+
+**Type 1: Letter-based answers (A, B, C, D, E)**
+- Map to position: A=1, B=2, C=3, D=4, E=5
+- Example: Answer: "B" → Answer column: 2
+- Example: Answer: "E" → Answer column: 5
+
+**Type 2: Number-based answers (1, 2, 3, 4, 5, 6)**
+- Use the number directly as the answer
+- Example: Answer: 3 → Answer column: 3
+- Example: Answer: 5 → Answer column: 5
+
+**Type 3: Text-based answers (full text match)**
+- Find which option matches the answer text
+- Use the position number (1-6) of that option
+- Example: Answer is "should neither depend" and option 2 is "should neither depend" → Answer column: 2
+- Example: Answer is "history, geography and politics" and option 1 is "history, geography and politics" → Answer column: 1
+- If no exact match, find closest partial match
+
+**Type 4: Yes/No answers**
+- Option count = 2
+- Options1="Yes", Options2="No"
+- Answer: 1 for Yes, 2 for No
+
+### SPECIAL QUESTION TYPES
+
+**Paragraph Formation Questions:**
+- May have 5 or 6 options
+- Include all options, set optionCount accordingly (5 or 6)
+- No need to skip any questions
+
+**Sentence Correction/Improvement Questions:**
+- Usually have 2-4 options
+- Extract options as listed
+- Match text-based answer to option content
+
+**Reading Comprehension Questions:**
+- May have 5 options (A through E)
+- Include all 5 options, set optionCount=5
+- Answer can be 1-5
+
+### EXTRACTION GUIDELINES
+
+1. **Extract options EXACTLY as written** - preserve capitalization and spelling
+   - If option is "A. aloof" → Extract as "aloof" (NOT "loof")
+   - If option is "B. witty" → Extract as "witty"
+   - DO NOT drop leading letters or change spelling
+
+2. **Handle option letters correctly**
+   - Options with "A.", "B.", "C.", "D.", "E." → Extract text AFTER the letter and period
+   - Options with "A. ", "B. ", etc. → Remove the letter prefix, keep only the text
+   - Example: "A. aloof" → "aloof"
+   - Example: "B. witty" → "witty"
+
+3. Extract ALL options listed under "Options:" header
+4. Handle multiline option formats - combine lines that belong to same option
+5. Ignore "Correct sentence:" or similar labels in answer key - focus on the option content
+6. For answer explanation, extract the explanation text and replace newlines with " n "
+7. Process EVERY question in the input - do not skip any EXCEPT when answer exceeds available options
+
+### VALIDATION CHECKS BEFORE OUTPUTING
+- Determine MAXIMUM option count across all questions (2, 3, 4, 5, or 6)
+- CSV header will have Options1 through Options[maxOptionCount]
+- Each row must have: Question Type, Question, Option count, Options1-[maxOptionCount], Answer, Category, Difficulty, Score, Tags, Answer Explanation
+- Option count must match actual number of non-empty options for that question
+- All options 1 through optionCount must be non-empty
+- Options beyond optionCount are empty strings (padding)
+- Answer must be a number between 1 and optionCount
+- If answer exceeds optionCount, skip that question
+- **CRITICAL:** Tags must ALWAYS be quoted because they contain commas: `"Grammar,Subject-Verb Agreement"`
+- **CRITICAL:** Quote any field that contains commas (Question, Options, Answer Explanation)
 """
 
 def convert_with_groq(md_content: str) -> str:
@@ -424,12 +428,41 @@ def convert_with_groq(md_content: str) -> str:
 
 ---
 
+## CRITICAL REMINDERS FOR CONVERSION:
+
+1. **CSV QUOTING is MANDATORY for fields with commas:**
+   - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
+   - Quote Question if it has commas
+   - Quote Options if they have commas
+   - Quote Answer Explanation if it has commas
+
+2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
+   - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
+   - CSV header will have Options1 through Options[maxCount]
+   - Each question row has its actual optionCount and only that many non-empty options
+
+3. **Option Count = ACTUAL number of options** (2, 3, 4, 5, or 6)
+   - 2 options: Set optionCount=2, fill Options1-2
+   - 4 options: Set optionCount=4, fill Options1-4
+   - 5 options: Set optionCount=5, fill Options1-5
+   - 6 options: Set optionCount=6, fill Options1-6
+   - Options beyond actual count are empty strings
+
+4. **Every row must have consistent column count** based on maxOptionCount
+
+5. **Text-based answers:** Match the answer text to find the correct option number (1-6)
+
+6. **Letter answers (A, B, C, D, E):** Convert to numbers (A=1, B=2, C=3, D=4, E=5)
+
+7. **Number answers (1, 2, 3, 4, 5, 6):** Use directly as the answer
+
 Now, convert the following Markdown to CSV using the exact same logic:
 
 ### Input Markdown
 {md_content}
 
 ### Output CSV
+IMPORTANT: Output ONLY the CSV. Start immediately with the header row.
 """
 
     retry_count = 0
@@ -500,6 +533,34 @@ def convert_with_claude_cli(md_content: str) -> str:
 {SAMPLE_CSV}
 
 ---
+
+## CRITICAL REMINDERS FOR CONVERSION:
+
+1. **CSV QUOTING is MANDATORY for fields with commas:**
+   - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
+   - Quote Question if it has commas
+   - Quote Options if they have commas
+   - Quote Answer Explanation if it has commas
+
+2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
+   - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
+   - CSV header will have Options1 through Options[maxCount]
+   - Each question row has its actual optionCount and only that many non-empty options
+
+3. **Option Count = ACTUAL number of options** (2, 3, 4, 5, or 6)
+   - 2 options: Set optionCount=2, fill Options1-2
+   - 4 options: Set optionCount=4, fill Options1-4
+   - 5 options: Set optionCount=5, fill Options1-5
+   - 6 options: Set optionCount=6, fill Options1-6
+   - Options beyond actual count are empty strings
+
+4. **Every row must have consistent column count** based on maxOptionCount
+
+5. **Text-based answers:** Match the answer text to find the correct option number (1-6)
+
+6. **Letter answers (A, B, C, D, E):** Convert to numbers (A=1, B=2, C=3, D=4, E=5)
+
+7. **Number answers (1, 2, 3, 4, 5, 6):** Use directly as the answer
 
 Now, convert the following Markdown to CSV using the exact same logic:
 

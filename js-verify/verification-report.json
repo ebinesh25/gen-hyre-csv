@@ -1,102 +1,16 @@
 {
-  "timestamp": "2026-02-11T09:36:52.180Z",
+  "timestamp": "2026-02-11T12:20:05.721Z",
   "summary": {
-    "total": 18,
-    "passed": 13,
-    "failed": 5
+    "total": 1,
+    "passed": 1,
+    "failed": 0
   },
   "passed": [
-    {
-      "file": "Change of Speech Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Verbal Analogies Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Ordering Sentences Test - DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Synonyms Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Spellings Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "One Word Substitutes Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Idioms and Phrases Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Change of Voice Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Selecting Words Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Cloze Test -DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
-    {
-      "file": "Reading Comprehension Test - DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
-    },
     {
       "file": "Completing Statements Test - DB.csv",
       "rowCount": 20,
       "questionCount": 20
-    },
-    {
-      "file": "Antonyms Test-DB.csv",
-      "rowCount": 20,
-      "questionCount": 20
     }
   ],
-  "failed": [
-    {
-      "file": "Sentence Correction Test -DB.csv",
-      "error": "Row 1: Maximum options 2-6 - Question: \"Does the following sentence have an S–V error? She...\"",
-      "reason": "Invalid question format or missing required question fields"
-    },
-    {
-      "file": "Sentence Formation Test - DB.csv",
-      "error": "Row 1: Maximum options 2-6 - Question: \"Arrange the following words to form a meaningful s...\"",
-      "reason": "Invalid question format or missing required question fields"
-    },
-    {
-      "file": "Paragraph Formation Test -DB.csv",
-      "error": "Row 1: Maximum options 2-6 - Question: \"Rearrange the following five sentences in proper s...\"",
-      "reason": "Invalid question format or missing required question fields"
-    },
-    {
-      "file": "Spotting Errors Test -DB.csv",
-      "error": "Row 13: Maximum options 2-6 - Question: \"Spot the error: I have been (1)/ told that (2)/ th...\"",
-      "reason": "Invalid question format or missing required question fields"
-    },
-    {
-      "file": "Sentence Improvement Test - DB.csv",
-      "error": "Row 1: Maximum options 2-6 - Question: \"A modern education system should not depend on out...\"",
-      "reason": "Invalid question format or missing required question fields"
-    }
-  ]
+  "failed": []
 }

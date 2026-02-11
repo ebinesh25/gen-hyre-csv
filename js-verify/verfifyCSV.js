@@ -7,13 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.dirname(__dirname);
-const SOURCE_DIR = path.join(ROOT_DIR, "csv");
+const SOURCE_DIR = path.join(ROOT_DIR, "csv-ai");
 const VERIFIED_DIR = path.join(__dirname, "verified-csv");
 const FAILED_DIR = path.join(__dirname, "failed-csv");
 
-// Configuration
+// Configuration - maxOptionCount will be determined dynamically from CSV header
 const CONFIG = {
-  maxOptionCount: 4,
+  maxOptionCount: 4, // Default, will be overridden by actual CSV header
   maxTestCaseCount: 10,
   features: {
     hasQuestionExplanationFeature: true,
@@ -77,6 +77,31 @@ function parseCSV(filePath) {
 function validateCSV(filePath) {
   try {
     const rows = parseCSV(filePath);
+
+    if (rows.length === 0) {
+      return { valid: false, error: "No data rows found", rowCount: 0 };
+    }
+
+    // Dynamically determine maxOptionCount from the header row
+    const header = rows[0];
+    let maxOptionCount = 0;
+    for (let i = 0; i < header.length; i++) {
+      const col = header[i].trim();
+      if (col.startsWith("Options") || col.startsWith("option")) {
+        const num = parseInt(col.replace(/\D+/g, ""), 10);
+        if (!isNaN(num)) {
+          maxOptionCount = Math.max(maxOptionCount, num);
+        }
+      }
+    }
+
+    // If no option columns found in header, use default
+    if (maxOptionCount === 0) {
+      maxOptionCount = 4;
+    }
+
+    console.log(`  Dynamic maxOptionCount determined: ${maxOptionCount}`);
+
     const parser = new CSVParser(path.basename(filePath));
 
     // Filter out empty rows
@@ -102,7 +127,7 @@ function validateCSV(filePath) {
       try {
         const [result, error] = parser.validate(
           [row],
-          CONFIG.maxOptionCount,
+          maxOptionCount, // Use dynamically determined maxOptionCount
           CONFIG.maxTestCaseCount,
           CONFIG.features,
         );
