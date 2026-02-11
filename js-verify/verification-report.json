@@ -1,131 +1,102 @@
 {
-  "timestamp": "2026-02-10T05:47:26.909Z",
+  "timestamp": "2026-02-11T09:36:52.180Z",
   "summary": {
-    "total": 24,
-    "passed": 24,
-    "failed": 0
+    "total": 18,
+    "passed": 13,
+    "failed": 5
   },
   "passed": [
     {
-      "file": "Mensuration Test - DB.csv",
-      "rowCount": 27,
-      "questionCount": 27
-    },
-    {
-      "file": "Probability Test - DB.csv",
-      "rowCount": 29,
-      "questionCount": 29
-    },
-    {
-      "file": "Simple Interest Test -DB.csv",
-      "rowCount": 16,
-      "questionCount": 16
-    },
-    {
-      "file": "Ratio & Proportion Test - DB.csv",
-      "rowCount": 15,
-      "questionCount": 15
-    },
-    {
-      "file": "Races and Games Test - DB.csv",
-      "rowCount": 8,
-      "questionCount": 8
-    },
-    {
-      "file": "Time Speed & Distance Test - DB.csv",
+      "file": "Change of Speech Test -DB.csv",
       "rowCount": 20,
       "questionCount": 20
     },
     {
-      "file": "Height & Distace Test  - DB.csv",
-      "rowCount": 5,
-      "questionCount": 5
-    },
-    {
-      "file": "Partnership Test - DB.csv",
-      "rowCount": 6,
-      "questionCount": 6
-    },
-    {
-      "file": "Ages Test - DB.csv",
-      "rowCount": 23,
-      "questionCount": 23
-    },
-    {
-      "file": "Compound Interest Test  - DB.csv",
-      "rowCount": 15,
-      "questionCount": 15
-    },
-    {
-      "file": "Problem on Trains Test - DB.csv",
-      "rowCount": 11,
-      "questionCount": 11
-    },
-    {
-      "file": "Profit and Loss Test - DB.csv",
-      "rowCount": 29,
-      "questionCount": 29
-    },
-    {
-      "file": "Coordinate Geometry Test - DB.csv",
-      "rowCount": 5,
-      "questionCount": 5
-    },
-    {
-      "file": "Numbers Test -DB.csv",
-      "rowCount": 19,
-      "questionCount": 19
-    },
-    {
-      "file": "Chain Rule Test - DB.csv",
-      "rowCount": 19,
-      "questionCount": 19
-    },
-    {
-      "file": "Arithmatic Progression Test-DB.csv",
-      "rowCount": 10,
-      "questionCount": 10
-    },
-    {
-      "file": "Mixtures & Alligations Test - DB.csv",
+      "file": "Verbal Analogies Test -DB.csv",
       "rowCount": 20,
       "questionCount": 20
     },
     {
-      "file": "LCM HCF Test  - DB.csv",
-      "rowCount": 12,
-      "questionCount": 12
+      "file": "Ordering Sentences Test - DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Logarithm Test - DB.csv",
-      "rowCount": 15,
-      "questionCount": 15
+      "file": "Synonyms Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Geometric Progression Test - DB.csv",
-      "rowCount": 7,
-      "questionCount": 7
+      "file": "Spellings Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Pipes & Cistern Test - DB.csv",
-      "rowCount": 11,
-      "questionCount": 11
+      "file": "One Word Substitutes Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Time & Work Test - DB.csv",
-      "rowCount": 15,
-      "questionCount": 15
+      "file": "Idioms and Phrases Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Averages Test - DB.csv",
-      "rowCount": 30,
-      "questionCount": 30
+      "file": "Change of Voice Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     },
     {
-      "file": "Percentage Test - DB.csv",
-      "rowCount": 31,
-      "questionCount": 31
+      "file": "Selecting Words Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Cloze Test -DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Reading Comprehension Test - DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Completing Statements Test - DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Antonyms Test-DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
     }
   ],
-  "failed": []
+  "failed": [
+    {
+      "file": "Sentence Correction Test -DB.csv",
+      "error": "Row 1: Maximum options 2-6 - Question: \"Does the following sentence have an S–V error? She...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Sentence Formation Test - DB.csv",
+      "error": "Row 1: Maximum options 2-6 - Question: \"Arrange the following words to form a meaningful s...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Paragraph Formation Test -DB.csv",
+      "error": "Row 1: Maximum options 2-6 - Question: \"Rearrange the following five sentences in proper s...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Spotting Errors Test -DB.csv",
+      "error": "Row 13: Maximum options 2-6 - Question: \"Spot the error: I have been (1)/ told that (2)/ th...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Sentence Improvement Test - DB.csv",
+      "error": "Row 1: Maximum options 2-6 - Question: \"A modern education system should not depend on out...\"",
+      "reason": "Invalid question format or missing required question fields"
+    }
+  ]
 }
