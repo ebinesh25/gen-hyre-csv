@@ -9,6 +9,11 @@ wheels/
 # Virtual environments
 .venv
 .env
+.venv.*
+
+# uv cache
+.uv/
+uv.lock
 
 csv*/
 docs*/
@@ -20,3 +25,74 @@ md*/
 txts/
 wrong-csv/
 output/
+
+############################################
+# Project specific
+############################################
+
+# Runtime inputs / outputs
+new-ai-converter/input/
+new-ai-converter/output/
+new-ai-converter/logs/
+
+# Failed runs & generated reports
+new-ai-converter/output/csv/
+new-ai-converter/output/failed/
+new-ai-converter/output/reports/
+
+############################################
+# Config overrides / secrets
+############################################
+
+# Ignore local config overrides
+new-ai-converter/config/*.local.yaml
+new-ai-converter/config/secrets.yaml
+new-ai-converter/config/.env
+
+############################################
+# Python artifacts
+############################################
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+############################################
+# Testing / coverage
+############################################
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+############################################
+# Logs & temp files
+############################################
+
+*.log
+*.tmp
+*.bak
+
+############################################
+# OS / Editor junk
+############################################
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+############################################
+# Build / packaging
+############################################
+
+build/
+dist/
+*.egg-info/

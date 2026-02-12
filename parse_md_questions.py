@@ -31,20 +31,51 @@ def parse_questions_from_file(file_path):
         flags=re.IGNORECASE
     )
 
-
-
-
-
     # Split by question number pattern at line start.
-    # Handles: "1.", "**1.**", "1 .", " 1.", "1\.", " 1\.", " 1\. ", "1.Ravi's" with whitespace variations
-    # Uses negative lookahead (?!\d) to avoid matching decimals like "1.1236"
-    # Uses (?![\d.]) to avoid matching decimals and mathematical expressions like "1.1236P"
-    pattern = r'(?m)^(?=\s*\*\*\d+\s*\.\s*\*\*\s*(?![\d.])|\s*\d+\s*(?:\\.)?\.\s*(?![\d.])|^\d+\.\s+(?![\d.]))'
+    # Handles: "# 55.", "### 11.", "**1.**", "1.", "1\.", etc.
+    # Uses negative lookahead (?![\d.]) to avoid matching decimals like "1.1236"
+    # Handles:
+    #   - Markdown headers with question numbers: # 55., ## 55., ### 55.
+    #   - Bold question numbers: **1.**
+    #   - Plain question numbers: 1. or 1.p (no space after dot)
+    #   - Escaped question numbers: 1\.
+    pattern = r'(?m)^(?=\#{1,6}\s*\d+\.\s*|\*\*\d+\s*\.\s*\*\*\s*(?![\d.])|\d+\s*(?:\\.)?\.\s*(?![\d.]))'
     parts = re.split(pattern, content)
 
     for part in parts:
         part = part.strip()
         if not part:
+            continue
+
+        # Skip section headers that look like questions (e.g., "**QUANTITATIVE APTITUDE**")
+        # These are typically just category/topic headers without actual question content
+        lines = part.split('\n')
+        first_line = lines[0].strip() if lines else ''
+
+        # Check if first line looks like a section header:
+        # - All uppercase or mostly uppercase
+        # - No question marks
+        # - Short (under 100 chars)
+        # - No or very few digits (to avoid skipping actual questions with numbers)
+        # - Limited number of words (under 10)
+        # - Contains common section header words (Aptitude, Reasoning, Verbal, Quantitative, Technical, etc.)
+        is_all_caps = first_line.isupper() or (sum(1 for c in first_line if c.isupper()) > len(first_line) * 0.7)
+        has_question_mark = '?' in first_line
+        digit_count = sum(c.isdigit() for c in first_line)
+        word_count = len(first_line.split())
+
+        # Common section header words that indicate topic/category rather than actual question
+        header_keywords = ['aptitude', 'reasoning', 'verbal', 'quantitative', 'technical',
+                          'pseudocode', 'fundamental', 'computer', 'network', 'security',
+                          'cloud', 'mock', 'test', 'placement', 'logical', 'analytical']
+        is_header_keyword = any(keyword in first_line.lower() for keyword in header_keywords)
+
+        if (len(first_line) < 100 and
+            not has_question_mark and
+            digit_count < 3 and  # Allow some digits but not many (to skip headers, not questions with numbers)
+            (is_all_caps or is_header_keyword) and
+            word_count <= 10):
+            # This is likely a section header, skip it
             continue
 
         question = parse_single_question(part)
@@ -115,7 +146,11 @@ def parse_single_question(content):
     while i < len(lines):
         line = lines[i].strip()
         # Check for "**Options:**" header or "**Options:" (without closing **) or "Options:"
-        if re.match(r'^\*\*Options:\*\*$', line) or re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE) or re.match(r'^Options\s*:?\s*$', line, re.IGNORECASE):
+        # Also handle markdown headers like "### Options:" or "###Options:"
+        if (re.match(r'^\*\*Options:\*\*$', line) or
+            re.match(r'^\*\*\s*Options\s*:?\s*$', line, re.IGNORECASE) or
+            re.match(r'^Options\s*:?\s*$', line, re.IGNORECASE) or
+            re.match(r'^\#{1,6}\s*Options\s*:?\s*$', line, re.IGNORECASE)):
             i += 1
             break
         # Check if this looks like an option line (including partial bolding like **A.) or equals sign format (A =)
