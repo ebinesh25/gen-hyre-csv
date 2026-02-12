@@ -1,0 +1,113 @@
+# AI Converter - Default Configuration
+
+# Pipeline configuration
+pipeline:
+  # Preprocessing steps (executed in order)
+  preprocess:
+    - name: "md_formatter"
+      enabled: true
+      options:
+        fix_question_numbers: true
+        normalize_spacing: true
+        add_options_header: true
+    - name: "option_normalizer"
+      enabled: true
+      options:
+        strip_prefixes: true
+        ensure_letter_prefix: true
+    - name: "answer_validator"
+      enabled: true
+      options:
+        validate_match: true
+        warn_on_mismatch: true
+
+  # AI provider configuration
+  provider:
+    # Active provider (must be defined in providers.yaml)
+    # Override with AI_PROVIDER environment variable
+    active: "${AI_PROVIDER:-groq}"
+
+    # Provider-specific settings
+    settings:
+      # Groq settings
+      groq:
+        model: "llama-3.3-70b-versatile"
+        temperature: 0
+        max_tokens: 16000
+        timeout: 300
+
+      # Claude CLI settings
+      claude_cli:
+        timeout: 300
+        use_session_persistence: false
+
+  # Postprocessing steps
+  postprocess:
+    - name: "csv_cleaner"
+      enabled: true
+      options:
+        remove_markdown_blocks: true
+        remove_conversational_text: true
+        validate_header: true
+
+  # Verification settings
+  verification:
+    enabled: true
+    method: "js_verify"  # or "internal"
+    js_verify_path: "../js-verify/verfifyCSV.js"
+    auto_fix: false
+    continue_on_error: true
+
+# Input/Output settings
+io:
+  input_dir: "../md"
+  output_dir: "output"
+  csv_subdir: "csv"
+  failed_subdir: "failed"
+  reports_subdir: "reports"
+
+  # File handling
+  overwrite_existing: false
+  backup_on_conversion: true
+  backup_dir: "output/.backups"
+
+  # Batch processing
+  batch_size: 10  # Process N files at a time (for rate limiting)
+  parallel_workers: 1  # Set >1 for parallel processing
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "detailed"  # simple, detailed, json
+  console_output: true
+  file_output: true
+  log_dir: "logs"
+  rotation:
+    enabled: true
+    max_size_mb: 10
+    backup_count: 5
+
+# Retry settings
+retry:
+  max_retries: 5
+  base_delay: 60  # seconds
+  exponential_backoff: true
+  jitter: true
+  jitter_range: 0.1
+
+# Progress tracking
+progress:
+  enabled: true
+  show_bar: true
+  update_interval: 1  # seconds
+  save_intermediate: true
+  checkpoint_file: "output/.progress.json"
+
+# Default values for CSV output
+defaults:
+  csv:
+    question_type: "objective"
+    category: "Aptitude"
+    difficulty: "medium"
+    score: 5
+    tags: "Aptitude,Numbers"

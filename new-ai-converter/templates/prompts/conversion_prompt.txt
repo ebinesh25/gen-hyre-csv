@@ -1,0 +1,239 @@
+Here are examples of how to convert Markdown to CSV:
+
+### Example Input Markdown
+1.A car travels 700 miles in seven hours, each hour covering 20 miles more than the previous hour. How many miles did it travel in the first hour?
+
+**Options:
+**A.10
+
+B.25
+
+C.20
+
+D.40
+
+**Answer : D.40**
+
+**Solution:**
+
+Let x be the number of miles the car traveled in the first hour.
+
+Then, in the second hour, it covered x + 25 miles.
+
+In the third hour, it covered x + 50 miles. And so on.
+
+We can set up the following equation based on the given information:
+
+x + (x + 20) + (x + 40) + (x + 60) + (x + 80) + (x + 100) + (x + 120) = 700
+
+Simplifying this equation, we get:
+
+7x + 420 = 700
+
+7x = 280
+
+x = 40
+
+6\. The sequence 12, 18, x, y, 36 is an arithmetic progression (AP). Find the values of x and y.
+
+**Options:
+**A. x = 22, y = 28
+
+B. x = 24, y = 30
+
+C. x = 26, y = 32
+
+D. x = 20, y = 26
+
+**Answer: B. x = 24, y = 30
+**
+
+**Solution:**
+
+Since the sequence is an arithmetic progression, the common difference (d) between consecutive terms is constant.
+
+First, let's find the common difference using the first two terms:
+
+d = 18 - 12 = 6
+
+Now we can find x and y by adding the common difference to each previous term:
+
+x = 18 + 6 = 24
+
+y = 24 + 6 = 30
+
+Let's verify our answer:
+
+First term: 12
+
+Second term: 12 + 6 = 18
+
+Third term: 18 + 6 = 24
+
+Fourth term: 24 + 6 = 30
+
+Fifth term: 30 + 6 = 36
+
+Therefore, x = 24 and y = 30.
+
+10.What is the sum of the first 15 even natural numbers?
+
+**Options:
+**A. 190
+
+B.240
+
+C. 210
+
+D. 196
+
+**Answer: B.240
+**
+
+**Solution:**
+
+The sum of the first n even natural numbers is given by the formula n(n+1).
+
+Since we want the sum of the first 15 even natural numbers,
+
+we can substitute n=15 into the formula to get: 15(15+1) = 240.
+
+Therefore, the sum of the first 15 even natural numbers is 240.
+
+11.Does the following sentence have an S-V error? She and her friends was waiting outside.
+
+Options:
+ Yes
+ No
+
+Answer: Yes
+
+Explanation: The subject "She and her friends" is a compound subject and is plural, so it requires the plural verb "were".
+
+12.Rearrange the following five sentences in proper sequence:
+
+1. Realising his mistake, Aman apologised.
+2. Without checking facts, Aman believed the rumour.
+3. Aman heard a rumour during lunch.
+4. His friend explained the truth.
+5. He avoided speaking to his friend.
+
+Which sentence should come second?
+
+Options:
+ 1
+ 2
+ 3
+ 4
+ 5
+
+Answer: 2
+
+Explanation: After hearing the rumour, Aman believed it and got angry.
+
+NOTE: This question has 5 options but answer is 2 (within first 4), so we keep first 4 options.
+
+13.A modern education system should not depend on outdated methods nor rely on obsolete technology.
+
+Options:
+ should not depend
+ should neither depend
+ should either depend
+ No correction required
+
+Answer: should neither depend
+
+Explanation: The correlative conjunction "neither" must be paired with "nor".
+
+14.Fill in the blank with the appropriate determiner:
+
+_____ of the students who participated have been selected.
+
+Options:
+ A. Few
+ B. Some
+ C. Every
+ D. No
+
+Answer: B
+
+Explanation: "Some" correctly indicates that not all, but a certain number have been selected.
+
+NOTE: Original had 5 options (A-E), but option E was dropped. Answer B is within A-D.
+
+15.Choose the best alternative for the underlined phrase:
+
+The company decided to take the supplier to the court over the breach of contract.
+
+to the court
+ in the court
+ to court
+ into the court
+
+Answer: to court
+
+Explanation: The correct idiomatic expression is "to court".
+
+### Example Output CSV
+Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation,,,,,
+objective,"A car travels 700 miles in seven hours, each hour covering 20 miles more than the previous hour. How many miles did it travel in the first hour?",4,10,25,20,40,4,Aptitude,medium,5,"Aptitude,Numbers","* Let x be the number of miles the car traveled in the first hour. Then, in the second hour, it covered x + 25 miles. In the third hour, it covered x + 50 miles. And so on. We can set up the following equation based on the given information: x + (x + 20) + (x + 40) + (x + 60) + (x + 80) + (x + 100) + (x + 120) = 700 Simplifying this equation, we get: 7x + 420 = 700 7x = 280 x = 40",,,,,
+objective,"A, B, C and D are four consecutive even numbers respectively and their average is 65. What is the product of A and D?",4,3968,4092,4216,4352,3,Aptitude,medium,5,"Aptitude,Numbers","* Let x, x + 2, x + 4 and x + 6 represent numbers A, B, C and D respectively. Then, x+(x+2)+(x+4)+(x+6)4=65 4x+12=260 4x=248 x=62 So, A = 62, B = 64, C = 66, D = 68 ∴ A × D = 62 × 68 = 4216",,,,,
+objective,"The average of 5 consecutive multiples of 3 M, N, O, P, and Q is 54. What is the product of M and Q?",4,2916,2880,3136,3249,2,Aptitude,medium,5,"Aptitude,Numbers","* Since M, N, O, P, and Q are five consecutive multiples of 3, and we know that the average of numbers at equal intervals is the middle number. Here the average is 54. So the numbers are 48, 51, 54, 57, 60. Finally, the product of M and Q is 48 * 60 = 2880.",,,,,
+objective,The sum of 3 consecutive multiples of 5 is 60 more than the average of these numbers. What will be the highest of these numbers?,4,15,35,25,30,2,Aptitude,medium,5,"Aptitude,Numbers","* Let's call the smallest of the 3 consecutive multiples of 5 ""x"". Then we know that the next two numbers are x + 5 and x + 10. The sum of these numbers is x + (x + 5) + (x + 10) = 3x + 15. The average of these numbers is (x + (x + 5) + (x + 10)) / 3 = (3x + 15) / 3 = x + 5. So the sum of the numbers is 60 more than the average: 3x + 15 = (x + 5) + 60 2x + 15 = 65 2x = 50 x = 25 Therefore, the highest of the 3 numbers is x + 10 = 25 + 10 = 35.",,,,,
+objective,Find the value of 1000 + 1010 + 1020 + … + 1300.,4,91000,93500,35650,98500,3,Aptitude,medium,5,"Aptitude,Numbers","* The sequence of numbers is 1000, 1010, 1020, …, 1300, and the number of terms in the sequence is (1300 - 1000) / 10 + 1 = 31. Summation of the series in AP = Average x Number of elements Here, the average of the arithmetic sequence is (first number + last number) / 2(1000 + 1300) / 2 = 1150 Total = 31 * 1150 = 35650.",,,,,
+objective,"The sequence 12, 18, x, y, 36 is an arithmetic progression (AP). Find the values of x and y.",4,"x = 22, y = 28","x = 24, y = 30","x = 26, y = 32","x = 20, y = 26",2,Aptitude,medium,5,"Aptitude,Numbers","* Since the sequence is an arithmetic progression, the common difference (d) between consecutive terms is constant. First, let's find the common difference using the first two terms: d = 18 - 12 = 6 Now we can find x and y by adding the common difference to each previous term: x = 18 + 6 = 24 y = 24 + 6 = 30 Let's verify our answer: First term: 12 Second term: 12 + 6 = 18 Third term: 18 + 6 = 24 Fourth term: 24 + 6 = 30 Fifth term: 30 + 6 = 36 Therefore, x = 24 and y = 30.",,,,,
+objective,"Find the 9th term of the arithmetic progression 2, 5, 8, …",4,48,26,32,36,2,Aptitude,medium,5,"Aptitude,Numbers","* The common difference in this AP is 3. Therefore, a9 = a1 + (n-1)d \= 2 + (9-1)3 \= 26 Hence, the 9th term of the given AP is 26.",,,,,
+objective,"If the first term of an AP is 12, the common difference is 2, and the last term is 22, find the total number of terms in the AP.",4,8,6,12,16,2,Aptitude,medium,5,"Aptitude,Numbers","* Using the same method as above, we get: 22 = 12 + (n - 1)2 10 = 2(n - 1) n - 1 = 5 n = 6 Therefore, there are 6 terms in the AP.",,,,,
+objective,"Which term of the arithmetic progression (AP) 12, 18, 24, ... is 150?",4,19th term,20th term,21st term,23rd term,4,Aptitude,medium,5,"Aptitude,Numbers","* The common difference of the AP 12, 18, 24, ... is d = 18 - 12 = 6. To find which term is 150, we use the formula for the nth term of an arithmetic sequence: aₙ = a₁ + (n - 1)d Where: aₙ = 150 (the term we're looking for) a₁ = 12 (the first term) d = 6 (the common difference) n = term number (what we need to find) Substituting the values: 150 = 12 + (n - 1)(6) 150 = 12 + 6n - 6 150 = 6 + 6n 150 - 6 = 6n 144 = 6n n = 24 Wait, let me recalculate: 150 - 12 = (n - 1)(6) 138 = (n - 1)(6) 138 ÷ 6 = n - 1 23 = n - 1 n = 24 Actually: 138 = 6(n - 1) 23 = n - 1 n = 24 Let me verify: a₂₄ = 12 + (24-1)(6) = 12 + 138 = 150 Therefore, the 24th term of the AP is 150.",,,,,
+objective,What is the sum of the first 15 even natural numbers?,4,190,240,210,196,2,Aptitude,medium,5,"Aptitude,Numbers","* The sum of the first n even natural numbers is given by the formula n(n+1). Since we want the sum of the first 15 even natural numbers, we can substitute n=15 into the formula to get: 15(15+1) = 240. Therefore, the sum of the first 15 even natural numbers is 240.",,,,,
+objective,"Does the following sentence have an S-V error? She and her friends was waiting outside.",2,Yes,No,,,1,Aptitude,medium,5,"Aptitude,Grammar","* The subject ""She and her friends"" is a compound subject and is plural, so it requires the plural verb ""were"".",,,,,,
+objective,"Rearrange the following five sentences in proper sequence: 1. Realising his mistake, Aman apologised. 2. Without checking facts, Aman believed the rumour. 3. Aman heard a rumour during lunch. 4. His friend explained the truth. 5. He avoided speaking to his friend. Which sentence should come second?",4,1,2,3,4,2,Aptitude,medium,5,"Aptitude,Paragraph Formation","* After hearing the rumour, Aman believed it and got angry. Note: Original had 5 options but answer is 2 (within first 4), so we kept first 4 options with option count = 4.",,,,,,
+objective,"A modern education system should not depend on outdated methods nor rely on obsolete technology.",4,"should not depend","should neither depend","should either depend","No correction required",2,Aptitude,medium,5,"Aptitude,Sentence Improvement","* The correlative conjunction ""neither"" must be paired with ""nor"". Answer ""should neither depend"" matches option 2.",,,,,,
+objective,"Fill in the blank with the appropriate determiner: _____ of the students who participated have been selected.",4,"A. Few","B. Some","C. Every","D. No",2,Aptitude,medium,5,"Aptitude,Determiners","* ""Some"" correctly indicates that not all, but a certain number have been selected. Note: Original had 5 options (A-E), but option E was dropped since answer B is within first 4.",,,,,,
+objective,"Choose the best alternative for the underlined phrase: The company decided to take the supplier to the court over the breach of contract.",4,"to the court","in the court","to court","into the court",3,Aptitude,medium,5,"Aptitude,Idioms","* The correct idiomatic expression is ""to court"". Answer ""to court"" matches option 3.",,,,,
+
+---
+
+## CRITICAL REMINDERS FOR CONVERSION:
+
+0. **MOST CRITICAL - Option Prefix Removal:**
+   - ALWAYS strip "A.", "B.", "C.", "D.", "E." from option text
+   - "A. Economical" → "Economical" (NOT "A. Economical")
+   - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
+   - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
+
+1. **CSV QUOTING - ALWAYS QUOTE THESE FIELDS:**
+   - **ALL Options** - Quote every single option, even if no commas
+   - **Question** - Always quote
+   - **Tags** - Always quote (always has commas)
+   - **Category** - Always quote (may have commas like "Logical Reasoning,Directions")
+   - **Answer Explanation** - Always quote
+   - This prevents ALL column shift issues!
+
+2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
+   - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
+   - CSV header will have Options1 through Options[maxCount]
+   - Each question row has its actual optionCount and only that many non-empty options
+
+3. **Option Count = ACTUAL number of options** (2, 3, 4, 5, or 6)
+   - 2 options: Set optionCount=2, fill Options1-2
+   - 4 options: Set optionCount=4, fill Options1-4
+   - 5 options: Set optionCount=5, fill Options1-5
+   - 6 options: Set optionCount=6, fill Options1-6
+   - Options beyond actual count are empty strings
+
+4. **Every row must have consistent column count** based on maxOptionCount
+
+5. **Text-based answers:** Match the answer text to find the correct option number (1-6)
+
+6. **Letter answers (A, B, C, D, E):** Convert to numbers (A=1, B=2, C=3, D=4, E=5)
+
+7. **Number answers (1, 2, 3, 4, 5, 6):** Use directly as the answer
+
+Now, convert the following Markdown to CSV using the exact same logic:
+
+### Input Markdown
+{md_content}
+
+### Output CSV
+IMPORTANT: Output ONLY the CSV. Start immediately with the header row and END immediately after last row

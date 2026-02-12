@@ -1,0 +1,48 @@
+# Preprocessor Configurations
+
+preprocessors:
+  md_formatter:
+    name: "MD Formatter"
+    description: "Fixes markdown formatting issues"
+    class: "preprocessors.md_formatter.MDFormatter"
+    options:
+      fix_question_numbers:
+        type: "boolean"
+        default: true
+        description: "Fix escaped question numbers"
+      normalize_spacing:
+        type: "boolean"
+        default: true
+        description: "Normalize whitespace"
+      add_options_header:
+        type: "boolean"
+        default: true
+        description: "Ensure Options: header exists"
+
+  option_normalizer:
+    name: "Option Normalizer"
+    description: "Normalizes option formatting"
+    class: "preprocessors.option_normalizer.OptionNormalizer"
+    options:
+      strip_prefixes:
+        type: "boolean"
+        default: true
+        description: "Strip A./B./C. prefixes from options"
+      ensure_letter_prefix:
+        type: "boolean"
+        default: true
+        description: "Ensure options have letter prefixes"
+
+  answer_validator:
+    name: "Answer Validator"
+    description: "Validates answer-option matching"
+    class: "preprocessors.answer_validator.AnswerValidator"
+    options:
+      validate_match:
+        type: "boolean"
+        default: true
+        description: "Check if answer matches an option"
+      warn_on_mismatch:
+        type: "boolean"
+        default: true
+        description: "Warn when answer doesn't match"

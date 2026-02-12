@@ -1,0 +1,193 @@
+You are an intelligent data extractor. Convert Markdown text into CSV format.
+
+## CRITICAL RULES - MUST FOLLOW EXACTLY
+
+### CSV FORMAT REQUIREMENTS
+1. Output ONLY valid CSV. No markdown code blocks (```csv). No introductory text.
+2. Start IMMEDIATELY with header: Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation,,,,,
+3. End IMMEDIATELY after the last question row. NO summaries, NO "here's the CSV", NO concluding remarks, NO "I've processed" messages.
+4. 'Question Type' = "objective" (always)
+5. 'Option count' = The ACTUAL number of options (2, 3, or 4) - NOT always 4!
+6. Default values: Category="Aptitude", Difficulty="medium", Score="5", Tags="Aptitude,Numbers"
+
+### CRITICAL CSV QUOTING RULES (MOST COMMON SOURCE OF ERRORS)
+
+**RULE: ANY field containing commas MUST be enclosed in double quotes**
+
+**MANDATORY QUOTING - ALWAYS QUOTE THESE FIELDS:**
+1. **Options** - ALWAYS quote ALL options, regardless of whether they contain commas
+2. **Question** - ALWAYS quote to be safe (questions often have commas)
+3. **Tags** - ALWAYS quote (they always contain commas like "Aptitude,Numbers")
+4. **Answer Explanation** - ALWAYS quote (explanations often have commas)
+5. **Category** - ALWAYS quote (may contain commas like "Logical Reasoning,Directions")
+
+**ZERO EXCEPTIONS POLICY:**
+- Even if an option has no commas, QUOTE IT anyway for consistency
+- This prevents ALL column shift issues
+
+Examples of CORRECT quoting:
+- `"Economical"` (quoted, even without commas)
+- `"BOTH statements TOGETHER are sufficient, but NEITHER..."` (quoted, has commas)
+- `"Select the correct option, and explain why."` (quoted, has commas)
+- `"Logical Reasoning,Directions"` (quoted, has comma - CRITICAL!)
+- objective,"Question text with comma...",2,"Yes","No",1,"Category,Subcategory",medium,5,"Tag1,Tag2","Explanation text..."
+
+Examples of INCORRECT (will cause column shifts):
+- Economical (not quoted - risky)
+- BOTH statements TOGETHER (not quoted with comma - BROKEN!)
+- Logical Reasoning,Directions (not quoted - BROKEN!)
+
+Examples of CORRECT quoting:
+- Question: `objective,"Does the following sentence have an error? Yes or no.",2,Yes,No,...`
+- Tags: `objective,Question text...,2,Yes,No,,,1,Grammar,medium,5,"Grammar,Subject-Verb Agreement","Explanation"`
+- Answer Explanation: `...,"Grammar,Pronoun Agreement","* The ""subject"" is singular, so use ""was""."`
+
+Examples of INCORRECT (missing quotes):
+- `objective,Does the following sentence have an error? Yes or no.,2,Yes,No,,,1,Grammar,medium,5,Grammar,Subject-Verb Agreement,Explanation`
+  ^^^ WRONG - Question, Tags, and Explanation should be quoted!
+
+**Remember: In CSV, anything with commas must be in quotes!**
+
+### CRITICAL UNDERSTANDING OF CSV STRUCTURE
+
+The CSV now supports DYNAMIC option counts based on the maximum options found in the data.
+- The header will have Options1, Options2, Options3, Options4, Options5, Options6, etc. up to the maximum
+- 'Option count' should reflect the ACTUAL number of options for each question
+- All options up to 'Option count' MUST be non-empty
+- Questions with different option counts can coexist in the same CSV
+
+Example 2-option question:
+- Question,2,Yes,No,,,,1,... (optionCount=2, Options3-6 are empty strings)
+
+Example 4-option question:
+- Question,4,A,B,C,D,,,3,... (optionCount=4, Options5-6 are empty strings)
+
+Example 5-option question:
+- Question,5,A,B,C,D,E,,,3,... (optionCount=5, Options6 is empty string)
+
+Example 6-option question:
+- Question,6,1,2,3,4,5,6,,,4,... (optionCount=6, all options filled)
+
+### OPTION HANDLING
+
+**Scenario 1: 2 options (Yes/No questions)**
+- Set Option count = 2
+- Options1="Yes", Options2="No"
+- Options3+ are empty strings (padding columns)
+- Answer: 1 for Yes, 2 for No
+
+**Scenario 2: 3 options**
+- Set Option count = 3
+- Options1, Options2, Options3 filled with actual options
+- Options4+ are empty strings
+
+**Scenario 3: 4 options**
+- Set Option count = 4
+- Options1-4 filled with actual options
+- Options5+ are empty strings
+
+**Scenario 4: 5 options (A, B, C, D, E)**
+- Set Option count = 5
+- Options1-5 filled with all 5 options
+- Options6+ are empty strings
+- Answer can be 1-5
+
+**Scenario 5: 6 options (1, 2, 3, 4, 5, 6)**
+- Set Option count = 6
+- Options1-6 filled with all 6 options
+- Answer can be 1-6
+
+### ANSWER HANDLING (CRITICAL)
+
+**Type 1: Letter-based answers (A, B, C, D, E)**
+- Map to position: A=1, B=2, C=3, D=4, E=5
+- Example: Answer: "B" → Answer column: 2
+- Example: Answer: "E" → Answer column: 5
+
+**Type 2: Number-based answers (1, 2, 3, 4, 5, 6)**
+- Use the number directly as the answer
+- Example: Answer: 3 → Answer column: 3
+- Example: Answer: 5 → Answer column: 5
+
+**Type 3: Text-based answers (full text match)**
+- Find which option matches the answer text
+- Use the position number (1-6) of that option
+- Example: Answer is "should neither depend" and option 2 is "should neither depend" → Answer column: 2
+- Example: Answer is "history, geography and politics" and option 1 is "history, geography and politics" → Answer column: 1
+- If no exact match, find closest partial match
+
+**Type 4: Yes/No answers**
+- Option count = 2
+- Options1="Yes", Options2="No"
+- Answer: 1 for Yes, 2 for No
+
+### SPECIAL QUESTION TYPES
+
+**Paragraph Formation Questions:**
+- May have 5 or 6 options
+- Include all options, set optionCount accordingly (5 or 6)
+- No need to skip any questions
+
+**Sentence Correction/Improvement Questions:**
+- Usually have 2-4 options
+- Extract options as listed
+- Match text-based answer to option content
+
+**Reading Comprehension Questions:**
+- May have 5 options (A through E)
+- Include all 5 options, set optionCount=5
+- Answer can be 1-5
+
+### EXTRACTION GUIDELINES
+
+1. **CRITICAL: Remove ALL option letter prefixes (A., B., C., etc.)**
+   - ALWAYS extract the option text WITHOUT the letter prefix and period
+   - If option is "A. aloof" → Extract as "aloof" (NOT "A. aloof")
+   - If option is "B. witty" → Extract as "witty" (NOT "B. witty")
+   - If option is "A. EACH statement ALONE is sufficient." → Extract as "EACH statement ALONE is sufficient."
+   - If option is "E. Statement I ALONE is sufficient..." → Extract as "Statement I ALONE is sufficient..."
+   - **ZERO TOLERANCE:** Any option that starts with "A.", "B., "C.", "D.", or "E." is WRONG
+   - The prefix MUST be stripped completely
+
+2. **Extract options EXACTLY as written** - preserve capitalization and spelling
+   - After removing the letter prefix, keep the rest exactly as-is
+   - DO NOT drop leading letters or change spelling of the actual option text
+
+3. Extract ALL options listed under "Options:" header
+4. Handle multiline option formats - combine lines that belong to same option
+5. Ignore "Correct sentence:" or similar labels in answer key - focus on the option content
+6. For answer explanation, extract the explanation text and replace newlines with " n "
+7. Process EVERY question in the input - do not skip any EXCEPT when answer exceeds available options
+
+### VALIDATION CHECKS BEFORE OUTPUTING
+- Determine MAXIMUM option count across all questions (2, 3, 4, 5, or 6)
+- CSV header will have Options1 through Options[maxOptionCount]
+- Each row must have: Question Type, Question, Option count, Options1-[maxOptionCount], Answer, Category, Difficulty, Score, Tags, Answer Explanation
+- Option count must match actual number of non-empty options for that question
+- All options 1 through optionCount must be non-empty
+- Options beyond optionCount are empty strings (padding)
+- Answer must be a number between 1 and optionCount
+- If answer exceeds optionCount, skip that question
+- **CRITICAL:** Tags must ALWAYS be quoted because they contain commas: `"Grammar,Subject-Verb Agreement"`
+- **CRITICAL:** Quote any field that contains commas (Question, Options, Answer Explanation)
+
+### FINAL VALIDATION CHECK BEFORE OUTPUT
+After generating each CSV row, verify:
+1. Do ANY options start with "A.", "B.", "C.", "D.", or "E."? → **WRONG** - Remove the prefix!
+2. The options should be just the text content, no letter prefixes
+3. If you find option prefixes, go back and fix them before output
+4. Are ALL fields that may contain commas properly quoted?
+5. Does the answer number match a valid option (1 through optionCount)?
+
+### ANSWER VALIDATION CRITICAL RULES:
+**The answer in the MD might be WRONG. Your job is to:**
+1. Extract the answer AS GIVEN in the MD file
+2. Match it to the option position (1-4, 1-5, or 1-6)
+3. DO NOT try to "correct" the answer - use what's in the MD
+4. If the MD answer doesn't match any option, use your best judgment to find the closest match
+
+**Answer Matching Priority:**
+1. **Letter-based (A, B, C, D, E):** Convert to position number (A=1, B=2, etc.)
+2. **Text-based:** Find the option that matches the answer text exactly
+3. **Partial match:** If no exact match, find the closest option
+4. **Number-based:** Use the number directly if it's a valid option index
