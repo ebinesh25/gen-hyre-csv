@@ -385,16 +385,18 @@ Example 6-option question:
 
 ### EXTRACTION GUIDELINES
 
-1. **Extract options EXACTLY as written** - preserve capitalization and spelling
-   - If option is "A. aloof" → Extract as "aloof" (NOT "loof")
-   - If option is "B. witty" → Extract as "witty"
-   - DO NOT drop leading letters or change spelling
+1. **CRITICAL: Remove ALL option letter prefixes (A., B., C., etc.)**
+   - ALWAYS extract the option text WITHOUT the letter prefix and period
+   - If option is "A. aloof" → Extract as "aloof" (NOT "A. aloof")
+   - If option is "B. witty" → Extract as "witty" (NOT "B. witty")
+   - If option is "A. EACH statement ALONE is sufficient." → Extract as "EACH statement ALONE is sufficient."
+   - If option is "E. Statement I ALONE is sufficient..." → Extract as "Statement I ALONE is sufficient..."
+   - **ZERO TOLERANCE:** Any option that starts with "A.", "B., "C.", "D.", or "E." is WRONG
+   - The prefix MUST be stripped completely
 
-2. **Handle option letters correctly**
-   - Options with "A.", "B.", "C.", "D.", "E." → Extract text AFTER the letter and period
-   - Options with "A. ", "B. ", etc. → Remove the letter prefix, keep only the text
-   - Example: "A. aloof" → "aloof"
-   - Example: "B. witty" → "witty"
+2. **Extract options EXACTLY as written** - preserve capitalization and spelling
+   - After removing the letter prefix, keep the rest exactly as-is
+   - DO NOT drop leading letters or change spelling of the actual option text
 
 3. Extract ALL options listed under "Options:" header
 4. Handle multiline option formats - combine lines that belong to same option
@@ -413,6 +415,12 @@ Example 6-option question:
 - If answer exceeds optionCount, skip that question
 - **CRITICAL:** Tags must ALWAYS be quoted because they contain commas: `"Grammar,Subject-Verb Agreement"`
 - **CRITICAL:** Quote any field that contains commas (Question, Options, Answer Explanation)
+
+### FINAL VALIDATION CHECK BEFORE OUTPUT
+After generating each CSV row, verify:
+1. Do ANY options start with "A.", "B.", "C.", "D.", or "E."? → **WRONG** - Remove the prefix!
+2. The options should be just the text content, no letter prefixes
+3. If you find option prefixes, go back and fix them before output
 """
 
 def convert_with_groq(md_content: str) -> str:
@@ -429,6 +437,12 @@ def convert_with_groq(md_content: str) -> str:
 ---
 
 ## CRITICAL REMINDERS FOR CONVERSION:
+
+0. **MOST CRITICAL - Option Prefix Removal:**
+   - ALWAYS strip "A.", "B.", "C.", "D.", "E." from option text
+   - "A. Economical" → "Economical" (NOT "A. Economical")
+   - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
+   - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
 
 1. **CSV QUOTING is MANDATORY for fields with commas:**
    - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
@@ -486,9 +500,11 @@ IMPORTANT: Output ONLY the CSV. Start immediately with the header row.
                 csv_start = csv_output.find("Question Type,Question")
                 csv_output = csv_output[csv_start:]
 
-            # Clean up markdown code blocks
+            # Clean up markdown code blocks - handle both ```csv and standalone ```
             if "```csv" in csv_output:
                 csv_output = csv_output.replace("```csv", "").replace("```", "")
+            # Also remove any standalone ``` lines (for cases where AI didn't use ```csv)
+            csv_output = re.sub(r'^```\s*$', '', csv_output, flags=re.MULTILINE)
 
             return csv_output.strip()
 
@@ -535,6 +551,12 @@ def convert_with_claude_cli(md_content: str) -> str:
 ---
 
 ## CRITICAL REMINDERS FOR CONVERSION:
+
+0. **MOST CRITICAL - Option Prefix Removal:**
+   - ALWAYS strip "A.", "B.", "C.", "D.", "E." from option text
+   - "A. Economical" → "Economical" (NOT "A. Economical")
+   - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
+   - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
 
 1. **CSV QUOTING is MANDATORY for fields with commas:**
    - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
@@ -601,9 +623,11 @@ IMPORTANT: Output ONLY valid CSV. Start with the header row. Do not include any 
                 csv_start = csv_output.find("Question Type,Question")
                 csv_output = csv_output[csv_start:]
 
-            # Clean up markdown code blocks
+            # Clean up markdown code blocks - handle both ```csv and standalone ```
             if "```csv" in csv_output:
                 csv_output = csv_output.replace("```csv", "").replace("```", "")
+            # Also remove any standalone ``` lines (for cases where AI didn't use ```csv)
+            csv_output = re.sub(r'^```\s*$', '', csv_output, flags=re.MULTILINE)
 
             return csv_output.strip()
 

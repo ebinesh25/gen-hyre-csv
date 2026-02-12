@@ -1,16 +1,47 @@
 {
-  "timestamp": "2026-02-11T12:20:05.721Z",
+  "timestamp": "2026-02-12T11:07:14.645Z",
   "summary": {
-    "total": 1,
-    "passed": 1,
-    "failed": 0
+    "total": 7,
+    "passed": 5,
+    "failed": 2
   },
   "passed": [
     {
-      "file": "Completing Statements Test - DB.csv",
+      "file": "Mphasis VERBAL - 2 Manipulated.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "AMAZON APTITUDE - 2 manipulated.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Sample Question of Hexaware LOGICAL REASONING-2 DB Manipulated.csv",
       "rowCount": 20,
       "questionCount": 20
+    },
+    {
+      "file": "NTT DATA APTITUDE - 2 Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "DELOITEE Computer Science MCQs-2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
     }
   ],
-  "failed": []
+  "failed": [
+    {
+      "file": "ZOHO Mock Test -2 DB.csv",
+      "error": "Row 21: Invalid Question Type - Question: \"(no question)...\"",
+      "reason": "Invalid question format or missing required question fields"
+    },
+    {
+      "file": "Infosys REASONING APTITUDE -2 DB.csv",
+      "error": "Row 4: Invalid answer - Question: \"A candy shop owner offers a combo of one chocolate...\"",
+      "reason": "Invalid question format or missing required question fields"
+    }
+  ]
 }

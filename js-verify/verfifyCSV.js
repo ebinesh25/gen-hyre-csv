@@ -90,7 +90,7 @@ function validateCSV(filePath) {
       if (col.startsWith("Options") || col.startsWith("option")) {
         const num = parseInt(col.replace(/\D+/g, ""), 10);
         if (!isNaN(num)) {
-          maxOptionCount = Math.max(maxOptionCount, num);
+          maxOptionCount = maxOptionCount;
         }
       }
     }
