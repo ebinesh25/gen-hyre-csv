@@ -268,19 +268,37 @@ def get_system_prompt() -> str:
 ### CSV FORMAT REQUIREMENTS
 1. Output ONLY valid CSV. No markdown code blocks (```csv). No introductory text.
 2. Start IMMEDIATELY with header: Question Type,Question,Option count,Options1,Options2,Options3,Options4,Answer,Category,Difficulty,Score,Tags,Answer Explanation,,,,,
-3. 'Question Type' = "objective" (always)
-4. 'Option count' = The ACTUAL number of options (2, 3, or 4) - NOT always 4!
-5. Default values: Category="Aptitude", Difficulty="medium", Score="5", Tags="Aptitude,Numbers"
+3. End IMMEDIATELY after the last question row. NO summaries, NO "here's the CSV", NO concluding remarks, NO "I've processed" messages.
+4. 'Question Type' = "objective" (always)
+5. 'Option count' = The ACTUAL number of options (2, 3, or 4) - NOT always 4!
+6. Default values: Category="Aptitude", Difficulty="medium", Score="5", Tags="Aptitude,Numbers"
 
 ### CRITICAL CSV QUOTING RULES (MOST COMMON SOURCE OF ERRORS)
 
 **RULE: ANY field containing commas MUST be enclosed in double quotes**
 
-Columns that MUST be quoted if they contain commas:
-1. **Question** - Quote if it contains any commas
-2. **Options** - Quote if they contain commas
-3. **Tags** - ALWAYS quote tags because they ALWAYS contain commas (e.g., "Aptitude,Numbers", "Grammar,Subject-Verb Agreement")
-4. **Answer Explanation** - Quote if it contains commas
+**MANDATORY QUOTING - ALWAYS QUOTE THESE FIELDS:**
+1. **Options** - ALWAYS quote ALL options, regardless of whether they contain commas
+2. **Question** - ALWAYS quote to be safe (questions often have commas)
+3. **Tags** - ALWAYS quote (they always contain commas like "Aptitude,Numbers")
+4. **Answer Explanation** - ALWAYS quote (explanations often have commas)
+5. **Category** - ALWAYS quote (may contain commas like "Logical Reasoning,Directions")
+
+**ZERO EXCEPTIONS POLICY:**
+- Even if an option has no commas, QUOTE IT anyway for consistency
+- This prevents ALL column shift issues
+
+Examples of CORRECT quoting:
+- `"Economical"` (quoted, even without commas)
+- `"BOTH statements TOGETHER are sufficient, but NEITHER..."` (quoted, has commas)
+- `"Select the correct option, and explain why."` (quoted, has commas)
+- `"Logical Reasoning,Directions"` (quoted, has comma - CRITICAL!)
+- objective,"Question text with comma...",2,"Yes","No",1,"Category,Subcategory",medium,5,"Tag1,Tag2","Explanation text..."
+
+Examples of INCORRECT (will cause column shifts):
+- Economical (not quoted - risky)
+- BOTH statements TOGETHER (not quoted with comma - BROKEN!)
+- Logical Reasoning,Directions (not quoted - BROKEN!)
 
 Examples of CORRECT quoting:
 - Question: `objective,"Does the following sentence have an error? Yes or no.",2,Yes,No,...`
@@ -421,6 +439,21 @@ After generating each CSV row, verify:
 1. Do ANY options start with "A.", "B.", "C.", "D.", or "E."? → **WRONG** - Remove the prefix!
 2. The options should be just the text content, no letter prefixes
 3. If you find option prefixes, go back and fix them before output
+4. Are ALL fields that may contain commas properly quoted?
+5. Does the answer number match a valid option (1 through optionCount)?
+
+### ANSWER VALIDATION CRITICAL RULES:
+**The answer in the MD might be WRONG. Your job is to:**
+1. Extract the answer AS GIVEN in the MD file
+2. Match it to the option position (1-4, 1-5, or 1-6)
+3. DO NOT try to "correct" the answer - use what's in the MD
+4. If the MD answer doesn't match any option, use your best judgment to find the closest match
+
+**Answer Matching Priority:**
+1. **Letter-based (A, B, C, D, E):** Convert to position number (A=1, B=2, etc.)
+2. **Text-based:** Find the option that matches the answer text exactly
+3. **Partial match:** If no exact match, find the closest option
+4. **Number-based:** Use the number directly if it's a valid option index
 """
 
 def convert_with_groq(md_content: str) -> str:
@@ -444,11 +477,13 @@ def convert_with_groq(md_content: str) -> str:
    - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
    - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
 
-1. **CSV QUOTING is MANDATORY for fields with commas:**
-   - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
-   - Quote Question if it has commas
-   - Quote Options if they have commas
-   - Quote Answer Explanation if it has commas
+1. **CSV QUOTING - ALWAYS QUOTE THESE FIELDS:**
+   - **ALL Options** - Quote every single option, even if no commas
+   - **Question** - Always quote
+   - **Tags** - Always quote (always has commas)
+   - **Category** - Always quote (may have commas like "Logical Reasoning,Directions")
+   - **Answer Explanation** - Always quote
+   - This prevents ALL column shift issues!
 
 2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
    - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
@@ -506,6 +541,20 @@ IMPORTANT: Output ONLY the CSV. Start immediately with the header row.
             # Also remove any standalone ``` lines (for cases where AI didn't use ```csv)
             csv_output = re.sub(r'^```\s*$', '', csv_output, flags=re.MULTILINE)
 
+            # Clean up conversational text at the end (AI summaries like "I've processed all...")
+            # Split by lines and only keep valid CSV lines (start with "objective" or header)
+            lines = csv_output.split('\n')
+            csv_lines = []
+            for line in lines:
+                line = line.strip()
+                # Keep header line and lines starting with "objective"
+                if line.startswith("Question Type,") or line.startswith("objective,"):
+                    csv_lines.append(line)
+                # Stop at first non-CSV line (conversational text)
+                elif csv_lines and not (line.startswith("Question Type,") or line.startswith("objective,")):
+                    break
+            csv_output = '\n'.join(csv_lines)
+
             return csv_output.strip()
 
         except Exception as e:
@@ -558,11 +607,13 @@ def convert_with_claude_cli(md_content: str) -> str:
    - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
    - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
 
-1. **CSV QUOTING is MANDATORY for fields with commas:**
-   - Tags ALWAYS need quotes: `"Grammar,Subject-Verb Agreement"`
-   - Quote Question if it has commas
-   - Quote Options if they have commas
-   - Quote Answer Explanation if it has commas
+1. **CSV QUOTING - ALWAYS QUOTE THESE FIELDS:**
+   - **ALL Options** - Quote every single option, even if no commas
+   - **Question** - Always quote
+   - **Tags** - Always quote (always has commas)
+   - **Category** - Always quote (may have commas like "Logical Reasoning,Directions")
+   - **Answer Explanation** - Always quote
+   - This prevents ALL column shift issues!
 
 2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
    - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
@@ -591,7 +642,7 @@ Now, convert the following Markdown to CSV using the exact same logic:
 
 ### Output CSV
 
-IMPORTANT: Output ONLY valid CSV. Start with the header row. Do not include any introductory text.
+IMPORTANT: Output ONLY the CSV data. Start with the header row. Do NOT include any introductory text. Do NOT include any concluding remarks, summaries, or "I've processed" messages at the end. JUST the CSV and nothing else.
 """
 
     # Create the prompt file for Claude CLI
@@ -628,6 +679,20 @@ IMPORTANT: Output ONLY valid CSV. Start with the header row. Do not include any 
                 csv_output = csv_output.replace("```csv", "").replace("```", "")
             # Also remove any standalone ``` lines (for cases where AI didn't use ```csv)
             csv_output = re.sub(r'^```\s*$', '', csv_output, flags=re.MULTILINE)
+
+            # Clean up conversational text at the end (AI summaries like "I've processed all...")
+            # Split by lines and only keep valid CSV lines (start with "objective" or header)
+            lines = csv_output.split('\n')
+            csv_lines = []
+            for line in lines:
+                line = line.strip()
+                # Keep header line and lines starting with "objective"
+                if line.startswith("Question Type,") or line.startswith("objective,"):
+                    csv_lines.append(line)
+                # Stop at first non-CSV line (conversational text)
+                elif csv_lines and not (line.startswith("Question Type,") or line.startswith("objective,")):
+                    break
+            csv_output = '\n'.join(csv_lines)
 
             return csv_output.strip()
 

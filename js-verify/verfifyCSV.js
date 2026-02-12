@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.dirname(__dirname);
 const SOURCE_DIR = path.join(ROOT_DIR, "csv-ai");
-const VERIFIED_DIR = path.join(__dirname, "verified-csv");
-const FAILED_DIR = path.join(__dirname, "failed-csv");
+const VERIFIED_DIR = path.join(__dirname, "csv-verified");
+const FAILED_DIR = path.join(__dirname, "csv-failed");
 
 // Configuration - maxOptionCount will be determined dynamically from CSV header
 const CONFIG = {
@@ -90,7 +90,7 @@ function validateCSV(filePath) {
       if (col.startsWith("Options") || col.startsWith("option")) {
         const num = parseInt(col.replace(/\D+/g, ""), 10);
         if (!isNaN(num)) {
-          maxOptionCount = maxOptionCount;
+          maxOptionCount = num;
         }
       }
     }
@@ -113,9 +113,11 @@ function validateCSV(filePath) {
       return { valid: false, error: "No data rows found", rowCount: 0 };
     }
 
-    // Validate row by row to get better error info
+    // Validate row by row and collect ALL errors
+    const errors = [];
     let validResult = [];
     let rowIndex = 0;
+
     for (const row of dataRows) {
       const questionType = row[0].replaceAll(" ", "").toLowerCase();
 
@@ -136,11 +138,63 @@ function validateCSV(filePath) {
           const questionPreview = row[1]
             ? row[1].substring(0, 50)
             : "(no question)";
-          return {
-            valid: false,
-            error: `Row ${rowIndex}: ${error} - Question: "${questionPreview}..."`,
-            rowCount: dataRows.length,
-          };
+
+          // Try to extract column info from error message
+          const errorLower = error.toLowerCase();
+          let columnName = "Unknown";
+          let columnValue = "";
+
+          // Parse error to find column info
+          if (errorLower.includes("option")) {
+            const optionMatch = error.match(/Option\s*(\d+)/i);
+            if (optionMatch) {
+              columnName = `Option${optionMatch[1]}`;
+              const optionIndex = parseInt(optionMatch[1]) - 1;
+              // Options typically start at index 2 (after QuestionType and Question)
+              columnValue = row[2 + optionIndex] || "";
+            }
+          } else if (errorLower.includes("answer")) {
+            columnName = "Answer";
+            // Find answer column index in header
+            const answerColIndex = header.findIndex(h =>
+              h.toLowerCase().includes("answer") ||
+              h.toLowerCase().includes("correctanswer") ||
+              h.toLowerCase().includes("correct answer")
+            );
+            if (answerColIndex >= 0 && row[answerColIndex]) {
+              columnValue = row[answerColIndex];
+            }
+          } else if (errorLower.includes("question")) {
+            columnName = "Question";
+            columnValue = row[1] || "";
+          } else if (errorLower.includes("testcase") || errorLower.includes("test case")) {
+            const tcMatch = error.match(/TestCase\s*(\d+)/i);
+            if (tcMatch) {
+              columnName = `TestCase${tcMatch[1]}`;
+            }
+          } else if (errorLower.includes("explanation")) {
+            columnName = "Explanation";
+            const expColIndex = header.findIndex(h =>
+              h.toLowerCase().includes("explanation") ||
+              h.toLowerCase().includes("explantion") // common typo
+            );
+            if (expColIndex >= 0 && row[expColIndex]) {
+              columnValue = row[expColIndex];
+            }
+          }
+
+          errors.push({
+            row: rowIndex,
+            column: columnName,
+            columnValue: columnValue.substring(0, 100), // Limit length
+            error: error,
+            reason: getFailureReason(error),
+            questionPreview: questionPreview,
+            rowData: row.map((cell, idx) => ({
+              column: header[idx] || `Column${idx}`,
+              value: cell.substring(0, 50) // Limit each cell value
+            }))
+          });
         }
         if (result && result.length > 0) {
           validResult.push(result[0]);
@@ -149,13 +203,32 @@ function validateCSV(filePath) {
         const questionPreview = row[1]
           ? row[1].substring(0, 50)
           : "(no question)";
-        return {
-          valid: false,
-          error: `Row ${rowIndex}: ${e.message} - Question: "${questionPreview}..."`,
-          rowCount: dataRows.length,
-        };
+
+        errors.push({
+          row: rowIndex,
+          column: "Unknown",
+          columnValue: "",
+          error: e.message,
+          reason: getFailureReason(e.message),
+          questionPreview: questionPreview,
+          rowData: row.map((cell, idx) => ({
+            column: header[idx] || `Column${idx}`,
+            value: cell.substring(0, 50)
+          }))
+        });
       }
       rowIndex++;
+    }
+
+    // Return result with all errors collected
+    if (errors.length > 0) {
+      return {
+        valid: false,
+        errors: errors,
+        errorCount: errors.length,
+        rowCount: dataRows.length,
+        questionCount: validResult.length,
+      };
     }
 
     return {
@@ -164,7 +237,20 @@ function validateCSV(filePath) {
       questionCount: validResult.length,
     };
   } catch (e) {
-    return { valid: false, error: e.message, rowCount: 0 };
+    return {
+      valid: false,
+      errors: [{
+        row: 0,
+        column: "File",
+        columnValue: "",
+        error: e.message,
+        reason: "File parsing error",
+        questionPreview: "",
+        rowData: []
+      }],
+      errorCount: 1,
+      rowCount: 0
+    };
   }
 }
 
@@ -207,12 +293,35 @@ function verifyAllCSVs() {
       // Copy to failed folder
       const destPath = path.join(FAILED_DIR, file);
       fs.copyFileSync(sourcePath, destPath);
-      results.failed.push({
-        file,
-        error: validationResult.error,
-      });
+
+      // Handle both old format (single error) and new format (errors array)
+      const errorData = validationResult.errors
+        ? {
+            file,
+            errorCount: validationResult.errorCount,
+            errors: validationResult.errors,
+          }
+        : {
+            file,
+            error: validationResult.error,
+          };
+
+      results.failed.push(errorData);
+
       console.log(`✗ FAIL: ${file}`);
-      console.log(`  Error: ${validationResult.error}`);
+      if (validationResult.errors) {
+        console.log(`  Error Count: ${validationResult.errorCount}`);
+        validationResult.errors.forEach((e, idx) => {
+          console.log(`  [${idx + 1}] Row ${e.row}, Column: ${e.column}`);
+          console.log(`      Error: ${e.error}`);
+          console.log(`      Reason: ${e.reason}`);
+          if (e.columnValue) {
+            console.log(`      Value: "${e.columnValue}"`);
+          }
+        });
+      } else {
+        console.log(`  Error: ${validationResult.error}`);
+      }
     }
     console.log("-".repeat(80));
   }
@@ -229,12 +338,19 @@ function verifyAllCSVs() {
 
   if (results.failed.length > 0) {
     console.log("\nFailed files:");
-    results.failed.forEach(({ file, error }) => {
-      console.log(`  - ${file}: ${error}`);
+    results.failed.forEach((f) => {
+      if (f.errors) {
+        console.log(`  - ${f.file}: ${f.errorCount} error(s)`);
+        f.errors.forEach((e) => {
+          console.log(`    Row ${e.row}, Col ${e.column}: ${e.reason}`);
+        });
+      } else {
+        console.log(`  - ${f.file}: ${f.error}`);
+      }
     });
   }
 
-  // Generate JSON report
+  // Generate JSON report with detailed errors
   const reportPath = path.join(__dirname, "verification-report.json");
   const report = {
     timestamp: new Date().toISOString(),
@@ -248,11 +364,29 @@ function verifyAllCSVs() {
       rowCount: p.rowCount,
       questionCount: p.questionCount,
     })),
-    failed: results.failed.map((f) => ({
-      file: f.file,
-      error: f.error,
-      reason: getFailureReason(f.error),
-    })),
+    failed: results.failed.map((f) => {
+      if (f.errors) {
+        return {
+          file: f.file,
+          errorCount: f.errorCount,
+          errors: f.errors.map((e) => ({
+            row: e.row,
+            column: e.column,
+            columnValue: e.columnValue,
+            error: e.error,
+            reason: e.reason,
+            questionPreview: e.questionPreview,
+            rowData: e.rowData,
+          })),
+        };
+      }
+      // Backward compatibility for old format
+      return {
+        file: f.file,
+        error: f.error,
+        reason: getFailureReason(f.error),
+      };
+    }),
   };
 
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -289,15 +423,16 @@ function getFailureReason(error) {
 
 function verifyCSV(file_path) {
   const validationResult = validateCSV(file_path);
-  const file = "aptitude_all_questions.csv";
+  const file = path.basename(file_path);
   const results = {
     passed: [],
     failed: [],
   };
+
   if (validationResult.valid) {
     // Copy to verified folder
     const destPath = path.join(VERIFIED_DIR, file);
-    fs.copyFileSync(sourcePath, destPath);
+    fs.copyFileSync(file_path, destPath);
     results.passed.push({
       file,
       ...validationResult,
@@ -306,14 +441,36 @@ function verifyCSV(file_path) {
     console.log(`  Questions: ${validationResult.questionCount}`);
   } else {
     // Copy to failed folder
-    // const destPath = path.join(FAILED_DIR, file);
-    // fs.copyFileSync(sourcePath, destPath);
-    results.failed.push({
-      file,
-      error: validationResult.error,
-    });
+    const destPath = path.join(FAILED_DIR, file);
+    fs.copyFileSync(file_path, destPath);
+
+    const errorData = validationResult.errors
+      ? {
+          file,
+          errorCount: validationResult.errorCount,
+          errors: validationResult.errors,
+        }
+      : {
+          file,
+          error: validationResult.error,
+        };
+
+    results.failed.push(errorData);
     console.log(`✗ FAIL: ${file}`);
-    console.log(`  Error: ${validationResult.error}`);
+
+    if (validationResult.errors) {
+      console.log(`  Error Count: ${validationResult.errorCount}`);
+      validationResult.errors.forEach((e, idx) => {
+        console.log(`  [${idx + 1}] Row ${e.row}, Column: ${e.column}`);
+        console.log(`      Error: ${e.error}`);
+        console.log(`      Reason: ${e.reason}`);
+        if (e.columnValue) {
+          console.log(`      Value: "${e.columnValue}"`);
+        }
+      });
+    } else {
+      console.log(`  Error: ${validationResult.error}`);
+    }
   }
   console.log("-".repeat(80));
 }

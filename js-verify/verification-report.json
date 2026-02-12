@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-12T11:07:14.645Z",
+  "timestamp": "2026-02-12T12:29:04.840Z",
   "summary": {
     "total": 7,
     "passed": 5,
@@ -35,13 +35,205 @@
   "failed": [
     {
       "file": "ZOHO Mock Test -2 DB.csv",
-      "error": "Row 21: Invalid Question Type - Question: \"(no question)...\"",
-      "reason": "Invalid question format or missing required question fields"
+      "errorCount": 1,
+      "errors": [
+        {
+          "row": 1,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid option count",
+          "reason": "Unknown validation error",
+          "questionPreview": "What is the output of this C code?",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "What is the output of this C code?"
+            }
+          ]
+        }
+      ]
     },
     {
       "file": "Infosys REASONING APTITUDE -2 DB.csv",
-      "error": "Row 4: Invalid answer - Question: \"A candy shop owner offers a combo of one chocolate...\"",
-      "reason": "Invalid question format or missing required question fields"
+      "errorCount": 2,
+      "errors": [
+        {
+          "row": 4,
+          "column": "Answer",
+          "columnValue": "Statement I ALONE is sufficient, but Statement II ALONE is not sufficient",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "A candy shop owner offers a combo of one chocolate",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "A candy shop owner offers a combo of one chocolate"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "EACH statement ALONE is sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "BOTH statements TOGETHER are sufficient, but NEITH"
+            },
+            {
+              "column": "Options3",
+              "value": "None of the statements are sufficient"
+            },
+            {
+              "column": "Options4",
+              "value": "Statement II ALONE is sufficient, but Statement I "
+            },
+            {
+              "column": "Answer",
+              "value": "Statement I ALONE is sufficient, but Statement II "
+            },
+            {
+              "column": "Category",
+              "value": "1"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Data Sufficiency"
+            },
+            {
+              "column": "Column13",
+              "value": "Let the current price of gum = g and the price of "
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 10,
+          "column": "Answer",
+          "columnValue": "NONE",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "Which of these statements is sufficient to determi",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Which of these statements is sufficient to determi"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "EACH statement ALONE is sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "Statement I ALONE is sufficient, but Statement II "
+            },
+            {
+              "column": "Options3",
+              "value": "BOTH statements TOGETHER are sufficient, but NEITH"
+            },
+            {
+              "column": "Options4",
+              "value": "Statement II ALONE is sufficient, but Statement I "
+            },
+            {
+              "column": "Answer",
+              "value": "NONE"
+            },
+            {
+              "column": "Category",
+              "value": "3"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Data Sufficiency"
+            },
+            {
+              "column": "Column13",
+              "value": "Statement I: Mother's age at Arjun's birth = 24; F"
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
