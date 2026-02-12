@@ -70,12 +70,26 @@ def parse_questions_from_file(file_path):
                           'cloud', 'mock', 'test', 'placement', 'logical', 'analytical']
         is_header_keyword = any(keyword in first_line.lower() for keyword in header_keywords)
 
+        # Check if part looks like an actual question:
+        # Should start with a question number pattern or contain question-like content
+        # Question patterns: "1.", "**1.**", "# 55.", "### 11.", etc.
+        starts_with_question = bool(re.match(r'^(\d+\.|\*\*\d+\.|#{1,6}\s*\d+\.)', first_line))
+
+        # Check if this looks like continuation/sub-point text rather than a standalone question
+        # Continuation lines often: start with lowercase words, no question number, longer than typical headers
+        is_continuation = (
+            not starts_with_question and  # No question number at start
+            len(first_line) > 30 and  # Longer than typical headers
+            not has_question_mark and  # No question mark
+            first_line[0].islower()  # Starts with lowercase (not a header)
+        )
+
         if (len(first_line) < 100 and
             not has_question_mark and
             digit_count < 3 and  # Allow some digits but not many (to skip headers, not questions with numbers)
-            (is_all_caps or is_header_keyword) and
-            word_count <= 10):
-            # This is likely a section header, skip it
+            (is_all_caps or is_header_keyword or is_continuation) and  # Also skip continuation lines
+            word_count <= 15):  # Increased word count slightly for continuation lines
+            # This is likely a section header, non-question content, or continuation - skip it
             continue
 
         question = parse_single_question(part)
@@ -171,7 +185,10 @@ def parse_single_question(content):
         line = lines[i].strip()
 
         # Check if line starts with **Answer, __Answer:, Answer, or **Solution
-        if re.search(r'^\*\*\s*Answer|^__Answer\s*:|^Answer\s*:', line, re.IGNORECASE) or re.search(r'^\*\*\s*Solution|^Solution\s*:', line, re.IGNORECASE):
+        # Also check for markdown headers like # **Answer: or # **Solution:
+        if (re.search(r'^\*\*\s*Answer|^__Answer\s*:|^Answer\s*:', line, re.IGNORECASE) or
+            re.search(r'^\*\*\s*Solution|^Solution\s*:', line, re.IGNORECASE) or
+            re.search(r'^\#\s*\*\*\s*Answer|^\#\s*\*\*\s*Solution', line, re.IGNORECASE)):
             break
 
         # Check for bold option markers like **A.** or **A. (with partial bolding)
