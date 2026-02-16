@@ -57,7 +57,7 @@ def cli(ctx, config: Optional[Path], verbose: bool):
 )
 @click.option(
     '--provider', '-p',
-    type=click.Choice(['groq', 'claude_cli'], case_sensitive=False),
+    type=click.Choice(['groq', 'claude_cli', 'openai'], case_sensitive=False),
     help='AI provider to use'
 )
 @click.option(
@@ -223,6 +223,114 @@ def verify(ctx, csv_file: Path):
     except Exception as e:
         logger = get_logger(__name__)
         logger.error(f"Verification failed: {e}")
+        if verbose:
+            import traceback
+            traceback.print_exc()
+        sys.exit(1)
+
+
+@cli.command()
+@click.argument('csv_file', type=click.Path(exists=True, path_type=Path))
+@click.option(
+    '--md-file', '-m',
+    type=click.Path(exists=True, path_type=Path),
+    help='Original MD file (for context)'
+)
+@click.option(
+    '--output', '-o',
+    type=click.Path(path_type=Path),
+    help='Output file for fixed CSV (default: <input>_fixed.csv)'
+)
+@click.pass_context
+def fix(ctx, csv_file: Path, md_file: Optional[Path], output: Optional[Path]):
+    """Fix a CSV file using AI based on verification errors.
+
+    This command:
+    1. Verifies the CSV file
+    2. If errors found, sends to AI for fixing
+    3. Saves fixed version to new file
+    4. Re-verifies the fixed version
+    """
+    config_loader = ctx.obj['config_loader']
+    verbose = ctx.obj['verbose']
+
+    try:
+        config = config_loader.load()
+        pipeline = Pipeline(config)
+        logger = get_logger(__name__)
+
+        from .models.results import PipelineContext
+        from .core.pipeline import FixError
+
+        context = PipelineContext(
+            config=config,
+            input_file=md_file or csv_file,
+            output_file=csv_file,
+        )
+
+        # Step 1: Verify to get error report
+        click.echo(f"Verifying {csv_file.name}...")
+        verification_result = asyncio.run(pipeline._verify(csv_file, context))
+
+        if not verification_result:
+            click.echo("Verification failed to produce results")
+            sys.exit(1)
+
+        if verification_result.get('passed', True):
+            click.echo(f"No errors found in {csv_file.name}")
+            sys.exit(0)
+
+        errors = verification_result.get('errors', [])
+        click.echo(f"Found {len(errors)} errors")
+
+        # Step 2: Read original MD if provided
+        md_content = ""
+        if md_file:
+            click.echo(f"Reading MD file: {md_file.name}")
+            md_content = md_file.read_text(encoding='utf-8')
+
+        # Step 3: Read CSV content
+        csv_content = csv_file.read_text(encoding='utf-8')
+
+        # Step 4: Fix with AI
+        click.echo("Sending to AI for fixing...")
+        try:
+            fixed_csv = asyncio.run(pipeline._fix_csv(
+                md_content,
+                csv_content,
+                verification_result,
+                context
+            ))
+        except FixError as e:
+            click.echo(f"AI fixing failed: {e}", err=True)
+            if verbose:
+                import traceback
+                traceback.print_exc()
+            sys.exit(1)
+
+        # Step 5: Save fixed CSV
+        if output is None:
+            output = csv_file.parent / f"{csv_file.stem}_fixed{csv_file.suffix}"
+
+        output.write_text(fixed_csv, encoding='utf-8')
+
+        click.echo(f"Fixed CSV saved to {output}")
+
+        # Step 6: Verify fixed version
+        click.echo("Verifying fixed CSV...")
+        fixed_verification = asyncio.run(pipeline._verify(output, context))
+
+        if fixed_verification and fixed_verification.get('passed', True):
+            click.echo("Verification PASSED")
+            sys.exit(0)
+        else:
+            errors_after = len(fixed_verification.get('errors', [])) if fixed_verification else 0
+            click.echo(f"Verification still has {errors_after} errors")
+            sys.exit(1)
+
+    except Exception as e:
+        logger = get_logger(__name__)
+        logger.error(f"Fix failed: {e}")
         if verbose:
             import traceback
             traceback.print_exc()

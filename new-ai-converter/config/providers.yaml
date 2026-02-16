@@ -25,3 +25,16 @@ providers:
     pricing:
       input_per_million: null
       output_per_million: null
+
+  openai:
+    name: "OpenAI"
+    description: "OpenAI API for conversion"
+    class: "providers.openai_provider.OpenAIProvider"
+    env_vars:
+      - OPENAI_HYRE_API_KEY
+    rate_limit:
+      requests_per_minute: 60
+      retry_on_limit: true
+    pricing:
+      input_per_million: 2.50
+      output_per_million: 10.00

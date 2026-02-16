@@ -4,6 +4,8 @@ from pathlib import Path
 from typing import Optional, Dict, Any, List
 from datetime import datetime
 
+from ..core.config import Config
+
 
 @dataclass
 class ConversionResult:
@@ -19,6 +21,8 @@ class ConversionResult:
         error: Optional error message if conversion failed
         duration_seconds: Time taken for conversion
         timestamp: When the conversion occurred
+        source_md_file: Optional path to original MD file (for fixing context)
+        fixed_output_file: Optional path to fixed CSV file (if fixing was attempted)
     """
     success: bool
     input_file: Path
@@ -29,6 +33,8 @@ class ConversionResult:
     error: Optional[str] = None
     duration_seconds: float = 0
     timestamp: datetime = field(default_factory=datetime.utcnow)
+    source_md_file: Optional[Path] = None
+    fixed_output_file: Optional[Path] = None
 
 
 @dataclass
@@ -91,6 +97,8 @@ class PipelineContext:
         preprocessed_content: Content after preprocessing
         csv_output: Final CSV output
         verification_result: Optional verification result
+        source_md_file: Optional path to original MD file (for fixing context)
+        fixed_output_file: Optional path to fixed CSV file
     """
     config: Config
     input_file: Path
@@ -100,3 +108,29 @@ class PipelineContext:
     preprocessed_content: str = ""
     csv_output: str = ""
     verification_result: Optional[Dict[str, Any]] = None
+    source_md_file: Optional[Path] = None
+    fixed_output_file: Optional[Path] = None
+
+
+@dataclass
+class FixResult:
+    """Result of fixing a CSV file.
+
+    Attributes:
+        success: Whether fixing was successful
+        input_csv: Path to original CSV file
+        output_csv: Path to fixed CSV file
+        errors_before: Number of errors before fixing
+        errors_after: Number of errors after fixing
+        fixed_rows: Number of rows that were fixed
+        duration_seconds: Time taken for fixing
+        timestamp: When the fix occurred
+    """
+    success: bool
+    input_csv: Path
+    output_csv: Path
+    errors_before: int = 0
+    errors_after: int = 0
+    fixed_rows: int = 0
+    duration_seconds: float = 0
+    timestamp: datetime = field(default_factory=datetime.utcnow)

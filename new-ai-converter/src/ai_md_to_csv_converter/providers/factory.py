@@ -4,6 +4,7 @@ from typing import Dict, Type
 from .base import BaseProvider
 from .groq_provider import GroqProvider
 from .claude_cli_provider import ClaudeCliProvider
+from .openai_provider import OpenAIProvider
 from ..core.exceptions import ProviderError
 
 
@@ -13,6 +14,7 @@ class ProviderFactory:
     _providers: Dict[str, Type[BaseProvider]] = {
         "groq": GroqProvider,
         "claude_cli": ClaudeCliProvider,
+        "openai": OpenAIProvider,
     }
 
     @classmethod

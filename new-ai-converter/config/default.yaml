@@ -58,6 +58,15 @@ pipeline:
     auto_fix: false
     continue_on_error: true
 
+  # AI-based CSV fixing settings
+  fixing:
+    enabled: true
+    auto_fix_on_failure: true  # Automatically fix after verification failure
+    max_attempts: 1  # Single attempt only per requirements
+    provider: "claude_cli"  # Use Claude CLI for fixing
+    validate_after_fix: true  # Re-verify after fixing
+    fail_on_unfixable: false  # Continue if fixing fails
+
 # Input/Output settings
 io:
   input_dir: "../md"
@@ -82,10 +91,6 @@ logging:
   console_output: true
   file_output: true
   log_dir: "logs"
-  rotation:
-    enabled: true
-    max_size_mb: 10
-    backup_count: 5
 
 # Retry settings
 retry:

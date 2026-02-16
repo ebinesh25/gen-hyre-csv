@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Optional, Dict, Any, List
 from dataclasses import dataclass, field
 
+from .exceptions import ConfigError
+
 
 @dataclass
 class RetryConfig:
@@ -60,12 +62,24 @@ class VerificationConfig:
 
 
 @dataclass
+class FixingConfig:
+    """AI-based CSV fixing configuration."""
+    enabled: bool = False
+    auto_fix_on_failure: bool = False
+    max_attempts: int = 1
+    provider: str = "claude_cli"
+    validate_after_fix: bool = True
+    fail_on_unfixable: bool = False
+
+
+@dataclass
 class PipelineConfig:
     """Pipeline configuration."""
     preprocess: List[Dict[str, Any]] = field(default_factory=list)
     provider: ProviderConfig = field(default_factory=ProviderConfig)
     postprocess: List[Dict[str, Any]] = field(default_factory=list)
     verification: VerificationConfig = field(default_factory=VerificationConfig)
+    fixing: FixingConfig = field(default_factory=FixingConfig)
 
 
 @dataclass
@@ -200,11 +214,13 @@ class ConfigLoader:
                     settings=pipeline_cfg.get("provider", {}).get("settings", {})
                 ),
                 postprocess=pipeline_cfg.get("postprocess", []),
-                verification=VerificationConfig(**pipeline_cfg.get("verification", {}))
+                verification=VerificationConfig(**pipeline_cfg.get("verification", {})),
+                fixing=FixingConfig(**pipeline_cfg.get("fixing", {}))
             ),
             io=IOConfig(**{k: Path(v) if isinstance(v, str) and ('dir' in k or 'path' in k) else v
                            for k, v in io_cfg.items()}),
-            logging=LoggingConfig(**logging_cfg),
+            logging=LoggingConfig(**{k: Path(v) if isinstance(v, str) and k == 'log_dir' else v
+                                    for k, v in logging_cfg.items()}),
             retry=RetryConfig(**retry_cfg),
             progress=ProgressConfig(**progress_cfg),
             defaults=DefaultsConfig(**defaults_cfg)

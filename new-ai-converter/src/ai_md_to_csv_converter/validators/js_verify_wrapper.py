@@ -23,7 +23,12 @@ class JsVerifyWrapper(BaseValidator):
         Args:
             config: Configuration object
         """
-        super().__init__(config.pipeline.verification)
+        # Convert VerificationConfig dataclass to dict for base class
+        verification_dict = {
+            "enabled": config.pipeline.verification.enabled,
+            "name": "js_verify",
+        }
+        super().__init__(verification_dict)
         self.logger = get_logger(__name__)
 
         # Get paths from config

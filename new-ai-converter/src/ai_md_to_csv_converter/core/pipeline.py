@@ -14,6 +14,11 @@ from ..utils.logger import get_logger
 from ..utils.retry import RetryHandler
 
 
+class FixError(Exception):
+    """Exception raised when fixing fails."""
+    pass
+
+
 class Pipeline:
     """Main pipeline orchestrator for MD to CSV conversion.
 
@@ -82,16 +87,17 @@ class Pipeline:
             config=self.config,
             input_file=input_file,
             output_file=output_file,
+            source_md_file=input_file,  # Store for fixing context
         )
 
         self.logger.info(f"Processing: {input_file.name}")
 
         try:
-            # Stage 1: Read input
+            # Stage 1: Read input MD
             context.original_content = await self._read_input(input_file)
             context.preprocessed_content = context.original_content
 
-            # Stage 2: Preprocess
+            # Stage 2: Preprocess MD (using existing preprocessors)
             if self.preprocessors:
                 self.logger.debug(f"Running {len(self.preprocessors)} preprocessors")
                 for preprocessor in self.preprocessors:
@@ -100,18 +106,12 @@ class Pipeline:
                         context
                     )
 
-            # Stage 3: Build prompts
-            system_prompt, user_prompt = await self._build_prompts(
-                context.preprocessed_content
-            )
+            # Stage 3: Parse MD to CSV (using parse_md_questions.py)
+            self.logger.debug("Converting MD to CSV using parse_md_questions")
+            from ..preprocessors.parse_md_questions import parse_md_to_csv
+            context.csv_output = parse_md_to_csv(context.preprocessed_content)
 
-            # Stage 4: Convert with AI (with retry)
-            async def _convert():
-                return await self.provider.convert(system_prompt, user_prompt)
-
-            context.csv_output = await self.retry_handler.execute(_convert)
-
-            # Stage 5: Postprocess
+            # Stage 4: Postprocess CSV
             if self.postprocessors:
                 self.logger.debug(f"Running {len(self.postprocessors)} postprocessors")
                 for postprocessor in self.postprocessors:
@@ -120,15 +120,50 @@ class Pipeline:
                         context
                     )
 
-            # Stage 6: Write output
+            # Stage 5: Write output CSV
             await self._write_output(output_file, context.csv_output)
 
-            # Stage 7: Verify (if enabled)
+            # Stage 6: Verify (if enabled)
             if self.config.pipeline.verification.enabled:
                 context.verification_result = await self._verify(
                     output_file,
                     context
                 )
+
+                # Stage 7: Auto-fix if enabled and verification failed
+                if (context.verification_result and
+                    not context.verification_result.get("passed", True) and
+                    self.config.pipeline.fixing.enabled and
+                    self.config.pipeline.fixing.auto_fix_on_failure):
+
+                    self.logger.info(f"Attempting AI fix for {input_file.name}")
+                    try:
+                        fixed_csv = await self._fix_csv(
+                            context.original_content,  # Original MD for context
+                            context.csv_output,        # CSV with errors
+                            context.verification_result,
+                            context
+                        )
+
+                        # Save fixed CSV to separate file
+                        fixed_file = output_file.parent / f"{output_file.stem}_fixed{output_file.suffix}"
+                        await self._write_output(fixed_file, fixed_csv)
+                        context.fixed_output_file = fixed_file
+
+                        # Verify the fixed version
+                        fixed_verification = await self._verify(fixed_file, context)
+                        context.verification_result = fixed_verification
+
+                        self.logger.info(f"Fixed CSV saved to {fixed_file.name}")
+
+                        # Update csv_output to fixed version for counting
+                        context.csv_output = fixed_csv
+
+                    except FixError as e:
+                        if self.config.pipeline.fixing.fail_on_unfixable:
+                            raise
+                        self.logger.warning(f"AI fix failed: {e}")
+                        # Continue with original failed result
 
             # Calculate duration
             duration = time.time() - start_time
@@ -149,6 +184,8 @@ class Pipeline:
                 verification_result=context.verification_result,
                 metadata=context.metadata,
                 duration_seconds=duration,
+                source_md_file=context.source_md_file,
+                fixed_output_file=context.fixed_output_file,
             )
 
         except Exception as e:
@@ -311,3 +348,42 @@ class Pipeline:
                 self.logger.warning(f"Verification failed (continuing): {e}")
                 return {"error": str(e)}
             raise
+
+    async def _fix_csv(
+        self,
+        md_content: str,
+        csv_content: str,
+        error_report: Dict[str, Any],
+        context: PipelineContext
+    ) -> str:
+        """Fix CSV errors using AI.
+
+        Args:
+            md_content: Original MD content
+            csv_content: Generated CSV with errors
+            error_report: Verification error report
+            context: Pipeline context
+
+        Returns:
+            Fixed CSV content
+
+        Raises:
+            FixError: If fixing fails
+        """
+        from ..fixers.factory import FixerFactory
+
+        fixer_config = {
+            "name": "ai_csv_fixer",
+            "enabled": True,
+            "provider": context.config.pipeline.fixing.provider,
+            "options": {
+                "single_attempt": context.config.pipeline.fixing.max_attempts == 1,
+                "validate_output": context.config.pipeline.fixing.validate_after_fix,
+            }
+        }
+
+        try:
+            fixer = FixerFactory.create(fixer_config)
+            return await fixer.fix(md_content, csv_content, error_report, context)
+        except Exception as e:
+            raise FixError(f"AI-based CSV fixing failed: {e}") from e
