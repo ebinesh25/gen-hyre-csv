@@ -9,7 +9,7 @@ from pathlib import Path
 # 1. CONFIGURATION
 # ---------------------------------------------------------
 
-# Select AI provider: "GROQ" or "CLAUDE_CLI"
+# Select AI provider: "GROQ", "CLAUDE_CLI", or "OLLAMA"
 AI_PROVIDER = os.getenv("AI_PROVIDER", "GROQ")
 
 # Groq Configuration
@@ -728,6 +728,151 @@ IMPORTANT: Output ONLY the CSV data. Start with the header row. Do NOT include a
             else:
                 raise
 
+def convert_with_ollama(md_content: str) -> str:
+    """Convert markdown content to CSV using Ollama with retry on rate limit."""
+
+    user_prompt = f"""Here are examples of how to convert Markdown to CSV:
+
+### Example Input Markdown
+{SAMPLE_MD}
+
+### Example Output CSV
+{SAMPLE_CSV}
+
+---
+
+## CRITICAL REMINDERS FOR CONVERSION:
+
+0. **MOST CRITICAL - Option Prefix Removal:**
+   - ALWAYS strip "A.", "B.", "C.", "D.", "E." from option text
+   - "A. Economical" → "Economical" (NOT "A. Economical")
+   - "B. Wasteful" → "Wasteful" (NOT "B. Wasteful")
+   - **VERIFY YOUR OUTPUT:** Check that NO option starts with a letter + period!
+
+1. **CSV QUOTING - ALWAYS QUOTE THESE FIELDS:**
+   - **ALL Options** - Quote every single option, even if no commas
+   - **Question** - Always quote
+   - **Tags** - Always quote (always has commas)
+   - **Category** - Always quote (may have commas like "Logical Reasoning,Directions")
+   - **Answer Explanation** - Always quote
+   - This prevents ALL column shift issues!
+
+2. **DETERMINE MAXIMUM OPTION COUNT FIRST**
+   - Read ALL questions first to find maximum option count (could be 2, 3, 4, 5, or 6)
+   - CSV header will have Options1 through Options[maxCount]
+   - Each question row has its actual optionCount and only that many non-empty options
+
+3. **Option Count = ACTUAL number of options** (2, 3, 4, 5, or 6)
+   - 2 options: Set optionCount=2, fill Options1-2
+   - 4 options: Set optionCount=4, fill Options1-4
+   - 5 options: Set optionCount=5, fill Options1-5
+   - 6 options: Set optionCount=6, fill Options1-6
+   - Options beyond actual count are empty strings
+
+4. **Every row must have consistent column count** based on maxOptionCount
+
+5. **Text-based answers:** Match the answer text to find the correct option number (1-6)
+
+6. **Letter answers (A, B, C, D, E):** Convert to numbers (A=1, B=2, C=3, D=4, E=5)
+
+7. **Number answers (1, 2, 3, 4, 5, 6):** Use directly as the answer
+
+Now, convert the following Markdown to CSV using the exact same logic:
+
+### Input Markdown
+{md_content}
+
+### Output CSV
+
+IMPORTANT: Output ONLY the CSV data. Start with the header row. Do NOT include any introductory text. Do NOT include any concluding remarks, summaries, or "I've processed" messages at the end. JUST the CSV and nothing else.
+"""
+
+    # Create the prompt for Ollama
+    prompt = f"""{get_system_prompt()}
+
+{user_prompt}"""
+
+    retry_count = 0
+
+    while retry_count < MAX_RETRIES:
+        try:
+            # Run ollama with prompt via stdin
+            result = subprocess.run(
+                ["ollama", "run", "glm-5:cloud"],
+                input=prompt,
+                capture_output=True,
+                text=True,
+                timeout=300,  # 5 minute timeout
+            )
+
+            if result.returncode != 0:
+                error_msg = result.stderr or result.stdout
+                raise Exception(f"Ollama error: {error_msg}")
+
+            csv_output = result.stdout.strip()
+
+            # Clean up any conversational prefix
+            if "Question Type,Question" in csv_output:
+                csv_start = csv_output.find("Question Type,Question")
+                csv_output = csv_output[csv_start:]
+
+            # Clean up markdown code blocks - handle both ```csv and standalone ```
+            if "```csv" in csv_output:
+                csv_output = csv_output.replace("```csv", "").replace("```", "")
+            # Also remove any standalone ``` lines (for cases where AI didn't use ```csv)
+            csv_output = re.sub(r'^```\s*$', '', csv_output, flags=re.MULTILINE)
+
+            # Clean up conversational text at the end (AI summaries like "I've processed all...")
+            # Split by lines and only keep valid CSV lines (start with "objective" or header)
+            lines = csv_output.split('\n')
+            csv_lines = []
+            for line in lines:
+                line = line.strip()
+                # Keep header line and lines starting with "objective"
+                if line.startswith("Question Type,") or line.startswith("objective,"):
+                    csv_lines.append(line)
+                # Stop at first non-CSV line (conversational text)
+                elif csv_lines and not (line.startswith("Question Type,") or line.startswith("objective,")):
+                    break
+            csv_output = '\n'.join(csv_lines)
+
+            return csv_output.strip()
+
+        except subprocess.TimeoutExpired:
+            retry_count += 1
+            if retry_count >= MAX_RETRIES:
+                raise Exception("Ollama: Max retries reached due to timeout")
+            print(f"  Timeout. Retrying {retry_count}/{MAX_RETRIES}...")
+            time.sleep(10)
+
+        except Exception as e:
+            error_str = str(e)
+            # Check if it's a rate limit error
+            if "rate limit" in error_str.lower() or "429" in error_str:
+                retry_after = extract_retry_after(error_str)
+                retry_count += 1
+
+                if retry_count >= MAX_RETRIES:
+                    raise Exception(f"Rate limit: Max retries ({MAX_RETRIES}) reached")
+
+                hours = retry_after // 3600
+                minutes = (retry_after % 3600) // 60
+                seconds = retry_after % 60
+                wait_str = ""
+                if hours > 0:
+                    wait_str += f"{hours}h "
+                if minutes > 0:
+                    wait_str += f"{minutes}m "
+                wait_str += f"{seconds}s"
+
+                print(f"  Rate limit hit. Waiting {wait_str}before retry {retry_count}/{MAX_RETRIES}...")
+                time.sleep(retry_after)
+            else:
+                raise
+
+    raise Exception("Max retries reached")
+
+
 def convert_md_to_csv(md_content: str) -> str:
     """Convert markdown content to CSV using the configured AI provider."""
 
@@ -737,8 +882,10 @@ def convert_md_to_csv(md_content: str) -> str:
         return convert_with_groq(md_content)
     elif AI_PROVIDER == "CLAUDE_CLI":
         return convert_with_claude_cli(md_content)
+    elif AI_PROVIDER == "OLLAMA":
+        return convert_with_ollama(md_content)
     else:
-        raise ValueError(f"Unknown AI_PROVIDER: {AI_PROVIDER}. Use 'GROQ' or 'CLAUDE_CLI'")
+        raise ValueError(f"Unknown AI_PROVIDER: {AI_PROVIDER}. Use 'GROQ', 'CLAUDE_CLI', or 'OLLAMA'")
 
 
 # ---------------------------------------------------------

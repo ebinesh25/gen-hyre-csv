@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-02-12T13:41:04.706Z",
+  "timestamp": "2026-02-13T12:39:13.113Z",
   "summary": {
     "total": 83,
-    "passed": 64,
-    "failed": 19
+    "passed": 65,
+    "failed": 18
   },
   "passed": [
     {
@@ -130,6 +130,11 @@
       "file": "DELOITEE Cloud Computing MCQs -2 DB.csv",
       "rowCount": 4,
       "questionCount": 4
+    },
+    {
+      "file": "ACCENTURE Common Applications and MS Office -2 DB.csv",
+      "rowCount": 11,
+      "questionCount": 11
     },
     {
       "file": "Capgemini VERBAL ABILITY 2 - DB.csv",
@@ -3423,94 +3428,6 @@
             {
               "column": "Question",
               "value": "Printing"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
-            },
-            {
-              "column": "Column17",
-              "value": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "file": "ACCENTURE Common Applications and MS Office -2 DB.csv",
-      "errorCount": 1,
-      "errors": [
-        {
-          "row": 1,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "Common Applications and MS Office",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "Common Applications and MS Office"
             },
             {
               "column": "Option count",

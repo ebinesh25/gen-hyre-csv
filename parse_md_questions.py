@@ -77,11 +77,17 @@ def parse_questions_from_file(file_path):
 
         # Check if this looks like continuation/sub-point text rather than a standalone question
         # Continuation lines often: start with lowercase words, no question number, longer than typical headers
+        # Also check for common continuation starting words (Be, Have, Should, etc.)
+        continuation_starters = ['be', 'have', 'should', 'must', 'can', 'will', 'there', 'therefore',
+                             'hence', 'thus', 'also', 'not', 'only', 'if', 'when', 'where',
+                             'which', 'who', 'whose', 'what', 'how', 'why']
+        starts_with_continuation = first_line.lower().split()[0] if first_line else '' in continuation_starters
+
         is_continuation = (
             not starts_with_question and  # No question number at start
             len(first_line) > 30 and  # Longer than typical headers
             not has_question_mark and  # No question mark
-            first_line[0].islower()  # Starts with lowercase (not a header)
+            (first_line[0].islower() or starts_with_continuation)  # Starts with lowercase or continuation word
         )
 
         if (len(first_line) < 100 and
@@ -216,8 +222,13 @@ def parse_single_question(content):
                 # Don't increment i, let the answer extraction handle this line
                 break
             i += 1
+        # NEW: Also check for special option formats like "A. 109" (number sequences)
+        elif re.match(r'^([A-E])\.\s*\d+', line):
+            # Handle options like "A. 109", "B. 118", etc.
+            option_text = line[4:].strip()  # Everything after "A. " is the option
+            options.append(option_text)
+            i += 1
         elif opt_match_equals:
-            # Handle options with equals sign format like "A = text"
             option_raw = opt_match_equals.group(2)
             # Stop at **Answer or ** if present
             option_parts = re.split(r'\s*\*\*\s*Answer|\s*\*\*$', option_raw, maxsplit=1, flags=re.IGNORECASE)
