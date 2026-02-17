@@ -1,0 +1,654 @@
+{
+  "timestamp": "2026-02-17T07:40:30.923Z",
+  "summary": {
+    "total": 79,
+    "passed": 71,
+    "failed": 8
+  },
+  "passed": [
+    {
+      "file": "TCS NQT Mock Test 2- DB.csv",
+      "rowCount": 69,
+      "questionCount": 69
+    },
+    {
+      "file": "Sample HCL Placement LOGICAL REASONING -2 DB  Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Sample Question of Hexaware -2 DB Manipulated.csv",
+      "rowCount": 88,
+      "questionCount": 88
+    },
+    {
+      "file": "Sample Question of Hexaware Quantitative Aptitude- 2 DB Manipulated.csv",
+      "rowCount": 16,
+      "questionCount": 16
+    },
+    {
+      "file": "NTT DATA - 2 Manipulated.csv",
+      "rowCount": 44,
+      "questionCount": 44
+    },
+    {
+      "file": "Sample Question of Hexaware Coding -2 DB Manipulated.csv",
+      "rowCount": 2,
+      "questionCount": 2
+    },
+    {
+      "file": "Wipro WILP ANALYTICAL ABILITY 2-DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "NTT DATA REASONING APTITUDE - 2 Manipulated.csv",
+      "rowCount": 9,
+      "questionCount": 9
+    },
+    {
+      "file": "Goldman Sachs APTITUDE-2 DB.csv",
+      "rowCount": 8,
+      "questionCount": 8
+    },
+    {
+      "file": "TCS NQT  ADVANCE APTITUDE 2- DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Capgemini Pseudocoding Questions 2 - DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Multicore ware QUANTS- 2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Sample HCL Placement VERBAL- 2 DB  Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Tech Mahindra COMPUTER SCIENCE 2-DB.csv",
+      "rowCount": 12,
+      "questionCount": 12
+    },
+    {
+      "file": "AMAZON - 2 manipulated.csv",
+      "rowCount": 11,
+      "questionCount": 11
+    },
+    {
+      "file": "Capgemini Computer Networking questions 2 - DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Sample HCL Placement APTITUDE- 2 DB  Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Mphasis VERBAL - 2 Manipulated.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Sample Question of Hexaware VERBAL -2 DB Manipulated.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "ZOHO Mock Test -2 DB.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Infosys REASONING APTITUDE -2 DB.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Tech Mahindra LOGICAL REASONING  2-DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Cognizant GenC Mock Test - 2 DB.csv",
+      "rowCount": 55,
+      "questionCount": 55
+    },
+    {
+      "file": "Tech Mahindra Mock Test 2-DB.csv",
+      "rowCount": 58,
+      "questionCount": 58
+    },
+    {
+      "file": "Infosys Pseudocode-2 DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "NTT DATA VERBAL ABILITY - 2 Manipulated.csv",
+      "rowCount": 14,
+      "questionCount": 14
+    },
+    {
+      "file": "Mphasis AMCAT VERBAL- 2 Manipulated.csv",
+      "rowCount": 48,
+      "questionCount": 48
+    },
+    {
+      "file": "Cognizant GenC VERBAL REASONING - 2 DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "DELOITEE Cloud Computing MCQs -2 DB.csv",
+      "rowCount": 4,
+      "questionCount": 4
+    },
+    {
+      "file": "Capgemini VERBAL ABILITY 2 - DB.csv",
+      "rowCount": 30,
+      "questionCount": 30
+    },
+    {
+      "file": "Mphasis AMCAT LOGICAL - 2 Manipulated.csv",
+      "rowCount": 24,
+      "questionCount": 24
+    },
+    {
+      "file": "Goldman Sachs LOGICAL REASONING -2 DB.csv",
+      "rowCount": 12,
+      "questionCount": 12
+    },
+    {
+      "file": "DELOITEE LOGICAL REASONING -2 DB.csv",
+      "rowCount": 11,
+      "questionCount": 11
+    },
+    {
+      "file": "TCS NQT VERBAL 2- DB.csv",
+      "rowCount": 23,
+      "questionCount": 23
+    },
+    {
+      "file": "AMAZON APTITUDE - 2 manipulated.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Mphasis QUANTITATIVE APTITUDE - 2 Manipulated.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "ZOHO QUANTITATIVE APTITUDE-2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Sample Question of Hexaware COMPUTER FUNDAMENTAL -2 DB Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Sample HCL Placement Question Paper -2 DB  Manipulated.csv",
+      "rowCount": 60,
+      "questionCount": 60
+    },
+    {
+      "file": "Infosys Additional Pseudocode-2 DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "ZOHO Pseudocode -2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Cognizant GenC LOGICAL REASONING - 2 DB.csv",
+      "rowCount": 29,
+      "questionCount": 29
+    },
+    {
+      "file": "Goldman Sachs Mock Test -2 DB.csv",
+      "rowCount": 30,
+      "questionCount": 30
+    },
+    {
+      "file": "Wipro WILP QUANTITATIVE APTITUDE 2-DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Tech Mahindra APTITUDE  2-DB.csv",
+      "rowCount": 12,
+      "questionCount": 12
+    },
+    {
+      "file": "Sample Question of Hexaware LOGICAL REASONING-2 DB Manipulated.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Goldman Sachs VERBAL ABILITY -2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "TCS NQT QUANTITATIVE APTITUDE 2- DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Capgemini Technical Test 2 - DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Infosys Mock Test -2 DB.csv",
+      "rowCount": 58,
+      "questionCount": 58
+    },
+    {
+      "file": "Capgemini Mock Test 2 - DB.csv",
+      "rowCount": 55,
+      "questionCount": 55
+    },
+    {
+      "file": "ACCENTURE ENGLISH ABILITY -2 DB.csv",
+      "rowCount": 17,
+      "questionCount": 17
+    },
+    {
+      "file": "TCS NQT ADVANCE LOGICAL 2- DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "DELOITEE Technical Skills -2 DB.csv",
+      "rowCount": 9,
+      "questionCount": 9
+    },
+    {
+      "file": "Mphasis -2 Manipulated.csv",
+      "rowCount": 122,
+      "questionCount": 122
+    },
+    {
+      "file": "Tech Mahindra VERBAL ABILITY  2-DB.csv",
+      "rowCount": 12,
+      "questionCount": 12
+    },
+    {
+      "file": "AMAZON VERBAL - 2 manipulated.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Wipro WILP VERBAL ABILITY 2-DB.csv",
+      "rowCount": 20,
+      "questionCount": 20
+    },
+    {
+      "file": "Tech Mahindra TECHNICAL MCQS 2-DB.csv",
+      "rowCount": 12,
+      "questionCount": 12
+    },
+    {
+      "file": "NTT DATA APTITUDE - 2 Manipulated.csv",
+      "rowCount": 15,
+      "questionCount": 15
+    },
+    {
+      "file": "Mphasis LOGICAL REASONING - 2 Manipulated.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Cognizant GenC QUANTITATIVE APTITUDE - 2 DB.csv",
+      "rowCount": 25,
+      "questionCount": 25
+    },
+    {
+      "file": "Infosys QUANTITATIVE APTITUDE -2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "Multicore ware Mock Test - 2 DB.csv",
+      "rowCount": 35,
+      "questionCount": 35
+    },
+    {
+      "file": "Sample HCL Placement COMPUTER FUNDAMENTALS-2 DB  Manipulated.csv",
+      "rowCount": 30,
+      "questionCount": 30
+    },
+    {
+      "file": "Infosys Puzzle Solving -2 DB.csv",
+      "rowCount": 4,
+      "questionCount": 4
+    },
+    {
+      "file": "DELOITEE Computer Science MCQs-2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    },
+    {
+      "file": "AMAZON LOGICAL REASONING - 2 manipulated.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "Mphasis AMCAT APTITUDE - 2 Manipulated.csv",
+      "rowCount": 22,
+      "questionCount": 22
+    },
+    {
+      "file": "Capgemini DBMS questions 2 - DB.csv",
+      "rowCount": 5,
+      "questionCount": 5
+    },
+    {
+      "file": "DELOITEE Quantitative Aptitude -2 DB.csv",
+      "rowCount": 10,
+      "questionCount": 10
+    }
+  ],
+  "failed": [
+    {
+      "file": "Tech Mahindra CODING  2-DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "ACCENTURE Mock Test -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "ACCENTURE Common Applications and MS Office -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "ACCENTURE LOGICAL REASONING -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "Multicore ware COMPUTER FUNDAMENTALS - 2 DB.csv",
+      "errorCount": 3,
+      "errors": [
+        {
+          "row": 5,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid option count",
+          "reason": "Option count column contains non-numeric value - likely due to unescaped newlines in code/question text breaking CSV row parsing",
+          "questionPreview": "What is the output of the following Python code? c",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "What is the output of the following Python code? c"
+            },
+            {
+              "column": "Option count",
+              "value": " exc_type"
+            },
+            {
+              "column": "Options1",
+              "value": " exc_val"
+            },
+            {
+              "column": "Options2",
+              "value": " tb): print(\\\"Exit\\\") return True def gen(): with "
+            },
+            {
+              "column": "Options3",
+              "value": "4"
+            },
+            {
+              "column": "Options4",
+              "value": "Enter A Exit Enter B Exit"
+            },
+            {
+              "column": "Answer",
+              "value": "Enter A Enter Exit B"
+            },
+            {
+              "column": "Category",
+              "value": "Enter A B Exit"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Enter A Exit"
+            },
+            {
+              "column": "Score",
+              "value": "4"
+            },
+            {
+              "column": "Tags",
+              "value": "Computer Fundamentals"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "medium"
+            },
+            {
+              "column": "Column13",
+              "value": " causing the with block to exit.\""
+            },
+            {
+              "column": "Column14",
+              "value": " causing the with block to exit.\""
+            },
+            {
+              "column": "Column15",
+              "value": " causing the with block to exit.\""
+            },
+            {
+              "column": "Column16",
+              "value": " causing the with block to exit.\""
+            },
+            {
+              "column": "Column17",
+              "value": " causing the with block to exit.\""
+            }
+          ]
+        },
+        {
+          "row": 17,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid option count",
+          "reason": "Option count column contains non-numeric value - likely due to unescaped newlines in code/question text breaking CSV row parsing",
+          "questionPreview": "What is the output of the following C program? #in",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "What is the output of the following C program? #in"
+            },
+            {
+              "column": "Option count",
+              "value": " max); return 0; }\""
+            },
+            {
+              "column": "Options1",
+              "value": "4"
+            },
+            {
+              "column": "Options2",
+              "value": "Infinite Loop"
+            },
+            {
+              "column": "Options3",
+              "value": "0"
+            },
+            {
+              "column": "Options4",
+              "value": "255"
+            },
+            {
+              "column": "Answer",
+              "value": "Compile error"
+            },
+            {
+              "column": "Category",
+              "value": "1"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Computer Fundamentals"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Computer Fundamentals,C"
+            },
+            {
+              "column": "Column13",
+              "value": ""
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 20,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid option count",
+          "reason": "Option count column contains non-numeric value - likely due to unescaped newlines in code/question text breaking CSV row parsing",
+          "questionPreview": "Given the decorator below, what will the program p",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Given the decorator below, what will the program p"
+            },
+            {
+              "column": "Option count",
+              "value": " args"
+            },
+            {
+              "column": "Options1",
+              "value": " kwargs) return func(*args"
+            },
+            {
+              "column": "Options2",
+              "value": " **kwargs) return wrapper @logger def add(x"
+            },
+            {
+              "column": "Options3",
+              "value": " y=1): return x + y print(add(5"
+            },
+            {
+              "column": "Options4",
+              "value": " y=2))\""
+            },
+            {
+              "column": "Answer",
+              "value": "4"
+            },
+            {
+              "column": "Category",
+              "value": "Arguments were: (5, 2) {} followed by 7"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Arguments were: (5,) {'y': 2} followed by 7"
+            },
+            {
+              "column": "Score",
+              "value": "7"
+            },
+            {
+              "column": "Tags",
+              "value": "Arguments were: {'x':5, 'y':2} followed by 7"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "2"
+            },
+            {
+              "column": "Column13",
+              "value": "* The decorator prints the positional args tuple a"
+            },
+            {
+              "column": "Column14",
+              "value": "* The decorator prints the positional args tuple a"
+            },
+            {
+              "column": "Column15",
+              "value": "* The decorator prints the positional args tuple a"
+            },
+            {
+              "column": "Column16",
+              "value": "* The decorator prints the positional args tuple a"
+            },
+            {
+              "column": "Column17",
+              "value": "* The decorator prints the positional args tuple a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "ACCENTURE Network Security and Cloud -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "ACCENTURE PSEUDOCODE -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    },
+    {
+      "file": "Infosys VERBAL -2 DB.csv",
+      "error": "No valid questions found in CSV",
+      "reason": "CSV file contains no valid questions - all rows are invalid or the file is empty"
+    }
+  ]
+}

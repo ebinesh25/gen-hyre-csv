@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.dirname(__dirname);
-const SOURCE_DIR = path.join(ROOT_DIR, "csv-ai");
+const SOURCE_DIR = path.join(ROOT_DIR, "csv");
 const VERIFIED_DIR = path.join(__dirname, "csv-verified");
 const FAILED_DIR = path.join(__dirname, "csv-failed");
 
@@ -79,6 +79,7 @@ function validateCSV(filePath) {
     const rows = parseCSV(filePath);
 
     if (rows.length === 0) {
+      console.log(`${rows.length} for ${filePath}` )
       return { valid: false, error: "No data rows found", rowCount: 0 };
     }
 
@@ -228,6 +229,16 @@ function validateCSV(filePath) {
         errorCount: errors.length,
         rowCount: dataRows.length,
         questionCount: validResult.length,
+      };
+    }
+
+    // Fail validation if no valid questions were found
+    if (validResult.length === 0) {
+      return {
+        valid: false,
+        error: "No valid questions found in CSV",
+        rowCount: dataRows.length,
+        questionCount: 0,
       };
     }
 
@@ -397,6 +408,12 @@ function verifyAllCSVs() {
 
 // Get human-readable failure reason
 function getFailureReason(error) {
+  if (error.includes("No valid questions found")) {
+    return "CSV file contains no valid questions - all rows are invalid or the file is empty";
+  }
+  if (error.includes("Invalid option count")) {
+    return "Option count column contains non-numeric value - likely due to unescaped newlines in code/question text breaking CSV row parsing";
+  }
   if (error.includes("No data rows found")) {
     return "File is empty or contains no valid data rows";
   }
