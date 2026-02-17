@@ -1,44 +1,23 @@
 {
-  "timestamp": "2026-02-16T09:35:35.640Z",
+  "timestamp": "2026-02-17T06:11:58.771Z",
   "summary": {
-    "total": 6,
-    "passed": 4,
-    "failed": 2
+    "total": 4,
+    "passed": 0,
+    "failed": 4
   },
-  "passed": [
-    {
-      "file": "ACCENTURE Common Applications and MS Office -2 DB.csv",
-      "rowCount": 11,
-      "questionCount": 11
-    },
-    {
-      "file": "ACCENTURE Network Security and Cloud -2 DB.csv",
-      "rowCount": 10,
-      "questionCount": 10
-    },
-    {
-      "file": "ACCENTURE PSEUDOCODE -2 DB.csv",
-      "rowCount": 14,
-      "questionCount": 14
-    },
-    {
-      "file": "ACCENTURE ENGLISH ABILITY -2 DB.csv",
-      "rowCount": 11,
-      "questionCount": 11
-    }
-  ],
+  "passed": [],
   "failed": [
     {
-      "file": "ACCENTURE Mock Test -2 DB.csv",
-      "errorCount": 6,
+      "file": "DELOITEE VERBAL ABILITY -2 DB.csv",
+      "errorCount": 1,
       "errors": [
         {
-          "row": 14,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "# 23.Read the information given below and answer t",
+          "row": 4,
+          "column": "Answer",
+          "columnValue": "(1) continues to expand(2) will struggle",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "Select the most appropriate options to fill in the",
           "rowData": [
             {
               "column": "Question Type",
@@ -46,55 +25,55 @@
             },
             {
               "column": "Question",
-              "value": "# 23.Read the information given below and answer t"
+              "value": "Select the most appropriate options to fill in the"
             },
             {
               "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
               "value": "5"
             },
             {
+              "column": "Options1",
+              "value": "(1) to expand continues (2) will struggle"
+            },
+            {
+              "column": "Options2",
+              "value": "(1) expanding remains (2) could struggled"
+            },
+            {
+              "column": "Options3",
+              "value": "(1) to expanding remain (2) will struggling"
+            },
+            {
+              "column": "Options4",
+              "value": "(1) expand continues (2) may struggles"
+            },
+            {
+              "column": "Answer",
+              "value": "(1) continues to expand(2) will struggle"
+            },
+            {
+              "column": "Category",
+              "value": "5"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Aptitude"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "5"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
+              "value": "Aptitude,Grammar"
             },
             {
               "column": "Column13",
-              "value": ""
+              "value": "The correct grammatical construction for blank (1)"
             },
             {
               "column": "Column14",
@@ -111,415 +90,9 @@
             {
               "column": "Column17",
               "value": ""
-            }
-          ]
-        },
-        {
-          "row": 15,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "## 24. Read the information given below and answer",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "## 24. Read the information given below and answer"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
-            },
-            {
-              "column": "Column17",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "row": 16,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "## 25. Read the information given below and answer",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "## 25. Read the information given below and answer"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
-            },
-            {
-              "column": "Column17",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "row": 17,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "# 26.Read the information given below and answer t",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "# 26.Read the information given below and answer t"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
-            },
-            {
-              "column": "Column17",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "row": 18,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "##  29.Read the following information carefully an",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "##  29.Read the following information carefully an"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
-            },
-            {
-              "column": "Column17",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "row": 19,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "### 30.Read the following information carefully an",
-          "rowData": [
-            {
-              "column": "Question Type",
-              "value": "objective"
-            },
-            {
-              "column": "Question",
-              "value": "### 30.Read the following information carefully an"
-            },
-            {
-              "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
-              "value": "5"
-            },
-            {
-              "column": "Tags",
-              "value": "Aptitude,Numbers"
-            },
-            {
-              "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
-            },
-            {
-              "column": "Column14",
-              "value": ""
-            },
-            {
-              "column": "Column15",
-              "value": ""
-            },
-            {
-              "column": "Column16",
-              "value": ""
             },
             {
-              "column": "Column17",
+              "column": "Column18",
               "value": ""
             }
           ]
@@ -527,16 +100,16 @@
       ]
     },
     {
-      "file": "ACCENTURE LOGICAL REASONING -2 DB.csv",
-      "errorCount": 8,
+      "file": "Wipro WILP Mock Test  2-DB.csv",
+      "errorCount": 3,
       "errors": [
         {
-          "row": 3,
-          "column": "Unknown",
-          "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "# 23.Read the information given below and answer t",
+          "row": 26,
+          "column": "Answer",
+          "columnValue": "Both I and II together are sufficient",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "Who is the daughter of Meera? Statements: I. Rohan",
           "rowData": [
             {
               "column": "Question Type",
@@ -544,55 +117,55 @@
             },
             {
               "column": "Question",
-              "value": "# 23.Read the information given below and answer t"
+              "value": "Who is the daughter of Meera? Statements: I. Rohan"
             },
             {
               "column": "Option count",
-              "value": "0"
-            },
-            {
-              "column": "Options1",
-              "value": ""
-            },
-            {
-              "column": "Options2",
-              "value": ""
-            },
-            {
-              "column": "Options3",
-              "value": ""
-            },
-            {
-              "column": "Options4",
-              "value": ""
-            },
-            {
-              "column": "Answer",
-              "value": "1"
-            },
-            {
-              "column": "Category",
-              "value": "Aptitude"
-            },
-            {
-              "column": "Difficulty",
-              "value": "medium"
-            },
-            {
-              "column": "Score",
               "value": "5"
             },
             {
+              "column": "Options1",
+              "value": "I alone is sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "II alone is sufficient"
+            },
+            {
+              "column": "Options3",
+              "value": "Either I or II is sufficient"
+            },
+            {
+              "column": "Options4",
+              "value": "Neither I nor II is sufficient"
+            },
+            {
+              "column": "Answer",
+              "value": "Both I and II together are sufficient"
+            },
+            {
+              "column": "Category",
+              "value": "5"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Analytical Ability"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "5"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
+              "value": "Analytical Ability,Data Sufficiency"
             },
             {
               "column": "Column13",
-              "value": ""
+              "value": "Statement I tells us Rohan and Anu are siblings, b"
             },
             {
               "column": "Column14",
@@ -608,6 +181,450 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 39,
+          "column": "Answer",
+          "columnValue": "Both I and II together sufficient",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "Is A the father of C? I. A is the brother of B. II",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Is A the father of C? I. A is the brother of B. II"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "I alone sufficient, II alone not sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "II alone sufficient, I alone not sufficient"
+            },
+            {
+              "column": "Options3",
+              "value": "Either I or II sufficient"
+            },
+            {
+              "column": "Options4",
+              "value": "Neither I nor II sufficient"
+            },
+            {
+              "column": "Answer",
+              "value": "Both I and II together sufficient"
+            },
+            {
+              "column": "Category",
+              "value": "4"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Analytical Ability"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Analytical Ability,Data Sufficiency"
+            },
+            {
+              "column": "Column13",
+              "value": "Statement I alone: 'A is brother of B' → says noth"
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 40,
+          "column": "Answer",
+          "columnValue": "Both I and II together sufficient",
+          "error": "Invalid answer",
+          "reason": "Unknown validation error",
+          "questionPreview": "What is Geetha's rank among girls if she is 12th i",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "What is Geetha's rank among girls if she is 12th i"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "I alone sufficient, II alone not sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "II alone sufficient, I alone not sufficient"
+            },
+            {
+              "column": "Options3",
+              "value": "Either I or II sufficient"
+            },
+            {
+              "column": "Options4",
+              "value": "Neither I nor II sufficient"
+            },
+            {
+              "column": "Answer",
+              "value": "Both I and II together sufficient"
+            },
+            {
+              "column": "Category",
+              "value": "3"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Analytical Ability"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Analytical Ability,Data Sufficiency"
+            },
+            {
+              "column": "Column13",
+              "value": "From I: If 4 girls are ranked ahead of Geetha in t"
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "TCS NQT  LOGICAL REASONING 2- DB.csv",
+      "errorCount": 20,
+      "errors": [
+        {
+          "row": 1,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "In a conversation, Neha says, \"The man's wife's fa",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "In a conversation, Neha says, \"The man's wife's fa"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "Uncle"
+            },
+            {
+              "column": "Options2",
+              "value": "Brother"
+            },
+            {
+              "column": "Options3",
+              "value": "Cousin in law"
+            },
+            {
+              "column": "Options4",
+              "value": "Brother-in-law"
+            },
+            {
+              "column": "Options5",
+              "value": "None of these"
+            },
+            {
+              "column": "Answer",
+              "value": "3"
+            },
+            {
+              "column": "Category",
+              "value": "Logical Reasoning,Relationships"
+            },
+            {
+              "column": "Difficulty",
+              "value": "medium"
+            },
+            {
+              "column": "Score",
+              "value": "5"
+            },
+            {
+              "column": "Tags",
+              "value": "Logical Reasoning,Blood Relations"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Neha's father's brother is Neha's uncle. The man's"
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "A is the father of B. B is the sister of C. C is t",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "A is the father of B. B is the sister of C. C is t"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "Father"
+            },
+            {
+              "column": "Options2",
+              "value": "Father-in-law"
+            },
+            {
+              "column": "Options3",
+              "value": "Grandfather"
+            },
+            {
+              "column": "Options4",
+              "value": "Brother"
+            },
+            {
+              "column": "Options5",
+              "value": "None of these"
+            },
+            {
+              "column": "Answer",
+              "value": "2"
+            },
+            {
+              "column": "Category",
+              "value": "Logical Reasoning,Relationships"
+            },
+            {
+              "column": "Difficulty",
+              "value": "medium"
+            },
+            {
+              "column": "Score",
+              "value": "5"
+            },
+            {
+              "column": "Tags",
+              "value": "Logical Reasoning,Blood Relations"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "C is the father of D. E is the mother of D → so C "
+            },
+            {
+              "column": "Column14",
+              "value": ""
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Find the wrong number in the series: 3, 8, 15, 24,",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Find the wrong number in the series: 3, 8, 15, 24,"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "15"
+            },
+            {
+              "column": "Options2",
+              "value": "24"
+            },
+            {
+              "column": "Options3",
+              "value": "35"
+            },
+            {
+              "column": "Options4",
+              "value": "51"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "4"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Series"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Number Series"
+            },
+            {
+              "column": "Column14",
+              "value": "Correct pattern: numbers should be of the form n² "
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
               "value": ""
             }
           ]
@@ -616,9 +633,9 @@
           "row": 4,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "## 24. Read the information given below and answer",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Predict the next number in the series: 52, 90, 156",
           "rowData": [
             {
               "column": "Question Type",
@@ -626,59 +643,59 @@
             },
             {
               "column": "Question",
-              "value": "## 24. Read the information given below and answer"
+              "value": "Predict the next number in the series: 52, 90, 156"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "4"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "306"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "342"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "366"
             },
             {
               "column": "Options4",
+              "value": "400"
+            },
+            {
+              "column": "Options5",
               "value": ""
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": ""
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "2"
             },
             {
               "column": "Difficulty",
-              "value": "medium"
+              "value": "Logical Reasoning,Series"
             },
             {
               "column": "Score",
-              "value": "5"
+              "value": "medium"
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "5"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Logical Reasoning,Number Series"
             },
             {
               "column": "Column14",
-              "value": ""
+              "value": "Find the differences between consecutive terms: 90"
             },
             {
               "column": "Column15",
@@ -690,6 +707,14 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
               "value": ""
             }
           ]
@@ -698,9 +723,9 @@
           "row": 5,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "## 25. Read the information given below and answer",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "How many meaningful words can be formed from the w",
           "rowData": [
             {
               "column": "Question Type",
@@ -708,35 +733,39 @@
             },
             {
               "column": "Question",
-              "value": "## 25. Read the information given below and answer"
+              "value": "How many meaningful words can be formed from the w"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "5"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "One"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "Two"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "Three"
             },
             {
               "column": "Options4",
-              "value": ""
+              "value": "More than three"
+            },
+            {
+              "column": "Options5",
+              "value": "No meaningful words can be formed"
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": "5"
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "Logical Reasoning,Word Formation"
             },
             {
               "column": "Difficulty",
@@ -748,15 +777,11 @@
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "Logical Reasoning,Letters"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Consonants are replaced with the next alphabet let"
             },
             {
               "column": "Column14",
@@ -772,6 +797,10 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
               "value": ""
             }
           ]
@@ -780,9 +809,9 @@
           "row": 6,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "# 26.Read the information given below and answer t",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "What is Ritu's age? Statements: I. Ritu is the sam",
           "rowData": [
             {
               "column": "Question Type",
@@ -790,35 +819,39 @@
             },
             {
               "column": "Question",
-              "value": "# 26.Read the information given below and answer t"
+              "value": "What is Ritu's age? Statements: I. Ritu is the sam"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "5"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "I alone is sufficient while II alone is not suffic"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "II alone is sufficient while I alone is not suffic"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "Either I or II is sufficient"
             },
             {
               "column": "Options4",
-              "value": ""
+              "value": "Neither I nor II is sufficient"
+            },
+            {
+              "column": "Options5",
+              "value": "Both I and II together are sufficient"
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": "5"
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "Logical Reasoning,Data Sufficiency"
             },
             {
               "column": "Difficulty",
@@ -830,15 +863,11 @@
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "Logical Reasoning,Data Sufficiency"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "From I → Ritu = Pooja = Neelam = X. From II → Moha"
             },
             {
               "column": "Column14",
@@ -854,6 +883,10 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
               "value": ""
             }
           ]
@@ -862,9 +895,9 @@
           "row": 7,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "# 27. Read the following information carefully and",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "In the morning, Ravi starts walking facing the sun",
           "rowData": [
             {
               "column": "Question Type",
@@ -872,59 +905,59 @@
             },
             {
               "column": "Question",
-              "value": "# 27. Read the following information carefully and"
+              "value": "In the morning, Ravi starts walking facing the sun"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "4"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "North"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "South"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "East"
             },
             {
               "column": "Options4",
+              "value": "West"
+            },
+            {
+              "column": "Options5",
               "value": ""
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": ""
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "2"
             },
             {
               "column": "Difficulty",
-              "value": "medium"
+              "value": "Logical Reasoning,Directions"
             },
             {
               "column": "Score",
-              "value": "5"
+              "value": "medium"
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "5"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Logical Reasoning,Directions"
             },
             {
               "column": "Column14",
-              "value": ""
+              "value": "In the morning, the sun rises in the East, so Ravi"
             },
             {
               "column": "Column15",
@@ -936,6 +969,14 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
               "value": ""
             }
           ]
@@ -944,9 +985,9 @@
           "row": 8,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "### 28.Read the following information carefully an",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "In a certain code, '82' means 'fast car' and '69' ",
           "rowData": [
             {
               "column": "Question Type",
@@ -954,27 +995,31 @@
             },
             {
               "column": "Question",
-              "value": "### 28.Read the following information carefully an"
+              "value": "In a certain code, '82' means 'fast car' and '69' "
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "5"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "I alone is sufficient"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "II alone is sufficient"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "Either I or II is sufficient"
             },
             {
               "column": "Options4",
-              "value": ""
+              "value": "Neither I nor II is sufficient"
+            },
+            {
+              "column": "Options5",
+              "value": "Both I and II are sufficient"
             },
             {
               "column": "Answer",
@@ -982,7 +1027,7 @@
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "Logical Reasoning,Data Sufficiency"
             },
             {
               "column": "Difficulty",
@@ -994,15 +1039,11 @@
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "Logical Reasoning,Coding Decoding"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Given: 82 → fast, car, 69 → red, bus. Using Statem"
             },
             {
               "column": "Column14",
@@ -1018,6 +1059,10 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
               "value": ""
             }
           ]
@@ -1026,9 +1071,9 @@
           "row": 9,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "##  29.Read the following information carefully an",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Eight people P, Q, R, S, T, U, V and W are sitting",
           "rowData": [
             {
               "column": "Question Type",
@@ -1036,59 +1081,59 @@
             },
             {
               "column": "Question",
-              "value": "##  29.Read the following information carefully an"
+              "value": "Eight people P, Q, R, S, T, U, V and W are sitting"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "4"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "One"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "Two"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "Three"
             },
             {
               "column": "Options4",
+              "value": "Four"
+            },
+            {
+              "column": "Options5",
               "value": ""
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": ""
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "3"
             },
             {
               "column": "Difficulty",
-              "value": "medium"
+              "value": "Logical Reasoning,Seating Arrangement"
             },
             {
               "column": "Score",
-              "value": "5"
+              "value": "medium"
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "5"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Logical Reasoning,Circular Seating"
             },
             {
               "column": "Column14",
-              "value": ""
+              "value": "From the arrangement: Place T at a fixed position."
             },
             {
               "column": "Column15",
@@ -1100,6 +1145,14 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
               "value": ""
             }
           ]
@@ -1108,9 +1161,9 @@
           "row": 10,
           "column": "Unknown",
           "columnValue": "",
-          "error": "Option count must be at least 2",
-          "reason": "Invalid option format or exceeds maximum option count",
-          "questionPreview": "### 30.Read the following information carefully an",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Eight people P, Q, R, S, T, U, V and W are sitting",
           "rowData": [
             {
               "column": "Question Type",
@@ -1118,35 +1171,853 @@
             },
             {
               "column": "Question",
-              "value": "### 30.Read the following information carefully an"
+              "value": "Eight people P, Q, R, S, T, U, V and W are sitting"
             },
             {
               "column": "Option count",
-              "value": "0"
+              "value": "4"
             },
             {
               "column": "Options1",
-              "value": ""
+              "value": "P"
             },
             {
               "column": "Options2",
-              "value": ""
+              "value": "Q"
             },
             {
               "column": "Options3",
-              "value": ""
+              "value": "U"
             },
             {
               "column": "Options4",
+              "value": "W"
+            },
+            {
+              "column": "Options5",
               "value": ""
             },
             {
               "column": "Answer",
-              "value": "1"
+              "value": ""
             },
             {
               "column": "Category",
-              "value": "Aptitude"
+              "value": "4"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Seating Arrangement"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Circular Seating"
+            },
+            {
+              "column": "Column14",
+              "value": "Using the same final seating arrangement, identify"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 11,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Eight persons — P, Q, R, S, T, U, V and W are sitt",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Eight persons — P, Q, R, S, T, U, V and W are sitt"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "Q"
+            },
+            {
+              "column": "Options2",
+              "value": "W"
+            },
+            {
+              "column": "Options3",
+              "value": "R"
+            },
+            {
+              "column": "Options4",
+              "value": "S"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "1"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Seating Arrangement"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Octagonal Seating"
+            },
+            {
+              "column": "Column14",
+              "value": "The question clearly states that Q sits to the imm"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 12,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Eight persons — P, Q, R, S, T, U, V and W are sitt",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Eight persons — P, Q, R, S, T, U, V and W are sitt"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "Q"
+            },
+            {
+              "column": "Options2",
+              "value": "S"
+            },
+            {
+              "column": "Options3",
+              "value": "R"
+            },
+            {
+              "column": "Options4",
+              "value": "V"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "1"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Seating Arrangement"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Octagonal Seating"
+            },
+            {
+              "column": "Column14",
+              "value": "From the given conditions, exactly one person sits"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 13,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Eight persons — P, Q, R, S, T, U, V and W are sitt",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Eight persons — P, Q, R, S, T, U, V and W are sitt"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "Q sits between T and U."
+            },
+            {
+              "column": "Options2",
+              "value": "R is an immediate neighbour of P."
+            },
+            {
+              "column": "Options3",
+              "value": "V and T are immediate neighbours of R."
+            },
+            {
+              "column": "Options4",
+              "value": "None of the above."
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "3"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Seating Arrangement"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Octagonal Seating"
+            },
+            {
+              "column": "Column14",
+              "value": "From the final arrangement, R has V on one side an"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 14,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Select the combination of numbers so that the lett",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Select the combination of numbers so that the lett"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "3,1,4,2,6,5"
+            },
+            {
+              "column": "Options2",
+              "value": "2,3,6,4,5,1"
+            },
+            {
+              "column": "Options3",
+              "value": "4,2,6,5,1,3"
+            },
+            {
+              "column": "Options4",
+              "value": "3,2,5,6,1,4"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "3"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Word Formation"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Letters"
+            },
+            {
+              "column": "Column14",
+              "value": "A common meaningful word from these letters is RES"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 15,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Insert the symbols to make the equation correct: 5",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Insert the symbols to make the equation correct: 5"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "+, ×, ÷, −, ×"
+            },
+            {
+              "column": "Options2",
+              "value": "×, +, −, ×, ÷"
+            },
+            {
+              "column": "Options3",
+              "value": "−, ×, +, ÷, ×"
+            },
+            {
+              "column": "Options4",
+              "value": "None of these"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "4"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Mathematical Operations"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Symbols"
+            },
+            {
+              "column": "Column14",
+              "value": "Option A: 5 + 9 × 3 ÷ 6 − 72 × 12 = -854.5 ≠ 75. O"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 16,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Find the number which will replace the question ma",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Find the number which will replace the question ma"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "40"
+            },
+            {
+              "column": "Options2",
+              "value": "44"
+            },
+            {
+              "column": "Options3",
+              "value": "46"
+            },
+            {
+              "column": "Options4",
+              "value": "48"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "3"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Series"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Number Series"
+            },
+            {
+              "column": "Column14",
+              "value": "Find the differences between consecutive terms: 13"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 17,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 5 options exist (answer must be 1-5)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Five towns lie in a straight line from North to So",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Five towns lie in a straight line from North to So"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "P"
+            },
+            {
+              "column": "Options2",
+              "value": "Q"
+            },
+            {
+              "column": "Options3",
+              "value": "R"
+            },
+            {
+              "column": "Options4",
+              "value": "S"
+            },
+            {
+              "column": "Options5",
+              "value": "T"
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": ""
+            },
+            {
+              "column": "Difficulty",
+              "value": "5"
+            },
+            {
+              "column": "Score",
+              "value": "Logical Reasoning,Directions"
+            },
+            {
+              "column": "Tags",
+              "value": "medium"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "5"
+            },
+            {
+              "column": "Column14",
+              "value": "Logical Reasoning,Directions"
+            },
+            {
+              "column": "Column15",
+              "value": "Arrange the cities: P is north of Q. R is south of"
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            },
+            {
+              "column": "Column20",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 18,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Rohan, Tarun, Jatin, Suraj, and Vivek are standing",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Rohan, Tarun, Jatin, Suraj, and Vivek are standing"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "180 m"
+            },
+            {
+              "column": "Options2",
+              "value": "150 m"
+            },
+            {
+              "column": "Options3",
+              "value": "160 m"
+            },
+            {
+              "column": "Options4",
+              "value": "200 m"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "1"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Directions"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Distance and Direction"
+            },
+            {
+              "column": "Column14",
+              "value": "Distance covered: Vivek → Suraj = 20 m, Suraj → Ta"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 19,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Category should not contain commas or quotations",
+          "reason": "Unknown validation error",
+          "questionPreview": "What is Rakesh's age? Statements: Rakesh, Aman, an",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "What is Rakesh's age? Statements: Rakesh, Aman, an"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "I alone sufficient"
+            },
+            {
+              "column": "Options2",
+              "value": "II alone sufficient"
+            },
+            {
+              "column": "Options3",
+              "value": "Either I or II sufficient"
+            },
+            {
+              "column": "Options4",
+              "value": "Neither I nor II sufficient"
+            },
+            {
+              "column": "Options5",
+              "value": "Both I and II together sufficient"
+            },
+            {
+              "column": "Answer",
+              "value": "5"
+            },
+            {
+              "column": "Category",
+              "value": "Logical Reasoning,Data Sufficiency"
             },
             {
               "column": "Difficulty",
@@ -1158,15 +2029,11 @@
             },
             {
               "column": "Tags",
-              "value": "Aptitude,Numbers"
+              "value": "Logical Reasoning,Data Sufficiency"
             },
             {
               "column": "Answer Explanation",
-              "value": ""
-            },
-            {
-              "column": "Column13",
-              "value": ""
+              "value": "Let Aman = Karan = Rakesh = X. Mohan = Aman + Kara"
             },
             {
               "column": "Column14",
@@ -1182,6 +2049,286 @@
             },
             {
               "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 20,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 4 options exist (answer must be 1-4)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Mehul started walking with his back to the sun. Af",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Mehul started walking with his back to the sun. Af"
+            },
+            {
+              "column": "Option count",
+              "value": "4"
+            },
+            {
+              "column": "Options1",
+              "value": "North"
+            },
+            {
+              "column": "Options2",
+              "value": "South"
+            },
+            {
+              "column": "Options3",
+              "value": "East or West"
+            },
+            {
+              "column": "Options4",
+              "value": "North or South"
+            },
+            {
+              "column": "Options5",
+              "value": ""
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "4"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning,Directions"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Directions"
+            },
+            {
+              "column": "Column14",
+              "value": "If it is morning, sun is in the East, so if his ba"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "DELOITEE Mock Test -2 DB.csv",
+      "errorCount": 2,
+      "errors": [
+        {
+          "row": 16,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 5 options exist (answer must be 1-5)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Identify the letter cluster that does not belong t",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Identify the letter cluster that does not belong t"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "TRS"
+            },
+            {
+              "column": "Options2",
+              "value": "VPU"
+            },
+            {
+              "column": "Options3",
+              "value": "XOW"
+            },
+            {
+              "column": "Options4",
+              "value": "ZMY"
+            },
+            {
+              "column": "Options5",
+              "value": "BLZ"
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "5"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Logical Reasoning"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Logical Reasoning,Odd One Out"
+            },
+            {
+              "column": "Column14",
+              "value": "Analyzing the pattern in each cluster by examining"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "row": 25,
+          "column": "Unknown",
+          "columnValue": "",
+          "error": "Invalid answer: answer is 0 but only 5 options exist (answer must be 1-5)",
+          "reason": "Answer key exceeds option count - the answer number is greater than the number of options provided",
+          "questionPreview": "Select the most appropriate options to fill in the",
+          "rowData": [
+            {
+              "column": "Question Type",
+              "value": "objective"
+            },
+            {
+              "column": "Question",
+              "value": "Select the most appropriate options to fill in the"
+            },
+            {
+              "column": "Option count",
+              "value": "5"
+            },
+            {
+              "column": "Options1",
+              "value": "(1) to expand continues (2) will struggle"
+            },
+            {
+              "column": "Options2",
+              "value": "(1) expanding remains (2) could struggled"
+            },
+            {
+              "column": "Options3",
+              "value": "(1) to expanding remain (2) will struggling"
+            },
+            {
+              "column": "Options4",
+              "value": "(1) expand continues (2) may struggles"
+            },
+            {
+              "column": "Options5",
+              "value": "(1) continues to expand (2) will struggle"
+            },
+            {
+              "column": "Answer",
+              "value": ""
+            },
+            {
+              "column": "Category",
+              "value": "5"
+            },
+            {
+              "column": "Difficulty",
+              "value": "Verbal Ability"
+            },
+            {
+              "column": "Score",
+              "value": "medium"
+            },
+            {
+              "column": "Tags",
+              "value": "5"
+            },
+            {
+              "column": "Answer Explanation",
+              "value": "Verbal Ability,Fill in the Blanks"
+            },
+            {
+              "column": "Column14",
+              "value": "The correct grammatical construction for blank (1)"
+            },
+            {
+              "column": "Column15",
+              "value": ""
+            },
+            {
+              "column": "Column16",
+              "value": ""
+            },
+            {
+              "column": "Column17",
+              "value": ""
+            },
+            {
+              "column": "Column18",
+              "value": ""
+            },
+            {
+              "column": "Column19",
               "value": ""
             }
           ]

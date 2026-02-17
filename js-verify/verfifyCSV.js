@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const ROOT_DIR = path.dirname(__dirname);
-const SOURCE_DIR = path.join(ROOT_DIR, "csv-new-flow");
+const SOURCE_DIR = path.join(ROOT_DIR, "csv-ai");
 const VERIFIED_DIR = path.join(__dirname, "csv-verified");
 const FAILED_DIR = path.join(__dirname, "csv-failed");
 
